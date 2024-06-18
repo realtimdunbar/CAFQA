@@ -4,12 +4,14 @@ from qiskit_nature.units import DistanceUnit
 from qiskit_nature.second_q.circuit.library import HartreeFock
 from qiskit_nature.second_q.transformers import ActiveSpaceTransformer
 from qiskit_nature.second_q.drivers import PySCFDriver
-from qiskit_nature.second_q.mappers import ParityMapper, QubitConverter
+#from qiskit_nature.second_q.mappers import ParityMapper, QubitConverter
+from qiskit_nature.second_q.mappers import ParityMapper
 
 from skquant.opt import minimize
 import hypermapper
 import json
 import sys
+import pyscf
 from numbers import Number
 
 from vqe_helpers import *
@@ -26,7 +28,7 @@ def molecule(atom_string, new_num_orbitals=None, **kwargs):
     Returns:
     (Iterable[Float], Iterable[String], String) (Pauli coefficients, Pauli strings, Hartree-Fock bitstring)
     """
-    converter = QubitConverter(ParityMapper(), two_qubit_reduction=True)
+    #converter = QubitConverter(ParityMapper(), two_qubit_reduction=True)
     driver = PySCFDriver(
         atom=atom_string,
         basis="sto3g",
@@ -35,16 +37,22 @@ def molecule(atom_string, new_num_orbitals=None, **kwargs):
         unit=DistanceUnit.ANGSTROM
     )
     problem = driver.run()
+    mapper = ParityMapper(num_particles=problem.num_particles)
     if new_num_orbitals is not None:
         num_electrons = (problem.num_alpha, problem.num_beta)
         transformer = ActiveSpaceTransformer(num_electrons, new_num_orbitals)
         problem = transformer.transform(problem)
     ferOp = problem.hamiltonian.second_q_op()
-    qubitOp = converter.convert(ferOp, problem.num_particles)
+    #qubitOp = converter.convert(ferOp, problem.num_particles)
+    qubitOp = mapper.map(ferOp)
+    
+    #for pauli, coeff in sorted(qubitOp.label_iter()):
+        #print(f"{coeff.real:+.8f} * {pauli}")
+
     initial_state = HartreeFock(
         problem.num_spatial_orbitals,
         problem.num_particles,
-        converter
+        qubit_mapper=mapper
     )
     bitstring = "".join(["1" if bit else "0" for bit in initial_state._bitstr])
     # need to reverse order bc of qiskit endianness
