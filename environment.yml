@@ -1,0 +1,21 @@
+name: cafqa_env
+channels:
+- conda-forge
+- defaults
+dependencies:
+- python=3.9
+- jupyter=1.0.0
+- ipykernel=6.28.0
+- numpy=1.19.5
+- matplotlib
+- pip=23.3.2
+- pip:
+  - qiskit==0.45.1
+  - qiskit-aer==0.13.1
+  - pylatexenc==2.10
+  - qiskit_optimization
+  - qiskit_nature==0.5
+  - stim
+  - scikit-quant
+  - hypermapper==2.2.13
+  - pyscf

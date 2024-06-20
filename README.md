@@ -13,3 +13,7 @@ Full list of dependencies (`pip install ...`):
 - scikit-quant
 - hypermapper
 - pyscf
+
+Run the following line of code to create the appropriate conda environment:
+
+conda env create -f environment.yml
