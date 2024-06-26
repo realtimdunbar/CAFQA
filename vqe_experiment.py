@@ -56,11 +56,11 @@ def molecule(atom_string, new_num_orbitals=None, **kwargs):
     )
     bitstring = "".join(["1" if bit else "0" for bit in initial_state._bitstr])
     # need to reverse order bc of qiskit endianness
-    paulis = [x[::-1] for x in qubitOp.primitive.paulis.to_labels()]
+    paulis = [x[::-1] for x in qubitOp.paulis.to_labels()]
     # add the shift as extra I pauli
     paulis.append("I"*len(paulis[0]))
     paulis = np.array(paulis)
-    coeffs = list(qubitOp.primitive.coeffs)
+    coeffs = list(qubitOp.coeffs)
     # add the shift (nuclear repulsion)
     coeffs.append(problem.nuclear_repulsion_energy)
     coeffs = np.array(coeffs).real
