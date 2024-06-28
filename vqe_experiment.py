@@ -4,7 +4,6 @@ from qiskit_nature.units import DistanceUnit
 from qiskit_nature.second_q.circuit.library import HartreeFock
 from qiskit_nature.second_q.transformers import ActiveSpaceTransformer
 from qiskit_nature.second_q.drivers import PySCFDriver
-#from qiskit_nature.second_q.mappers import ParityMapper, QubitConverter
 from qiskit_nature.second_q.mappers import ParityMapper
 
 from skquant.opt import minimize
@@ -43,11 +42,7 @@ def molecule(atom_string, new_num_orbitals=None, **kwargs):
         transformer = ActiveSpaceTransformer(num_electrons, new_num_orbitals)
         problem = transformer.transform(problem)
     ferOp = problem.hamiltonian.second_q_op()
-    #qubitOp = converter.convert(ferOp, problem.num_particles)
     qubitOp = mapper.map(ferOp)
-    
-    #for pauli, coeff in sorted(qubitOp.label_iter()):
-        #print(f"{coeff.real:+.8f} * {pauli}")
 
     initial_state = HartreeFock(
         problem.num_spatial_orbitals,
@@ -231,6 +226,30 @@ def run_cafqa(n_qubits, coeffs, paulis, param_guess, budget, save_dir, loss_file
             **vqe_kwargs
         ))
     sys.stdout = stdout
+
+
+    # wire this up
+    # with Session(backend=backend) as session:
+    #     estimator = Estimator(session=session)
+    #     estimator.options.default_shots = 10000
+
+    #     callback = build_callback(ansatz_isa, hamiltonian_isa, estimator, callback_dict)
+
+    #     res = minimize(
+    #         vqe_cafqa_stim(
+    #             inputs=x,
+    #             n_qubits=n_qubits,
+    #             loss_filename=save_dir + "/" + loss_file,
+    #             params_filename=save_dir + "/" + params_file,
+    #             paulis=paulis, 
+    #             coeffs=coeffs,
+    #             **vqe_kwargs
+    #         ),
+    #         coeffs,
+    #         args=(ansatz_isa, hamiltonian_isa, estimator),
+    #         method="cobyla",
+    #         callback=callback,
+    #     )
 
     energy_cafqa = np.inf
     x_cafqa = None

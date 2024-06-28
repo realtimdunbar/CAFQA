@@ -13,3 +13,21 @@ Full list of dependencies (`pip install ...`):
 - scikit-quant
 - hypermapper
 - pyscf
+
+## Create a conda environment if you have not already:
+
+```
+conda create --name qs-01 python=3.12.2 -y
+```
+
+## Activate the environment:
+
+```
+conda activate qs-01
+```
+
+## Install the necessary libraries.
+
+```
+pip install -r requirements.txt
+```

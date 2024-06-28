@@ -1,6 +1,6 @@
-from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister, Aer, execute, IBMQ, transpile
+from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister, transpile
+from qiskit_aer import Aer, AerSimulator
 from qiskit.transpiler.passes import RemoveBarriers
-from qiskit.providers.aer import AerSimulator
 
 from qiskit.circuit.library import EfficientSU2
 
@@ -196,10 +196,10 @@ def compute_expectations(n_qubits, parameters, paulis, shots, backend, mode, **k
     if mode == 'no_noisy_sim':
         #get all the vqe circuits
         circuits = [vqe_circuit(n_qubits, parameters, pauli, **kwargs) for pauli in paulis]
-        result = execute(circuits, backend=Aer.get_backend("qasm_simulator"), shots=shots).result()
+        result = transpile(circuits, backend=Aer.get_backend("qasm_simulator"), shots=shots).result()
     elif mode == 'device_execution':
         tcircs = all_transpiled_vqe_circuits(n_qubits, parameters, paulis, backend, **kwargs)
-        job = execute(tcircs, backend=backend, shots=shots)
+        job = transpile(tcircs, backend=backend, shots=shots)
         result = job.result()
     elif mode == 'noisy_sim':
         sim_device = AerSimulator.from_backend(backend)
@@ -285,6 +285,7 @@ def vqe_cafqa_stim(inputs, n_qubits, coeffs, paulis, init_func=hartreefock, ansa
         parameters.append(inputs[key]*(np.pi/2))
 
     vqe_qc = QuantumCircuit(n_qubits)
+
     if not init_last:
         init_func(vqe_qc, **kwargs)
     add_ansatz(vqe_qc, ansatz_func, parameters, ansatz_reps, **kwargs)
