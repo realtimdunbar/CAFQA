@@ -16,6 +16,15 @@ from numbers import Number
 from vqe_helpers import *
 from circuit_manipulation import *
 
+# local simulation imports
+from qiskit_aer import AerSimulator
+from scipy.optimize import minimize
+from qiskit_ibm_runtime import Session
+from qiskit_ibm_runtime import EstimatorV2 as Estimator
+
+# To run locally
+backend = AerSimulator()
+
 
 def molecule(atom_string, new_num_orbitals=None, **kwargs):
     """
@@ -184,7 +193,8 @@ def run_cafqa(n_qubits, coeffs, paulis, param_guess, budget, save_dir, loss_file
     # check right number of parameters given
     ansatz_func = vqe_kwargs.get("ansatz_func", efficientsu2_full)
     ansatz_reps = vqe_kwargs.get("ansatz_reps", 1)
-    _, num_params = ansatz_func(n_qubits, ansatz_reps)
+    ansatz_isa, num_params = ansatz_func(n_qubits, ansatz_reps)
+
     if len(param_guess) == 0:
         param_guess = [0] * num_params
     assert len(param_guess) == num_params, f"Number of parameters given ({len(param_guess)}) does not match ansatz ({num_params})." 
@@ -226,30 +236,6 @@ def run_cafqa(n_qubits, coeffs, paulis, param_guess, budget, save_dir, loss_file
             **vqe_kwargs
         ))
     sys.stdout = stdout
-
-
-    # wire this up
-    # with Session(backend=backend) as session:
-    #     estimator = Estimator(session=session)
-    #     estimator.options.default_shots = 10000
-
-    #     callback = build_callback(ansatz_isa, hamiltonian_isa, estimator, callback_dict)
-
-    #     res = minimize(
-    #         vqe_cafqa_stim(
-    #             inputs=x,
-    #             n_qubits=n_qubits,
-    #             loss_filename=save_dir + "/" + loss_file,
-    #             params_filename=save_dir + "/" + params_file,
-    #             paulis=paulis, 
-    #             coeffs=coeffs,
-    #             **vqe_kwargs
-    #         ),
-    #         coeffs,
-    #         args=(ansatz_isa, hamiltonian_isa, estimator),
-    #         method="cobyla",
-    #         callback=callback,
-    #     )
 
     energy_cafqa = np.inf
     x_cafqa = None

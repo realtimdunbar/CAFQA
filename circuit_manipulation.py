@@ -78,6 +78,7 @@ def qiskit_to_stim(circuit):
     allowed_gates = ["X", "Y", "Z", "H", "CX", "S", "S_DAG", "SQRT_X", "SQRT_X_DAG"]
     stim_circ = stim.Circuit()
     # make sure right number of qubits in stim circ
+
     for i in range(circuit.num_qubits):
         stim_circ.append("I", [i])
     for instruction in circuit:
@@ -91,6 +92,6 @@ def qiskit_to_stim(circuit):
         elif gate_lbl == "SXDG":
             gate_lbl = "SQRT_X_DAG"
         assert gate_lbl in allowed_gates, f"Invalid gate {gate_lbl}."
-        qubit_idc = [qb.index for qb in instruction.qubits]
+        qubit_idc = [circuit.find_bit(qb)[0] for qb in instruction.qubits]
         stim_circ.append(gate_lbl, qubit_idc)
     return stim_circ
