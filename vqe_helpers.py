@@ -143,16 +143,16 @@ def all_transpiled_vqe_circuits(n_qubits, parameters, paulis, backend, seed_tran
     """
     backend_qubits = backend.configuration().n_qubits
     circuit = vqe_circuit(n_qubits, parameters, n_qubits*'Z', **kwargs)
+ 
     if remove_barriers:
         circuit = RemoveBarriers()(circuit)
     # transpile one circuit
     t_circuit = transpile(circuit, backend, optimization_level=3, seed_transpiler=seed_transpiler)
-
     # get the mapping from virtual to physical
     virtual_to_physical_mapping = {}
     for inst in t_circuit:
         if inst[0].name == 'measure':
-            virtual_to_physical_mapping[inst[2][0].index] = inst[1][0].index
+            virtual_to_physical_mapping[t_circuit.find_bit(inst[2][0])[0]] = t_circuit.find_bit(inst[1][0])[0]
     # remove final measurements
     t_circuit.remove_final_measurements()
     # create all transpiled circuits
@@ -199,7 +199,8 @@ def compute_expectations(n_qubits, parameters, paulis, shots, backend, mode, **k
         result = transpile(circuits, backend=Aer.get_backend("qasm_simulator"), shots=shots).result()
     elif mode == 'device_execution':
         tcircs = all_transpiled_vqe_circuits(n_qubits, parameters, paulis, backend, **kwargs)
-        job = transpile(tcircs, backend=backend, shots=shots)
+        new_circuit = transpile(tcircs, backend=backend)
+        job = backend.run(new_circuit)
         result = job.result()
     elif mode == 'noisy_sim':
         sim_device = AerSimulator.from_backend(backend)

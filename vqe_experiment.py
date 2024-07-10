@@ -18,7 +18,6 @@ from circuit_manipulation import *
 
 # local simulation imports
 from qiskit_aer import AerSimulator
-from scipy.optimize import minimize
 from qiskit_ibm_runtime import Session
 from qiskit_ibm_runtime import EstimatorV2 as Estimator
 

@@ -10,3 +10,4 @@ stim
 qiskit_nature
 hypermapper
 scikit-quant
+scipy-openblas64==0.3.27.63.1

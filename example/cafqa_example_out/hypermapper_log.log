@@ -9685,3 +9685,1690 @@ Starting optimization iteration 1
 End of training - Time       0.02 sec
 Model fitting time     0.0242 sec
 Total RS time     0.0582 sec
+{'application_name': 'cafqa_optimization', 'optimization_objectives': ['value'], 'design_of_experiment': {'number_of_samples': 100, 'doe_type': 'random sampling'}, 'optimization_iterations': 100, 'models': {'model': 'random_forest', 'number_of_trees': 10, 'max_features': 0.5, 'bootstrap': False, 'min_samples_split': 5}, 'input_parameters': {'x0': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x1': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x2': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x3': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x4': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x5': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x6': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x7': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x8': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x9': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x10': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x11': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x12': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x13': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x14': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x15': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}}, 'print_best': True, 'print_posterior_best': True, 'log_file': 'cafqa_example_out//hypermapper_log.log', 'output_data_file': 'cafqa_example_out//hypermapper_output.csv', 'verbose_logging': False, 'profiling': False, 'noise': True, 'profiling_file': 'profiles/profile.csv', 'append_profiles': False, 'number_of_cpus': 0, 'max_number_of_predictions': 1000000, 'time_budget': -1, 'number_of_repetitions': 1, 'hypermapper_mode': {'mode': 'default'}, 'output_image': {'output_image_pdf_file': 'output_pareto.pdf', 'image_xlog': False, 'image_ylog': False}, 'feasible_output': {'name': 'Valid', 'true_value': 'True', 'false_value': 'False', 'enable_feasible_predictor': False, 'enable_feasible_predictor_grid_search_on_recall_and_precision': False, 'feasible_predictor_grid_search_validation_file': '/home/lnardi/spatial-lang/results/apps_classification_test_set/BlackScholes.csv'}, 'timestamp': 'Timestamp', 'evaluations_per_optimization_iteration': 1, 'run_directory': '.', 'output_pareto_file': 'output_pareto.csv', 'acquisition_function': 'EI', 'scalarization_method': 'tchebyshev', 'weight_sampling': 'flat', 'bounding_box_limits': [0, 1], 'optimization_method': 'bayesian_optimization', 'local_search_starting_points': 10, 'local_search_random_points': 10000, 'local_search_evaluation_limit': -1, 'scalarization_key': 'scalarization', 'local_search_scalarization_weights': [1], 'print_parameter_importance': False, 'normalize_inputs': False, 'epsilon_greedy_threshold': 0.1, 'prior_method': 'pibo', 'prior_beta': -1, 'prior_floor': 1e-06, 'model_posterior_weight': 10, 'model_good_quantile': 0.05, 'prior_estimation_file': 'samples.csv', 'prior_estimation_quantile': 0.1, 'estimate_multivariate_priors': False, 'resume_optimization': False, 'resume_optimization_data': 'output_samples.csv', 'bandwidth_parameter': 0, 'bandwidth_n_factor': 100, 'prior_limit_estimation_points': 10000, 'posterior_computation_lower_limit': 1e-08, 'custom_gaussian_prior_means': [0], 'custom_gaussian_prior_stds': [-1], 'acquisition_function_optimizer': 'local_search', 'evolution_population_size': 50, 'evolution_generations': 150, 'mutation_rate': 1, 'evolution_crossover': False, 'regularize_evolution': False, 'batch_size': 2, 'cma_es_sigma': 0.2, 'cma_es_starting_points': 1, 'cma_es_random_points': 10000}
+Design of experiment phase, number of new doe samples = 100 .......
+Loss computed by CAFQA VQE is -4.763022851576725, in 0.04452062499967724 s.
+Loss computed by CAFQA VQE is -4.9289964228245875, in 0.04339408400028333 s.
+Loss computed by CAFQA VQE is -4.764454036529328, in 0.04467654199925164 s.
+Loss computed by CAFQA VQE is -3.2602158506367362, in 0.04100254200056952 s.
+Loss computed by CAFQA VQE is -4.77440492239605, in 0.03706512499957171 s.
+Loss computed by CAFQA VQE is -6.428904099300446, in 0.038296958000501036 s.
+Loss computed by CAFQA VQE is -4.767259666260257, in 0.04322225000032631 s.
+Loss computed by CAFQA VQE is -4.788765691459526, in 0.04241316699972231 s.
+Loss computed by CAFQA VQE is -4.368140983302945, in 0.04569274999994377 s.
+Loss computed by CAFQA VQE is -4.8028312128990915, in 0.04119391699987318 s.
+Loss computed by CAFQA VQE is -3.9007851851827007, in 0.04901774999962072 s.
+Loss computed by CAFQA VQE is -4.903220560929466, in 0.04494262499974866 s.
+Loss computed by CAFQA VQE is -4.368140983302945, in 0.04517470900009357 s.
+Loss computed by CAFQA VQE is -3.197210535712739, in 0.03817679199983104 s.
+Loss computed by CAFQA VQE is -3.0066426895357172, in 0.04471579199980624 s.
+Loss computed by CAFQA VQE is -4.691734244914224, in 0.04195724999954109 s.
+Loss computed by CAFQA VQE is -4.836983983702034, in 0.041508415999487625 s.
+Loss computed by CAFQA VQE is -4.773358433288662, in 0.04007237499990879 s.
+Loss computed by CAFQA VQE is -2.6798180483553318, in 0.03429154199966433 s.
+Loss computed by CAFQA VQE is -6.375210122542159, in 0.03600220899988926 s.
+Loss computed by CAFQA VQE is -6.468758575816997, in 0.03706324999984645 s.
+Loss computed by CAFQA VQE is -5.038561731738071, in 0.04169845799970062 s.
+Loss computed by CAFQA VQE is -5.296710744938959, in 0.04847383299966168 s.
+Loss computed by CAFQA VQE is -6.416082158480387, in 0.0392186250001032 s.
+Loss computed by CAFQA VQE is -6.71092765952894, in 0.041835166000055324 s.
+Loss computed by CAFQA VQE is -4.75021074678676, in 0.04824462499982474 s.
+Loss computed by CAFQA VQE is -4.720759507219112, in 0.04043100000035338 s.
+Loss computed by CAFQA VQE is -4.520305726169131, in 0.05308504200002062 s.
+Loss computed by CAFQA VQE is -4.708435861458145, in 0.0385095840001668 s.
+Loss computed by CAFQA VQE is -5.043523720228247, in 0.046227750000070955 s.
+Loss computed by CAFQA VQE is -4.836431575225099, in 0.04554066599939688 s.
+Loss computed by CAFQA VQE is -4.7176157554632425, in 0.037294458000360464 s.
+Loss computed by CAFQA VQE is -6.3857105984739615, in 0.04618683399985457 s.
+Loss computed by CAFQA VQE is -2.835181179855016, in 0.032659584000612085 s.
+Loss computed by CAFQA VQE is -2.7144481824192455, in 0.03454795899961027 s.
+Loss computed by CAFQA VQE is -4.555457869169626, in 0.03540270800021972 s.
+Loss computed by CAFQA VQE is -3.1808006764471983, in 0.04184783399978187 s.
+Loss computed by CAFQA VQE is -4.539047999044941, in 0.037812749999829975 s.
+Loss computed by CAFQA VQE is -4.717463246955347, in 0.043935167000199726 s.
+Loss computed by CAFQA VQE is -5.094252232473178, in 0.0428632920002201 s.
+Loss computed by CAFQA VQE is -4.837984347737903, in 0.04011895899930096 s.
+Loss computed by CAFQA VQE is -3.180800676447198, in 0.04198416700000962 s.
+Loss computed by CAFQA VQE is -7.528083297192115, in 0.0411218330000338 s.
+Loss computed by CAFQA VQE is -6.744650446929237, in 0.03271420799956104 s.
+Loss computed by CAFQA VQE is -5.016277994773761, in 0.03800725000019156 s.
+Loss computed by CAFQA VQE is -4.8228427453465414, in 0.03912300000047253 s.
+Loss computed by CAFQA VQE is -4.904215804143263, in 0.04019508399960614 s.
+Loss computed by CAFQA VQE is -5.094252232473176, in 0.03415091599981679 s.
+Loss computed by CAFQA VQE is -4.781500277439752, in 0.04651791700052854 s.
+Loss computed by CAFQA VQE is -6.364116611528363, in 0.042733041000246885 s.
+Loss computed by CAFQA VQE is -4.716463179076962, in 0.035189833000004 s.
+Loss computed by CAFQA VQE is -6.418748588448727, in 0.0395159590007097 s.
+Loss computed by CAFQA VQE is -6.64689829272182, in 0.04222487500010175 s.
+Loss computed by CAFQA VQE is -6.3902969738723705, in 0.03989470899978187 s.
+Loss computed by CAFQA VQE is -4.539048009904084, in 0.04331850000016857 s.
+Loss computed by CAFQA VQE is -5.068008873676243, in 0.04086137499962206 s.
+Loss computed by CAFQA VQE is -4.7416574225646375, in 0.04326987500007817 s.
+Loss computed by CAFQA VQE is -3.1440184423735302, in 0.04513058300017292 s.
+Loss computed by CAFQA VQE is -4.82672747481943, in 0.044610708000618615 s.
+Loss computed by CAFQA VQE is -6.440248630002808, in 0.043931042000622256 s.
+Loss computed by CAFQA VQE is -4.844599863161736, in 0.0414540420006233 s.
+Loss computed by CAFQA VQE is -4.797502153048118, in 0.04015695899943239 s.
+Loss computed by CAFQA VQE is -6.156116114417488, in 0.03193766700042033 s.
+Loss computed by CAFQA VQE is -4.783111570614803, in 0.040133458000127575 s.
+Loss computed by CAFQA VQE is -4.850244157701297, in 0.03784554100002424 s.
+Loss computed by CAFQA VQE is -4.805408456741615, in 0.04287883399956627 s.
+Loss computed by CAFQA VQE is -3.135888283776975, in 0.03970962499988673 s.
+Loss computed by CAFQA VQE is -4.82739898399625, in 0.045504417000302055 s.
+Loss computed by CAFQA VQE is -4.784146550657031, in 0.03974550000020827 s.
+Loss computed by CAFQA VQE is -4.850244157701297, in 0.04143275000024005 s.
+Loss computed by CAFQA VQE is -4.850232240319771, in 0.04145554099977744 s.
+Loss computed by CAFQA VQE is -4.8000070071739085, in 0.044589999999516294 s.
+Loss computed by CAFQA VQE is -4.772757342909188, in 0.04057025000020076 s.
+Loss computed by CAFQA VQE is -2.835181179855016, in 0.04003087500041147 s.
+Loss computed by CAFQA VQE is -4.497540287834063, in 0.0351598749994082 s.
+Loss computed by CAFQA VQE is -5.094252232473176, in 0.045196292000582616 s.
+Loss computed by CAFQA VQE is -4.678332152266146, in 0.04301799999939249 s.
+Loss computed by CAFQA VQE is -4.683633835179116, in 0.04159745800006931 s.
+Loss computed by CAFQA VQE is -1.9806581766181752, in 0.0307270419998531 s.
+Loss computed by CAFQA VQE is -6.56248189764268, in 0.04354500000044936 s.
+Loss computed by CAFQA VQE is -3.3495838355994336, in 0.043253458000435785 s.
+Loss computed by CAFQA VQE is -4.896261368604339, in 0.04825399999936053 s.
+Loss computed by CAFQA VQE is -2.943225005597425, in 0.031810540999686054 s.
+Loss computed by CAFQA VQE is -6.265701015342527, in 0.031642957999793 s.
+Loss computed by CAFQA VQE is -1.9023384028501438, in 0.031125333000090905 s.
+Loss computed by CAFQA VQE is -5.208710179304552, in 0.04465820800032816 s.
+Loss computed by CAFQA VQE is -4.359083515424624, in 0.04788599999938015 s.
+Loss computed by CAFQA VQE is -4.749292522974809, in 0.04216900000028545 s.
+Loss computed by CAFQA VQE is -5.9063683961655755, in 0.03656012500050565 s.
+Loss computed by CAFQA VQE is -4.808434850316486, in 0.04042625000056432 s.
+Loss computed by CAFQA VQE is -4.384337868763875, in 0.04322662499998842 s.
+Loss computed by CAFQA VQE is -4.684153334268553, in 0.049845792000269284 s.
+Loss computed by CAFQA VQE is -3.658188201981447, in 0.03579904199978046 s.
+Loss computed by CAFQA VQE is -3.6151373658284025, in 0.04084691699972609 s.
+Loss computed by CAFQA VQE is -5.121580913516835, in 0.03761166599997523 s.
+Loss computed by CAFQA VQE is -5.03882184278323, in 0.04517225000017788 s.
+Loss computed by CAFQA VQE is -2.835181179855016, in 0.04644229199948313 s.
+Loss computed by CAFQA VQE is -6.556105570659701, in 0.03371954199974425 s.
+Loss computed by CAFQA VQE is -6.36864951691766, in 0.03372370899978705 s.
+Loss computed by CAFQA VQE is -6.438717865124454, in 0.04284287500013306 s.
+x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,value,Timestamp
+2,0,0,3,1,3,3,0,3,3,3,0,2,3,0,1,-4.763022851576725,55
+2,3,2,1,3,2,3,3,3,1,3,0,0,0,0,1,-4.9289964228245875,100
+0,1,3,0,1,1,2,3,1,3,2,0,3,3,0,2,-4.764454036529328,146
+0,3,3,2,1,2,3,1,2,3,2,3,2,0,3,0,-3.2602158506367362,189
+0,3,2,3,2,3,3,0,3,0,3,2,0,0,1,0,-4.77440492239605,228
+1,0,0,3,1,0,2,0,0,1,0,2,0,2,2,2,-6.428904099300446,268
+0,1,2,1,1,1,2,3,1,0,3,1,3,0,2,2,-4.767259666260257,312
+1,1,1,2,2,1,3,2,2,1,0,2,2,3,0,0,-4.788765691459526,356
+1,0,1,3,0,2,3,2,3,1,1,0,1,1,2,1,-4.368140983302945,403
+1,0,2,2,3,3,0,3,3,2,1,1,2,2,2,3,-4.8028312128990915,446
+1,2,3,1,1,3,0,2,1,2,1,3,1,2,3,3,-3.9007851851827007,497
+0,1,2,1,3,2,0,0,3,2,2,2,1,3,3,3,-4.903220560929466,544
+0,2,3,0,0,0,2,1,1,1,3,1,1,1,1,0,-4.368140983302945,592
+0,1,1,3,2,0,2,3,2,0,0,2,2,3,2,1,-3.197210535712739,632
+2,1,0,1,1,2,0,1,0,1,3,2,1,2,0,0,-3.0066426895357172,679
+1,0,1,2,0,1,2,3,2,3,2,1,2,0,2,0,-4.691734244914224,723
+3,2,3,2,1,0,1,1,0,3,3,1,3,0,0,0,-4.836983983702034,765
+3,1,2,2,2,0,3,2,3,0,2,3,2,0,0,1,-4.773358433288662,807
+0,2,3,0,1,3,1,1,2,0,1,0,2,2,2,1,-2.6798180483553318,843
+0,1,1,0,2,3,2,3,0,3,2,2,0,0,3,3,-6.375210122542159,881
+2,3,3,2,0,0,3,3,2,2,2,2,3,2,3,2,-6.468758575816997,919
+2,2,2,1,0,3,3,3,1,0,1,3,1,3,1,1,-5.038561731738071,962
+1,3,2,1,2,3,2,1,1,3,1,1,3,0,0,2,-5.296710744938959,1013
+0,3,1,1,0,1,1,0,0,0,2,2,3,1,2,3,-6.416082158480387,1053
+0,1,1,3,0,2,1,3,0,0,3,2,3,0,3,2,-6.71092765952894,1101
+1,2,2,0,0,0,0,3,2,1,1,1,3,3,1,0,-4.75021074678676,1154
+3,1,1,0,1,3,0,0,1,0,1,2,2,2,1,0,-4.720759507219112,1196
+1,3,1,3,1,3,2,0,1,3,2,1,1,0,2,2,-4.520305726169131,1251
+0,1,2,2,0,2,3,2,1,0,2,1,1,2,3,0,-4.708435861458145,1291
+3,3,3,1,0,3,1,0,1,0,2,3,2,3,3,3,-5.043523720228247,1339
+1,3,0,2,2,1,2,3,2,3,1,3,3,2,2,3,-4.836431575225099,1385
+0,3,0,0,2,3,0,1,1,0,0,3,0,2,1,2,-4.7176157554632425,1425
+2,2,1,0,1,3,2,3,2,3,1,2,3,3,0,2,-6.3857105984739615,1473
+0,2,0,0,2,1,0,0,2,1,1,2,0,1,1,0,-2.835181179855016,1508
+2,0,1,0,2,1,0,0,0,3,0,0,3,1,3,3,-2.7144481824192455,1544
+3,2,2,0,3,1,0,0,2,3,1,0,0,2,3,3,-4.555457869169626,1582
+1,2,2,3,1,0,2,3,2,1,2,1,2,2,0,2,-3.1808006764471983,1625
+2,0,3,0,1,0,1,1,1,0,1,2,1,3,3,3,-4.539047999044941,1664
+1,0,2,2,3,2,0,3,2,1,3,3,2,1,3,3,-4.717463246955347,1709
+2,2,0,2,3,2,0,1,2,0,0,1,1,1,2,1,-5.094252232473178,1754
+3,1,1,2,3,2,1,0,1,2,0,2,2,3,0,0,-4.837984347737903,1797
+2,3,1,3,1,3,1,0,0,0,1,0,3,2,2,2,-3.180800676447198,1840
+2,0,3,3,3,1,2,0,2,2,1,2,1,2,1,2,-7.528083297192115,1883
+2,0,2,2,1,2,1,2,2,0,1,0,3,1,0,2,-6.744650446929237,1917
+1,1,0,2,3,3,0,0,2,3,0,2,0,1,3,1,-5.016277994773761,1957
+1,3,1,1,0,3,2,3,0,0,1,2,3,0,0,3,-4.8228427453465414,1998
+0,0,3,3,2,0,0,0,0,2,1,1,2,2,2,3,-4.904215804143263,2040
+0,0,0,3,2,2,2,0,2,1,0,3,0,2,0,2,-5.094252232473176,2075
+3,2,2,3,3,3,1,3,1,3,1,2,1,0,3,2,-4.781500277439752,2123
+2,3,3,0,3,2,3,0,2,1,1,3,1,2,1,1,-6.364116611528363,2167
+3,2,2,2,2,1,2,1,0,2,3,0,2,0,1,0,-4.716463179076962,2204
+2,1,1,0,1,2,2,0,2,2,3,0,3,3,1,3,-6.418748588448727,2245
+0,1,0,1,1,2,1,0,0,1,1,1,2,1,2,2,-6.64689829272182,2289
+2,1,2,3,1,1,3,3,2,3,0,2,1,1,3,3,-6.3902969738723705,2330
+3,3,0,1,3,2,1,0,3,2,2,3,3,3,0,1,-4.539048009904084,2375
+3,0,1,3,1,1,1,2,2,0,2,3,1,2,3,0,-5.068008873676243,2417
+1,2,2,2,3,1,1,1,3,2,1,1,3,0,2,3,-4.7416574225646375,2462
+0,0,2,2,0,2,1,0,2,1,3,3,3,0,2,1,-3.1440184423735302,2511
+1,3,1,1,3,2,1,1,0,0,2,1,3,3,0,2,-4.82672747481943,2557
+2,2,1,3,2,3,1,1,2,3,2,1,1,2,2,2,-6.440248630002808,2603
+1,1,1,0,1,3,3,3,3,2,2,1,0,1,0,0,-4.844599863161736,2646
+2,3,0,3,0,1,2,0,3,3,0,2,3,2,3,1,-4.797502153048118,2687
+0,2,1,0,3,1,2,2,0,3,0,2,1,0,2,0,-6.156116114417488,2721
+2,3,0,3,1,1,1,3,3,1,0,2,0,2,1,0,-4.783111570614803,2762
+3,1,1,1,1,0,3,3,2,0,0,0,2,3,1,3,-4.850244157701297,2801
+3,2,1,0,2,3,1,2,0,1,3,1,1,0,1,2,-4.805408456741615,2846
+2,3,3,1,1,3,1,1,0,0,0,2,3,1,2,1,-3.135888283776975,2888
+1,2,3,3,3,3,2,1,2,1,2,1,0,3,3,3,-4.82739898399625,2936
+3,0,3,3,1,2,0,0,1,2,2,0,2,3,1,0,-4.784146550657031,2977
+1,1,1,0,0,0,3,2,2,1,0,1,3,3,1,0,-4.850244157701297,3020
+0,2,3,3,3,2,0,1,3,1,3,0,3,2,0,1,-4.850232240319771,3063
+3,3,2,2,1,0,1,3,1,2,1,3,2,0,0,3,-4.8000070071739085,3109
+1,2,1,1,3,0,0,0,1,3,2,0,0,1,1,0,-4.772757342909188,3152
+0,0,2,1,1,3,2,2,2,1,1,1,3,3,1,3,-2.835181179855016,3193
+1,3,2,0,2,2,0,1,2,1,2,0,2,0,1,0,-4.497540287834063,3230
+2,3,3,3,2,3,2,2,0,3,3,1,0,2,3,1,-5.094252232473176,3276
+3,1,1,3,0,3,3,2,2,3,0,2,2,0,2,2,-4.678332152266146,3321
+3,0,2,1,0,0,1,0,1,1,1,1,3,2,0,1,-4.683633835179116,3364
+2,2,0,0,2,3,3,1,0,0,0,3,0,2,1,1,-1.9806581766181752,3396
+0,1,1,3,3,2,1,2,0,1,2,1,1,2,2,1,-6.56248189764268,3441
+2,1,3,0,1,2,1,3,0,1,1,3,0,1,1,3,-3.3495838355994336,3486
+1,1,0,1,2,1,2,1,1,2,2,3,2,0,1,2,-4.896261368604339,3536
+2,0,0,0,0,2,2,1,1,2,2,2,0,0,3,2,-2.943225005597425,3570
+2,0,1,1,2,1,0,0,2,2,0,0,2,3,0,1,-6.265701015342527,3603
+0,2,1,2,2,3,3,1,2,0,0,0,2,0,2,0,-1.9023384028501438,3636
+1,2,3,0,0,2,0,1,2,3,1,3,0,1,2,3,-5.208710179304552,3689
+1,0,3,1,2,3,2,3,3,3,1,0,3,3,3,2,-4.359083515424624,3739
+1,2,0,2,0,1,2,2,3,1,1,2,0,3,2,1,-4.749292522974809,3783
+0,2,1,1,1,2,3,1,0,2,1,0,0,0,0,2,-5.9063683961655755,3821
+0,3,3,3,2,2,3,0,3,2,0,2,3,1,0,1,-4.808434850316486,3863
+0,2,3,2,2,2,0,1,1,1,3,3,3,0,1,1,-4.384337868763875,3907
+1,3,3,3,3,3,3,3,1,3,2,1,1,0,1,1,-4.684153334268553,3959
+3,0,0,3,1,0,2,1,2,0,2,3,3,3,0,0,-3.658188201981447,3996
+0,2,1,3,1,1,3,0,2,2,2,1,3,0,1,1,-3.6151373658284025,4038
+0,2,3,2,0,2,2,0,3,2,0,3,1,2,2,2,-5.121580913516835,4077
+1,1,1,1,1,3,2,0,2,2,0,1,2,2,0,2,-5.03882184278323,4124
+2,2,1,3,2,1,1,2,0,3,3,3,1,2,3,3,-2.835181179855016,4171
+2,0,0,2,2,1,0,2,2,0,3,3,2,1,0,1,-6.556105570659701,4207
+0,3,1,2,2,3,3,2,0,0,2,3,0,0,0,0,-6.36864951691766,4242
+1,3,1,1,0,3,2,0,2,0,1,2,3,3,3,0,-6.438717865124454,4286
+
+
+End of doe/resume phase, the number of evaluated configurations is: 100
+
+End of DoE - Time     4.4142 sec
+Starting optimization iteration 1
+End of training - Time       0.03 sec
+Model fitting time     0.0276 sec
+Total RS time     0.0659 sec
+{'application_name': 'cafqa_optimization', 'optimization_objectives': ['value'], 'design_of_experiment': {'number_of_samples': 100, 'doe_type': 'random sampling'}, 'optimization_iterations': 100, 'models': {'model': 'random_forest', 'number_of_trees': 10, 'max_features': 0.5, 'bootstrap': False, 'min_samples_split': 5}, 'input_parameters': {'x0': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x1': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x2': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x3': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x4': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x5': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x6': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x7': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x8': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x9': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x10': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x11': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x12': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x13': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x14': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x15': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}}, 'print_best': True, 'print_posterior_best': True, 'log_file': 'cafqa_example_out//hypermapper_log.log', 'output_data_file': 'cafqa_example_out//hypermapper_output.csv', 'verbose_logging': False, 'profiling': False, 'noise': True, 'profiling_file': 'profiles/profile.csv', 'append_profiles': False, 'number_of_cpus': 0, 'max_number_of_predictions': 1000000, 'time_budget': -1, 'number_of_repetitions': 1, 'hypermapper_mode': {'mode': 'default'}, 'output_image': {'output_image_pdf_file': 'output_pareto.pdf', 'image_xlog': False, 'image_ylog': False}, 'feasible_output': {'name': 'Valid', 'true_value': 'True', 'false_value': 'False', 'enable_feasible_predictor': False, 'enable_feasible_predictor_grid_search_on_recall_and_precision': False, 'feasible_predictor_grid_search_validation_file': '/home/lnardi/spatial-lang/results/apps_classification_test_set/BlackScholes.csv'}, 'timestamp': 'Timestamp', 'evaluations_per_optimization_iteration': 1, 'run_directory': '.', 'output_pareto_file': 'output_pareto.csv', 'acquisition_function': 'EI', 'scalarization_method': 'tchebyshev', 'weight_sampling': 'flat', 'bounding_box_limits': [0, 1], 'optimization_method': 'bayesian_optimization', 'local_search_starting_points': 10, 'local_search_random_points': 10000, 'local_search_evaluation_limit': -1, 'scalarization_key': 'scalarization', 'local_search_scalarization_weights': [1], 'print_parameter_importance': False, 'normalize_inputs': False, 'epsilon_greedy_threshold': 0.1, 'prior_method': 'pibo', 'prior_beta': -1, 'prior_floor': 1e-06, 'model_posterior_weight': 10, 'model_good_quantile': 0.05, 'prior_estimation_file': 'samples.csv', 'prior_estimation_quantile': 0.1, 'estimate_multivariate_priors': False, 'resume_optimization': False, 'resume_optimization_data': 'output_samples.csv', 'bandwidth_parameter': 0, 'bandwidth_n_factor': 100, 'prior_limit_estimation_points': 10000, 'posterior_computation_lower_limit': 1e-08, 'custom_gaussian_prior_means': [0], 'custom_gaussian_prior_stds': [-1], 'acquisition_function_optimizer': 'local_search', 'evolution_population_size': 50, 'evolution_generations': 150, 'mutation_rate': 1, 'evolution_crossover': False, 'regularize_evolution': False, 'batch_size': 2, 'cma_es_sigma': 0.2, 'cma_es_starting_points': 1, 'cma_es_random_points': 10000}
+Design of experiment phase, number of new doe samples = 100 .......
+Loss computed by CAFQA VQE is -5.067721324367781, in 0.050005708006210625 s.
+Loss computed by CAFQA VQE is -6.2657010153425325, in 0.041063083001063205 s.
+Loss computed by CAFQA VQE is -4.830831204560159, in 0.04072895800345577 s.
+Loss computed by CAFQA VQE is -4.802492110963975, in 0.04064991699124221 s.
+Loss computed by CAFQA VQE is -6.395475850210792, in 0.033165708009619266 s.
+Loss computed by CAFQA VQE is -4.8321036469455105, in 0.041727834002813324 s.
+Loss computed by CAFQA VQE is -6.556105581304122, in 0.037432916011312045 s.
+Loss computed by CAFQA VQE is -6.417297771864936, in 0.03695829099160619 s.
+Loss computed by CAFQA VQE is -3.3659936948649816, in 0.04029699999955483 s.
+Loss computed by CAFQA VQE is -4.762629462199278, in 0.03082291600003373 s.
+Loss computed by CAFQA VQE is -4.787922983258312, in 0.036457540991250426 s.
+Loss computed by CAFQA VQE is -4.802892309112094, in 0.037168666007346474 s.
+Loss computed by CAFQA VQE is -4.714820323554589, in 0.03432454199355561 s.
+Loss computed by CAFQA VQE is -4.755831682932456, in 0.04430925000633579 s.
+Loss computed by CAFQA VQE is -6.364714009371184, in 0.03823191700212192 s.
+Loss computed by CAFQA VQE is -3.180800676447205, in 0.032809833995997906 s.
+Loss computed by CAFQA VQE is -4.836622764558474, in 0.03646266699070111 s.
+Loss computed by CAFQA VQE is -4.818326805663585, in 0.039523790997918695 s.
+Loss computed by CAFQA VQE is -4.8123988943980205, in 0.04113229099311866 s.
+Loss computed by CAFQA VQE is -5.077731052257974, in 0.039673374994890764 s.
+Loss computed by CAFQA VQE is -4.555457869169631, in 0.05400687499786727 s.
+Loss computed by CAFQA VQE is -4.774404922396055, in 0.040761958007351495 s.
+Loss computed by CAFQA VQE is -4.5855828558907685, in 0.04087120799522381 s.
+Loss computed by CAFQA VQE is -6.40332113479926, in 0.03656125000270549 s.
+Loss computed by CAFQA VQE is -4.793566703053489, in 0.03799537499435246 s.
+Loss computed by CAFQA VQE is -4.818034820602216, in 0.0432561670022551 s.
+Loss computed by CAFQA VQE is -5.028552003847885, in 0.04193404200486839 s.
+Loss computed by CAFQA VQE is -6.2757345367659525, in 0.03215758298756555 s.
+Loss computed by CAFQA VQE is -5.155065241862506, in 0.039537625008961186 s.
+Loss computed by CAFQA VQE is -6.571494281528516, in 0.030288207999547012 s.
+Loss computed by CAFQA VQE is -5.089919508487082, in 0.03390012499585282 s.
+Loss computed by CAFQA VQE is -4.7164631790769675, in 0.03408137500809971 s.
+Loss computed by CAFQA VQE is -4.99860466825074, in 0.03727891699236352 s.
+Loss computed by CAFQA VQE is -5.186572816257156, in 0.04134037499898113 s.
+Loss computed by CAFQA VQE is -4.942674317382712, in 0.04102270801377017 s.
+Loss computed by CAFQA VQE is -4.566840583014958, in 0.0342645420023473 s.
+Loss computed by CAFQA VQE is -4.3843378687638825, in 0.03590737500053365 s.
+Loss computed by CAFQA VQE is -5.095688512481164, in 0.03230237499519717 s.
+Loss computed by CAFQA VQE is -4.685127844485828, in 0.03372112500073854 s.
+Loss computed by CAFQA VQE is -4.722902516813505, in 0.03451383300125599 s.
+Loss computed by CAFQA VQE is -5.168064472249121, in 0.0386930829990888 s.
+Loss computed by CAFQA VQE is -4.777025451848635, in 0.03669524998986162 s.
+Loss computed by CAFQA VQE is -3.308033116216707, in 0.03199750000203494 s.
+Loss computed by CAFQA VQE is -4.393395336642204, in 0.03736429200216662 s.
+Loss computed by CAFQA VQE is -4.889542666371355, in 0.035960749999503605 s.
+Loss computed by CAFQA VQE is -4.777722079549328, in 0.03656629100441933 s.
+Loss computed by CAFQA VQE is -6.4307862088994, in 0.03250095900148153 s.
+Loss computed by CAFQA VQE is -4.772571929394685, in 0.03519583400338888 s.
+Loss computed by CAFQA VQE is -4.829526403102987, in 0.038251083009527065 s.
+Loss computed by CAFQA VQE is -4.8482334588980045, in 0.03685145800409373 s.
+Loss computed by CAFQA VQE is -6.425392472282562, in 0.03382916700502392 s.
+Loss computed by CAFQA VQE is -4.3843378687638825, in 0.03507879200333264 s.
+Loss computed by CAFQA VQE is -6.566161421591836, in 0.03891762500279583 s.
+Loss computed by CAFQA VQE is -4.991349030109291, in 0.03354875001241453 s.
+Loss computed by CAFQA VQE is -5.193271862019142, in 0.0386930829990888 s.
+Loss computed by CAFQA VQE is -3.184856269028151, in 0.034757917004753835 s.
+Loss computed by CAFQA VQE is -5.121286308918933, in 0.038570125005207956 s.
+Loss computed by CAFQA VQE is -4.750210746786767, in 0.03745987500587944 s.
+Loss computed by CAFQA VQE is -4.915266617674389, in 0.055658333003520966 s.
+Loss computed by CAFQA VQE is -4.805408456741622, in 0.03681762500491459 s.
+Loss computed by CAFQA VQE is -6.430519022337929, in 0.03049379200092517 s.
+Loss computed by CAFQA VQE is -5.09731379793298, in 0.039470957999583334 s.
+Loss computed by CAFQA VQE is -5.253075529580627, in 0.03188279199821409 s.
+Loss computed by CAFQA VQE is -6.27573455848424, in 0.03578129201196134 s.
+Loss computed by CAFQA VQE is -5.2149852299089545, in 0.030858500002068467 s.
+Loss computed by CAFQA VQE is -5.20948496093218, in 0.04201937498874031 s.
+Loss computed by CAFQA VQE is -6.710580763644227, in 0.03962520901404787 s.
+Loss computed by CAFQA VQE is -6.156116114417493, in 0.03216033299395349 s.
+Loss computed by CAFQA VQE is -6.156116114417493, in 0.040838624991010875 s.
+Loss computed by CAFQA VQE is -6.4269232371609135, in 0.04217508299916517 s.
+Loss computed by CAFQA VQE is -4.4352821484183735, in 0.034910125003079884 s.
+Loss computed by CAFQA VQE is -4.566840583014958, in 0.044885625000461005 s.
+Loss computed by CAFQA VQE is -6.3039752733604235, in 0.02909158301190473 s.
+Loss computed by CAFQA VQE is -6.369236960414037, in 0.03380441699118819 s.
+Loss computed by CAFQA VQE is -6.433782871867372, in 0.0355396670056507 s.
+Loss computed by CAFQA VQE is -4.883064499132347, in 0.040952041003038175 s.
+Loss computed by CAFQA VQE is -4.8019407814805835, in 0.03520254099566955 s.
+Loss computed by CAFQA VQE is -4.76302285157673, in 0.03535162500338629 s.
+Loss computed by CAFQA VQE is -5.208710179304557, in 0.032739625006797723 s.
+Loss computed by CAFQA VQE is -5.257645121589201, in 0.04275429200788494 s.
+Loss computed by CAFQA VQE is -4.774404922396055, in 0.036389708999195136 s.
+Loss computed by CAFQA VQE is -3.0756382996902945, in 0.034151707994169556 s.
+Loss computed by CAFQA VQE is -6.214674103358686, in 0.038568415999179706 s.
+Loss computed by CAFQA VQE is -4.377198451181274, in 0.0303472090017749 s.
+Loss computed by CAFQA VQE is -2.7144481824192526, in 0.033549625004525296 s.
+Loss computed by CAFQA VQE is -4.7259475418027215, in 0.03869962500175461 s.
+Loss computed by CAFQA VQE is -4.791435339032125, in 0.03558049999992363 s.
+Loss computed by CAFQA VQE is -3.191835707953501, in 0.03334879101021215 s.
+Loss computed by CAFQA VQE is -2.8351811798550233, in 0.03561954200267792 s.
+Loss computed by CAFQA VQE is -4.103156838105287, in 0.040136791998520494 s.
+Loss computed by CAFQA VQE is -3.2602158506367434, in 0.03277604200411588 s.
+Loss computed by CAFQA VQE is -5.134203582515932, in 0.029575125008705072 s.
+Loss computed by CAFQA VQE is -2.7144481824192526, in 0.03362341699539684 s.
+Loss computed by CAFQA VQE is -4.716729822684712, in 0.03513737500179559 s.
+Loss computed by CAFQA VQE is -4.777931081217517, in 0.03513654200651217 s.
+Loss computed by CAFQA VQE is -4.555457858310488, in 0.04093200000352226 s.
+Loss computed by CAFQA VQE is -4.804852387873829, in 0.050056541003868915 s.
+Loss computed by CAFQA VQE is -2.61964651609078, in 0.02905841601022985 s.
+Loss computed by CAFQA VQE is -4.802831212899097, in 0.03319162499974482 s.
+Loss computed by CAFQA VQE is -3.5265579619883547, in 0.037691207995521836 s.
+x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,value,Timestamp
+1,1,3,1,1,2,0,0,2,0,2,1,2,0,1,2,-5.067721324367781,65
+0,0,1,1,3,2,2,2,1,1,3,3,0,1,2,0,-6.2657010153425325,108
+0,3,3,3,1,0,2,1,1,1,2,2,0,3,1,3,-4.830831204560159,150
+1,0,1,3,0,1,1,1,0,3,1,3,1,1,3,2,-4.802492110963975,192
+0,3,1,0,2,3,3,1,0,1,2,2,0,1,0,0,-6.395475850210792,226
+3,0,0,3,3,1,1,3,1,3,3,1,1,0,2,0,-4.8321036469455105,270
+3,3,3,1,0,2,0,0,1,3,0,2,3,0,0,0,-6.556105581304122,309
+0,3,3,0,3,2,1,2,0,2,3,3,0,1,3,2,-6.417297771864936,347
+2,1,3,1,2,2,0,3,0,1,1,2,2,1,2,3,-3.3659936948649816,389
+2,1,1,0,2,1,0,2,3,0,0,0,0,2,3,0,-4.762629462199278,421
+3,1,3,1,3,0,1,3,0,2,0,2,3,1,0,2,-4.787922983258312,459
+0,3,0,0,2,3,3,1,1,3,2,3,1,0,3,1,-4.802892309112094,498
+1,1,0,3,0,0,3,1,0,2,0,3,2,2,0,1,-4.714820323554589,534
+3,1,3,3,2,2,3,3,2,2,3,3,3,3,2,3,-4.755831682932456,580
+2,2,1,3,1,1,1,2,2,3,3,0,1,0,2,0,-6.364714009371184,619
+2,3,2,0,2,3,0,0,0,2,1,1,0,2,1,0,-3.180800676447205,653
+3,3,3,0,3,3,1,2,2,0,0,3,1,3,0,3,-4.836622764558474,691
+1,0,2,2,1,0,1,0,3,1,3,1,2,1,1,0,-4.818326805663585,732
+1,1,2,3,1,2,3,2,3,3,2,0,2,3,2,2,-4.8123988943980205,775
+2,1,0,2,3,3,1,2,3,3,1,2,3,3,1,2,-5.077731052257974,816
+0,0,0,0,3,2,0,0,1,2,3,1,3,3,3,0,-4.555457869169631,871
+1,1,0,2,3,3,3,1,2,1,3,3,3,0,2,2,-4.774404922396055,914
+1,0,1,1,3,2,1,0,2,3,3,3,0,1,1,1,-4.5855828558907685,956
+2,1,1,0,3,2,3,2,2,2,1,2,3,1,0,3,-6.40332113479926,994
+3,2,3,0,1,3,1,3,1,0,2,3,0,1,3,1,-4.793566703053489,1033
+1,3,2,1,1,2,1,1,1,1,0,1,1,1,1,3,-4.818034820602216,1078
+1,3,2,1,0,3,3,0,2,3,1,1,1,3,3,1,-5.028552003847885,1121
+2,1,0,0,3,0,1,3,2,0,3,2,1,2,1,3,-6.2757345367659525,1155
+2,1,1,1,3,1,3,3,3,0,1,0,3,0,1,1,-5.155065241862506,1196
+0,1,0,2,2,3,2,3,0,0,3,2,0,0,3,2,-6.571494281528516,1228
+3,2,1,2,0,0,0,0,1,2,2,0,2,3,3,1,-5.089919508487082,1263
+0,2,3,0,1,2,3,1,3,2,0,2,1,2,1,2,-4.7164631790769675,1299
+1,0,3,0,2,0,0,2,3,3,1,3,0,3,0,2,-4.99860466825074,1337
+3,1,1,0,2,0,2,0,3,3,1,3,1,0,1,2,-5.186572816257156,1380
+3,3,1,1,3,0,3,0,2,3,3,0,1,2,1,1,-4.942674317382712,1422
+3,0,3,3,0,1,0,0,1,0,2,1,0,3,3,0,-4.566840583014958,1458
+3,2,3,0,1,1,1,2,0,2,2,1,3,3,2,2,-4.3843378687638825,1495
+0,2,1,0,3,2,0,3,1,2,3,0,0,1,2,0,-5.095688512481164,1529
+1,1,1,0,3,2,1,3,2,2,2,2,0,2,0,0,-4.685127844485828,1564
+0,3,3,3,3,0,0,3,1,2,0,0,2,3,1,3,-4.722902516813505,1600
+3,1,3,3,0,3,0,3,1,3,2,0,0,1,2,0,-5.168064472249121,1639
+2,3,0,3,3,3,3,2,3,3,0,2,1,1,2,0,-4.777025451848635,1677
+0,0,0,3,1,0,3,2,2,3,3,0,1,0,2,2,-3.308033116216707,1711
+1,2,3,0,0,2,0,1,3,0,3,3,2,1,2,0,-4.393395336642204,1749
+2,3,2,2,3,0,1,1,1,2,0,1,3,1,3,2,-4.889542666371355,1786
+0,1,2,2,0,2,3,1,1,2,1,1,2,3,0,1,-4.777722079549328,1824
+0,3,0,1,3,1,2,1,0,2,0,0,1,3,3,3,-6.4307862088994,1858
+0,1,3,2,3,3,2,1,3,0,2,2,0,3,1,3,-4.772571929394685,1895
+1,0,3,1,2,2,1,1,0,1,0,1,2,1,2,3,-4.829526403102987,1934
+2,1,1,2,0,0,0,3,3,1,0,2,3,1,2,2,-4.8482334588980045,1972
+0,1,1,2,2,1,1,1,0,0,2,3,3,1,0,1,-6.425392472282562,2008
+2,2,1,2,1,2,3,3,3,3,0,0,3,0,1,3,-4.3843378687638825,2044
+2,3,2,3,1,3,1,2,2,0,1,1,3,0,1,3,-6.566161421591836,2084
+3,0,2,3,0,0,3,0,2,0,3,1,1,2,2,0,-4.991349030109291,2119
+0,2,1,0,2,1,0,2,1,3,1,1,1,2,2,3,-5.193271862019142,2159
+2,1,3,2,0,0,1,0,0,2,2,1,3,3,1,1,-3.184856269028151,2195
+0,0,2,3,2,2,3,2,3,1,3,1,1,3,0,2,-5.121286308918933,2235
+2,0,2,1,2,3,2,1,1,1,3,0,1,3,1,3,-4.750210746786767,2273
+3,0,3,0,1,1,2,3,0,0,1,1,1,2,3,0,-4.915266617674389,2330
+2,0,1,2,0,0,3,2,3,1,0,1,3,0,1,3,-4.805408456741622,2369
+0,3,0,3,1,1,0,1,0,0,0,3,0,1,0,1,-6.430519022337929,2401
+1,1,3,1,0,0,1,2,1,1,2,0,0,1,2,3,-5.09731379793298,2442
+0,0,0,2,1,3,3,1,3,0,1,2,1,3,0,1,-5.253075529580627,2475
+0,0,1,1,3,2,3,0,0,3,2,3,3,2,3,3,-6.27573455848424,2512
+0,2,0,3,1,1,3,3,0,1,0,2,0,3,2,1,-5.2149852299089545,2544
+1,1,2,1,2,2,2,1,1,0,1,1,2,1,0,3,-5.20948496093218,2587
+2,1,1,0,2,2,2,1,2,1,1,3,2,1,1,0,-6.710580763644227,2628
+3,2,2,0,3,1,1,3,2,0,0,1,0,1,2,2,-6.156116114417493,2662
+1,3,3,1,1,1,2,2,3,2,1,0,2,0,0,0,-6.156116114417493,2704
+3,0,0,2,2,2,1,2,2,3,0,1,0,0,3,1,-6.4269232371609135,2748
+3,2,3,2,1,3,3,2,3,0,0,0,1,1,2,3,-4.4352821484183735,2784
+1,3,2,1,3,3,2,0,1,3,1,3,3,3,3,2,-4.566840583014958,2830
+3,0,2,2,2,0,2,1,0,0,2,2,2,2,0,1,-6.3039752733604235,2860
+2,3,0,3,3,2,0,3,2,0,1,2,3,0,2,1,-6.369236960414037,2896
+2,3,3,0,1,0,3,3,2,2,1,0,2,2,3,3,-6.433782871867372,2932
+2,1,1,1,2,0,1,1,1,3,0,2,3,3,1,3,-4.883064499132347,2975
+1,1,0,3,3,0,0,0,1,1,0,2,2,1,0,0,-4.8019407814805835,3011
+0,2,1,0,1,1,0,0,1,1,3,0,2,1,2,3,-4.76302285157673,3048
+1,0,1,1,2,0,0,3,2,0,0,1,2,3,0,0,-5.208710179304557,3082
+2,3,1,2,2,2,0,1,1,3,1,1,2,2,1,3,-5.257645121589201,3126
+2,2,0,2,0,0,3,1,1,3,1,3,3,1,0,2,-4.774404922396055,3164
+2,0,1,2,3,2,3,0,0,1,3,2,2,1,0,1,-3.0756382996902945,3199
+0,3,2,1,1,0,3,2,0,3,3,1,1,3,1,2,-6.214674103358686,3239
+3,0,3,0,0,1,1,0,3,0,2,2,0,0,0,2,-4.377198451181274,3270
+3,0,3,3,0,2,2,2,0,0,1,0,0,1,3,3,-2.7144481824192526,3305
+0,0,3,1,2,1,3,3,3,1,0,1,2,2,3,3,-4.7259475418027215,3345
+1,1,1,0,2,3,2,1,0,0,0,3,0,1,2,2,-4.791435339032125,3382
+2,0,3,1,2,0,1,0,0,1,1,2,0,2,2,0,-3.191835707953501,3417
+2,0,0,3,1,2,3,2,0,1,1,3,2,1,2,0,-2.8351811798550233,3453
+3,2,2,1,0,1,0,0,1,1,3,3,3,2,0,1,-4.103156838105287,3495
+3,0,0,0,2,2,0,0,3,2,2,3,1,1,2,3,-3.2602158506367434,3529
+1,2,3,2,0,3,0,3,0,0,3,0,0,3,0,0,-5.134203582515932,3560
+3,2,2,0,2,2,3,0,2,0,2,1,2,0,0,2,-2.7144481824192526,3595
+1,3,2,2,2,0,1,1,2,0,2,3,0,3,3,3,-4.716729822684712,3632
+1,1,3,0,3,1,2,2,2,0,0,1,0,0,2,3,-4.777931081217517,3668
+1,3,3,1,3,0,1,0,0,2,3,3,2,2,2,3,-4.555457858310488,3710
+3,0,0,3,2,0,0,0,0,3,3,0,3,0,3,0,-4.804852387873829,3762
+1,0,2,0,1,2,1,0,2,1,0,0,0,3,0,3,-2.61964651609078,3792
+1,0,0,3,3,0,3,0,3,0,3,2,0,0,2,1,-4.802831212899097,3827
+2,0,3,3,1,1,2,1,0,2,3,1,0,2,1,1,-3.5265579619883547,3866
+
+
+End of doe/resume phase, the number of evaluated configurations is: 100
+
+End of DoE - Time     3.9618 sec
+Starting optimization iteration 1
+End of training - Time       0.02 sec
+Model fitting time     0.0192 sec
+Total RS time     0.0597 sec
+{'application_name': 'cafqa_optimization', 'optimization_objectives': ['value'], 'design_of_experiment': {'number_of_samples': 100, 'doe_type': 'random sampling'}, 'optimization_iterations': 100, 'models': {'model': 'random_forest', 'number_of_trees': 10, 'max_features': 0.5, 'bootstrap': False, 'min_samples_split': 5}, 'input_parameters': {'x0': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x1': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x2': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x3': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x4': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x5': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x6': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x7': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x8': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x9': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x10': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x11': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x12': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x13': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x14': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x15': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}}, 'print_best': True, 'print_posterior_best': True, 'log_file': 'cafqa_example_out//hypermapper_log.log', 'output_data_file': 'cafqa_example_out//hypermapper_output.csv', 'verbose_logging': False, 'profiling': False, 'noise': True, 'profiling_file': 'profiles/profile.csv', 'append_profiles': False, 'number_of_cpus': 0, 'max_number_of_predictions': 1000000, 'time_budget': -1, 'number_of_repetitions': 1, 'hypermapper_mode': {'mode': 'default'}, 'output_image': {'output_image_pdf_file': 'output_pareto.pdf', 'image_xlog': False, 'image_ylog': False}, 'feasible_output': {'name': 'Valid', 'true_value': 'True', 'false_value': 'False', 'enable_feasible_predictor': False, 'enable_feasible_predictor_grid_search_on_recall_and_precision': False, 'feasible_predictor_grid_search_validation_file': '/home/lnardi/spatial-lang/results/apps_classification_test_set/BlackScholes.csv'}, 'timestamp': 'Timestamp', 'evaluations_per_optimization_iteration': 1, 'run_directory': '.', 'output_pareto_file': 'output_pareto.csv', 'acquisition_function': 'EI', 'scalarization_method': 'tchebyshev', 'weight_sampling': 'flat', 'bounding_box_limits': [0, 1], 'optimization_method': 'bayesian_optimization', 'local_search_starting_points': 10, 'local_search_random_points': 10000, 'local_search_evaluation_limit': -1, 'scalarization_key': 'scalarization', 'local_search_scalarization_weights': [1], 'print_parameter_importance': False, 'normalize_inputs': False, 'epsilon_greedy_threshold': 0.1, 'prior_method': 'pibo', 'prior_beta': -1, 'prior_floor': 1e-06, 'model_posterior_weight': 10, 'model_good_quantile': 0.05, 'prior_estimation_file': 'samples.csv', 'prior_estimation_quantile': 0.1, 'estimate_multivariate_priors': False, 'resume_optimization': False, 'resume_optimization_data': 'output_samples.csv', 'bandwidth_parameter': 0, 'bandwidth_n_factor': 100, 'prior_limit_estimation_points': 10000, 'posterior_computation_lower_limit': 1e-08, 'custom_gaussian_prior_means': [0], 'custom_gaussian_prior_stds': [-1], 'acquisition_function_optimizer': 'local_search', 'evolution_population_size': 50, 'evolution_generations': 150, 'mutation_rate': 1, 'evolution_crossover': False, 'regularize_evolution': False, 'batch_size': 2, 'cma_es_sigma': 0.2, 'cma_es_starting_points': 1, 'cma_es_random_points': 10000}
+Design of experiment phase, number of new doe samples = 100 .......
+Loss computed by CAFQA VQE is -2.8351811798550233, in 0.032335791998775676 s.
+Loss computed by CAFQA VQE is -1.9806581766181823, in 0.04616295800951775 s.
+Loss computed by CAFQA VQE is -3.1492027678376298, in 0.059918084007222205 s.
+Loss computed by CAFQA VQE is -4.771450428393136, in 0.03258937499776948 s.
+Loss computed by CAFQA VQE is -4.877944764041439, in 0.032710041996324435 s.
+Loss computed by CAFQA VQE is -5.518174180963303, in 0.04150050001044292 s.
+Loss computed by CAFQA VQE is -6.40332113479926, in 0.03583404100209009 s.
+Loss computed by CAFQA VQE is -4.854596974558378, in 0.03861925000092015 s.
+Loss computed by CAFQA VQE is -4.837818220977228, in 0.04325199998856988 s.
+Loss computed by CAFQA VQE is -4.368140983302952, in 0.035161459003575146 s.
+Loss computed by CAFQA VQE is -4.835098360240936, in 0.041046875005122274 s.
+Loss computed by CAFQA VQE is -4.497540298478484, in 0.033367084004567005 s.
+Loss computed by CAFQA VQE is -3.184856269028151, in 0.03424333399743773 s.
+Loss computed by CAFQA VQE is -4.781500277439758, in 0.03522700000030454 s.
+Loss computed by CAFQA VQE is -4.749292522974814, in 0.03203724999912083 s.
+Loss computed by CAFQA VQE is -4.714171128651159, in 0.043510792005690746 s.
+Loss computed by CAFQA VQE is -3.1972105357127463, in 0.034527625000919215 s.
+Loss computed by CAFQA VQE is -4.829344581541294, in 0.03577004199905787 s.
+Loss computed by CAFQA VQE is -3.2123985850567807, in 0.03592512500472367 s.
+Loss computed by CAFQA VQE is -4.845901172858394, in 0.039007708997814916 s.
+Loss computed by CAFQA VQE is -4.3843378687638825, in 0.03953670799091924 s.
+Loss computed by CAFQA VQE is -5.193271862019142, in 0.04050762500264682 s.
+Loss computed by CAFQA VQE is -4.8123988943980205, in 0.03768108300573658 s.
+Loss computed by CAFQA VQE is -4.817089281724648, in 0.07155966699065175 s.
+Loss computed by CAFQA VQE is -3.454984463098793, in 0.04033795799477957 s.
+Loss computed by CAFQA VQE is -6.27573455848424, in 0.0276183329988271 s.
+Loss computed by CAFQA VQE is -3.1877801153725547, in 0.03695404100290034 s.
+Loss computed by CAFQA VQE is -3.540379050890086, in 0.03580524999415502 s.
+Loss computed by CAFQA VQE is -6.55151920633517, in 0.03495516699331347 s.
+Loss computed by CAFQA VQE is -6.722980705156727, in 0.033420667008613236 s.
+Loss computed by CAFQA VQE is -4.699154522992819, in 0.03250412500347011 s.
+Loss computed by CAFQA VQE is -4.892226116991596, in 0.03994445799617097 s.
+Loss computed by CAFQA VQE is -6.242914839953158, in 0.03818287501053419 s.
+Loss computed by CAFQA VQE is -4.3854092322512646, in 0.035120208995067514 s.
+Loss computed by CAFQA VQE is -4.750835845029314, in 0.03325983299873769 s.
+Loss computed by CAFQA VQE is -6.556105581304122, in 0.043431332989712246 s.
+Loss computed by CAFQA VQE is -3.1182716975935008, in 0.045619458993314765 s.
+Loss computed by CAFQA VQE is -4.497540298478484, in 0.03720733299269341 s.
+Loss computed by CAFQA VQE is -6.242914839953158, in 0.033309124992229044 s.
+Loss computed by CAFQA VQE is -6.2593246883595555, in 0.03400191699620336 s.
+Loss computed by CAFQA VQE is -3.308033116216707, in 0.03240458300570026 s.
+Loss computed by CAFQA VQE is -4.752750330227762, in 0.039673499995842576 s.
+Loss computed by CAFQA VQE is -5.098958584896588, in 0.03589266700146254 s.
+Loss computed by CAFQA VQE is -5.116083624809651, in 0.03451416599273216 s.
+Loss computed by CAFQA VQE is -6.287565673544874, in 0.03352758300025016 s.
+Loss computed by CAFQA VQE is -4.808434850316491, in 0.038239125002291985 s.
+Loss computed by CAFQA VQE is -6.4307862088994, in 0.03389716699894052 s.
+Loss computed by CAFQA VQE is -2.8351811798550233, in 0.039067582998541184 s.
+Loss computed by CAFQA VQE is -4.590918516962201, in 0.06483333300275262 s.
+Loss computed by CAFQA VQE is -7.459014456414227, in 0.03641912499733735 s.
+Loss computed by CAFQA VQE is -5.027884446788107, in 0.03562958299880847 s.
+Loss computed by CAFQA VQE is -4.828300371651908, in 0.03638725000200793 s.
+Loss computed by CAFQA VQE is -4.715285352292126, in 0.03644091699970886 s.
+Loss computed by CAFQA VQE is -4.742916195991837, in 0.02808691599057056 s.
+Loss computed by CAFQA VQE is -4.836983983702039, in 0.03822362500068266 s.
+Loss computed by CAFQA VQE is -6.410854768054794, in 0.034714207999059 s.
+Loss computed by CAFQA VQE is -4.793566703053489, in 0.03311829200538341 s.
+Loss computed by CAFQA VQE is -6.2657010153425325, in 0.033159375001559965 s.
+Loss computed by CAFQA VQE is -6.054227555108511, in 0.03429445800429676 s.
+Loss computed by CAFQA VQE is -4.770178005922283, in 0.03679579199524596 s.
+Loss computed by CAFQA VQE is -4.946162655775209, in 0.030567916997824796 s.
+Loss computed by CAFQA VQE is -4.901016912574818, in 0.034765624994179234 s.
+Loss computed by CAFQA VQE is -5.206127508826778, in 0.04017875000135973 s.
+Loss computed by CAFQA VQE is -4.4262246805400505, in 0.038030499999877065 s.
+Loss computed by CAFQA VQE is -4.816745422087676, in 0.03971516700403299 s.
+Loss computed by CAFQA VQE is -4.782181029765882, in 0.035366541997063905 s.
+Loss computed by CAFQA VQE is -5.071768914438296, in 0.03462587500689551 s.
+Loss computed by CAFQA VQE is -2.4982622721257273, in 0.027759374992456287 s.
+Loss computed by CAFQA VQE is -5.294747773113141, in 0.043177166997338645 s.
+Loss computed by CAFQA VQE is -4.832770652427627, in 0.03900804099976085 s.
+Loss computed by CAFQA VQE is -3.5265579619883547, in 0.03832074999809265 s.
+Loss computed by CAFQA VQE is -6.354048971862776, in 0.02980570899671875 s.
+Loss computed by CAFQA VQE is -4.873134452217695, in 0.03788891700969543 s.
+Loss computed by CAFQA VQE is -4.772946953217636, in 0.037658708009985276 s.
+Loss computed by CAFQA VQE is -4.799317625344306, in 0.03567833299166523 s.
+Loss computed by CAFQA VQE is -4.808291723923059, in 0.040533749997848645 s.
+Loss computed by CAFQA VQE is -4.409592222103134, in 0.03258412500144914 s.
+Loss computed by CAFQA VQE is -4.829526403102987, in 0.037090124998940155 s.
+Loss computed by CAFQA VQE is -3.8704875383167683, in 0.03877250000368804 s.
+Loss computed by CAFQA VQE is -5.096292154928248, in 0.03314749999844935 s.
+Loss computed by CAFQA VQE is 0.7937658163799926, in 0.029585917000076734 s.
+Loss computed by CAFQA VQE is -4.6958406862465765, in 0.04052187499473803 s.
+Loss computed by CAFQA VQE is -4.83664341022649, in 0.03647037500923034 s.
+Loss computed by CAFQA VQE is -4.72402092183432, in 0.03850937500828877 s.
+Loss computed by CAFQA VQE is -2.7144481824192526, in 0.03267237500404008 s.
+Loss computed by CAFQA VQE is -6.4178690677941574, in 0.06192029199155513 s.
+Loss computed by CAFQA VQE is -3.001267861776479, in 0.030942583005526103 s.
+Loss computed by CAFQA VQE is -6.429070225846404, in 0.035358333989279345 s.
+Loss computed by CAFQA VQE is -5.040621394285187, in 0.0412562080018688 s.
+Loss computed by CAFQA VQE is -5.1875798752719895, in 0.040365499997278675 s.
+Loss computed by CAFQA VQE is -7.703734742577579, in 0.027504749989020638 s.
+Loss computed by CAFQA VQE is -4.827398983996257, in 0.03717116599727888 s.
+Loss computed by CAFQA VQE is -6.435763734006912, in 0.03646462500910275 s.
+Loss computed by CAFQA VQE is -4.791435339032125, in 0.036818708991631866 s.
+Loss computed by CAFQA VQE is -4.3507007602208905, in 0.03151050000451505 s.
+Loss computed by CAFQA VQE is -3.3824035541305224, in 0.0317276660061907 s.
+Loss computed by CAFQA VQE is -3.622054704199314, in 0.029641958011779934 s.
+Loss computed by CAFQA VQE is -4.359083515424629, in 0.03344174999801908 s.
+Loss computed by CAFQA VQE is -4.92228832189401, in 0.037015708003309555 s.
+Loss computed by CAFQA VQE is -6.156116114417493, in 0.0291697920038132 s.
+x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,value,Timestamp
+0,0,2,3,2,3,3,3,1,2,0,0,0,1,0,3,-2.8351811798550233,43
+1,1,1,1,2,2,2,2,3,1,1,2,1,2,1,1,-1.9806581766181823,91
+2,2,2,1,0,0,3,3,0,1,1,0,1,3,0,1,-3.1492027678376298,152
+3,3,2,3,0,0,0,3,2,0,3,0,0,1,3,0,-4.771450428393136,186
+1,1,0,1,0,1,3,0,1,0,0,2,2,0,2,0,-4.877944764041439,220
+1,1,0,1,2,2,3,3,3,1,3,1,0,1,0,0,-5.518174180963303,262
+0,1,1,2,1,0,3,0,0,2,1,3,1,3,3,1,-6.40332113479926,300
+1,1,3,2,1,1,0,0,1,0,2,3,1,1,3,1,-4.854596974558378,339
+1,1,0,3,1,1,1,3,3,3,2,1,2,2,3,2,-4.837818220977228,384
+1,0,3,0,0,1,1,2,2,2,1,2,1,1,1,2,-4.368140983302952,421
+2,3,0,3,2,3,3,1,3,1,3,3,1,2,0,2,-4.835098360240936,463
+1,2,0,2,3,1,3,0,3,2,3,0,0,1,0,1,-4.497540298478484,497
+0,1,3,1,3,0,2,1,2,0,2,2,1,2,3,2,-3.184856269028151,533
+3,0,3,1,3,2,3,2,0,3,0,0,2,1,1,1,-4.781500277439758,569
+0,2,1,0,1,1,1,1,3,2,2,0,2,3,2,0,-4.749292522974814,602
+3,1,1,2,1,2,3,2,2,1,3,3,3,1,2,1,-4.714171128651159,647
+0,3,3,2,1,1,3,2,2,0,0,1,3,1,2,0,-3.1972105357127463,683
+2,3,3,2,1,2,1,0,1,0,2,2,2,0,0,1,-4.829344581541294,720
+2,0,1,1,2,2,1,3,0,3,0,0,0,3,0,3,-3.2123985850567807,757
+0,0,2,3,0,3,2,3,1,3,1,2,3,1,0,3,-4.845901172858394,798
+1,2,1,0,1,0,2,3,3,0,1,1,3,1,0,3,-4.3843378687638825,838
+1,2,1,3,0,2,1,1,0,0,2,3,2,1,2,3,-5.193271862019142,880
+2,3,1,2,1,0,0,2,1,2,1,2,1,0,2,2,-4.8123988943980205,920
+0,1,1,3,3,1,3,3,1,2,2,0,0,3,3,1,-4.817089281724648,993
+3,1,2,2,2,0,1,3,3,1,1,2,0,3,3,1,-3.454984463098793,1034
+0,0,0,3,3,0,2,2,3,2,0,2,0,0,1,0,-6.27573455848424,1063
+2,1,3,0,0,1,3,3,0,3,3,3,2,0,2,0,-3.1877801153725547,1101
+0,3,0,1,2,0,1,2,2,1,0,3,3,3,2,2,-3.540379050890086,1138
+2,2,1,2,2,2,2,0,2,2,2,1,2,1,3,2,-6.55151920633517,1175
+2,2,1,2,3,2,3,3,2,1,0,2,3,1,0,0,-6.722980705156727,1209
+2,3,0,0,3,1,2,1,1,2,2,2,3,0,0,3,-4.699154522992819,1243
+3,1,1,3,0,2,0,1,1,0,0,3,3,3,1,2,-4.892226116991596,1284
+2,3,0,1,1,3,3,2,2,0,3,1,2,3,1,3,-6.242914839953158,1323
+1,1,2,3,0,0,1,3,3,0,1,0,0,3,3,0,-4.3854092322512646,1360
+1,1,1,0,0,0,0,3,1,2,2,0,1,0,1,3,-4.750835845029314,1394
+3,2,3,1,2,1,2,2,0,1,1,1,2,2,2,2,-6.556105581304122,1439
+3,3,1,3,3,0,2,2,1,3,3,3,1,2,2,2,-3.1182716975935008,1485
+0,0,3,2,1,1,2,2,3,2,1,2,2,3,2,2,-4.497540298478484,1524
+2,1,0,0,2,3,2,3,2,3,0,2,2,0,2,3,-6.242914839953158,1558
+0,2,2,1,1,1,2,1,1,0,0,3,3,3,0,0,-6.2593246883595555,1594
+1,0,0,2,1,2,0,0,2,3,2,3,1,0,2,0,-3.308033116216707,1627
+3,1,1,3,0,1,1,3,0,2,0,3,2,3,0,0,-4.752750330227762,1668
+2,3,0,2,0,2,1,2,1,3,1,2,3,0,0,2,-5.098958584896588,1706
+1,2,3,2,1,2,0,2,1,3,2,0,0,3,0,0,-5.116083624809651,1741
+2,2,1,1,3,1,1,1,2,0,2,2,0,2,2,0,-6.287565673544874,1776
+2,1,2,3,1,3,0,0,1,1,3,2,3,1,0,1,-4.808434850316491,1815
+2,1,2,2,2,1,0,1,2,0,2,1,1,1,1,0,-6.4307862088994,1850
+0,3,2,1,2,3,2,2,2,3,0,1,1,1,1,2,-2.8351811798550233,1891
+3,3,3,1,3,2,3,3,2,1,3,2,0,3,3,1,-4.590918516962201,1957
+0,1,3,1,3,0,0,2,0,0,3,3,1,1,2,1,-7.459014456414227,1994
+0,3,0,2,1,2,3,0,3,3,2,2,3,2,3,3,-5.027884446788107,2031
+3,3,1,2,3,3,1,3,2,0,1,0,1,0,3,2,-4.828300371651908,2068
+1,1,0,1,0,2,3,3,0,3,1,2,0,0,3,2,-4.715285352292126,2106
+2,1,0,0,0,0,3,1,3,0,0,2,0,1,1,0,-4.742916195991837,2135
+3,0,1,3,1,2,2,3,1,0,2,3,0,1,1,2,-4.836983983702039,2174
+2,3,2,2,0,3,0,0,2,3,2,3,3,3,3,1,-6.410854768054794,2210
+3,0,2,3,0,0,0,0,0,3,3,2,2,1,2,0,-4.793566703053489,2244
+3,0,0,1,0,1,2,2,0,1,0,3,2,3,3,0,-6.2657010153425325,2279
+1,2,2,0,0,1,1,0,1,3,0,3,3,0,3,2,-6.054227555108511,2314
+3,3,1,0,1,3,0,3,3,1,0,0,0,3,3,3,-4.770178005922283,2352
+0,1,2,0,1,0,0,3,3,0,0,1,2,0,3,3,-4.946162655775209,2384
+1,3,3,0,0,2,3,0,0,1,3,0,1,0,3,0,-4.901016912574818,2419
+3,3,3,3,0,0,2,1,0,2,3,3,2,0,3,1,-5.206127508826778,2461
+3,0,1,3,0,3,0,3,3,3,0,3,0,3,2,0,-4.4262246805400505,2500
+3,3,1,0,3,3,3,3,2,0,1,3,2,1,3,1,-4.816745422087676,2541
+3,1,3,3,0,0,0,1,0,0,3,0,1,2,3,2,-4.782181029765882,2578
+2,2,3,0,3,0,2,3,1,0,3,2,2,0,1,2,-5.071768914438296,2613
+2,2,2,2,3,1,1,2,0,0,2,0,1,1,0,3,-2.4982622721257273,2642
+3,1,3,3,3,3,0,1,1,2,3,1,3,0,1,3,-5.294747773113141,2687
+0,3,3,2,3,2,3,1,1,0,3,3,0,2,3,1,-4.832770652427627,2727
+2,1,1,1,2,3,3,0,0,1,2,1,2,1,0,1,-3.5265579619883547,2766
+0,1,1,2,0,0,3,1,0,2,0,0,2,3,3,3,-6.354048971862776,2797
+3,1,3,2,3,0,0,2,0,3,1,2,3,1,3,0,-4.873134452217695,2836
+3,0,1,1,2,1,0,2,3,2,2,2,1,3,1,2,-4.772946953217636,2874
+1,1,3,0,0,3,2,3,2,0,1,0,2,3,3,2,-4.799317625344306,2911
+3,3,1,3,3,1,0,1,0,3,2,1,3,2,2,0,-4.808291723923059,2953
+3,0,1,0,1,0,0,2,0,1,2,2,3,2,1,3,-4.409592222103134,2986
+3,2,1,3,3,2,1,1,3,1,2,0,0,3,0,0,-4.829526403102987,3025
+2,0,3,1,0,1,0,0,3,3,3,1,0,1,3,3,-3.8704875383167683,3065
+2,1,0,1,0,2,1,0,3,2,2,1,1,0,0,0,-5.096292154928248,3099
+0,2,0,1,3,2,0,0,2,0,0,3,2,2,2,1,0.7937658163799926,3129
+3,3,3,2,3,0,1,1,1,1,3,2,0,3,0,2,-4.6958406862465765,3171
+3,3,0,1,2,1,1,1,3,0,0,2,1,1,3,3,-4.83664341022649,3208
+3,3,0,2,3,3,1,0,1,2,3,3,3,0,1,1,-4.72402092183432,3248
+1,2,2,3,1,1,0,1,2,0,2,2,0,0,1,1,-2.7144481824192526,3282
+2,2,1,2,2,0,0,1,2,1,1,0,3,2,1,0,-6.4178690677941574,3345
+0,1,2,3,1,1,0,2,2,2,0,2,0,1,2,0,-3.001267861776479,3377
+2,3,3,0,2,2,3,0,2,0,3,2,2,2,2,1,-6.429070225846404,3414
+1,0,3,1,2,1,0,1,3,1,3,2,2,2,3,2,-5.040621394285187,3456
+1,3,0,1,2,2,3,3,1,3,2,2,2,1,3,3,-5.1875798752719895,3498
+2,2,0,2,3,0,3,2,2,0,2,0,3,2,0,1,-7.703734742577579,3526
+2,0,2,1,2,1,0,3,3,1,1,1,3,0,3,0,-4.827398983996257,3564
+1,2,0,1,3,1,0,1,3,2,2,3,0,1,2,2,-6.435763734006912,3602
+0,1,1,1,0,2,3,1,3,0,0,1,0,3,2,1,-4.791435339032125,3640
+3,1,0,2,1,3,3,2,0,2,0,0,1,1,3,2,-4.3507007602208905,3672
+0,1,2,1,0,0,0,1,2,2,2,0,1,2,2,1,-3.3824035541305224,3705
+0,2,0,0,0,2,1,3,2,3,3,0,0,1,0,1,-3.622054704199314,3736
+3,0,3,2,3,0,2,2,1,0,2,0,0,1,3,3,-4.359083515424629,3771
+0,0,2,3,3,3,0,0,1,2,3,3,3,3,0,2,-4.92228832189401,3809
+3,0,0,2,0,2,3,2,2,2,0,3,0,0,0,0,-6.156116114417493,3840
+
+
+End of doe/resume phase, the number of evaluated configurations is: 100
+
+End of DoE - Time     3.9128 sec
+Starting optimization iteration 1
+End of training - Time       0.05 sec
+Model fitting time     0.0480 sec
+Total RS time     0.0587 sec
+{'application_name': 'cafqa_optimization', 'optimization_objectives': ['value'], 'design_of_experiment': {'number_of_samples': 100, 'doe_type': 'random sampling'}, 'optimization_iterations': 100, 'models': {'model': 'random_forest', 'number_of_trees': 10, 'max_features': 0.5, 'bootstrap': False, 'min_samples_split': 5}, 'input_parameters': {'x0': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x1': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x2': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x3': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x4': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x5': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x6': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x7': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x8': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x9': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x10': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x11': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x12': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x13': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x14': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x15': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}}, 'print_best': True, 'print_posterior_best': True, 'log_file': 'cafqa_example_out//hypermapper_log.log', 'output_data_file': 'cafqa_example_out//hypermapper_output.csv', 'verbose_logging': False, 'profiling': False, 'noise': True, 'profiling_file': 'profiles/profile.csv', 'append_profiles': False, 'number_of_cpus': 0, 'max_number_of_predictions': 1000000, 'time_budget': -1, 'number_of_repetitions': 1, 'hypermapper_mode': {'mode': 'default'}, 'output_image': {'output_image_pdf_file': 'output_pareto.pdf', 'image_xlog': False, 'image_ylog': False}, 'feasible_output': {'name': 'Valid', 'true_value': 'True', 'false_value': 'False', 'enable_feasible_predictor': False, 'enable_feasible_predictor_grid_search_on_recall_and_precision': False, 'feasible_predictor_grid_search_validation_file': '/home/lnardi/spatial-lang/results/apps_classification_test_set/BlackScholes.csv'}, 'timestamp': 'Timestamp', 'evaluations_per_optimization_iteration': 1, 'run_directory': '.', 'output_pareto_file': 'output_pareto.csv', 'acquisition_function': 'EI', 'scalarization_method': 'tchebyshev', 'weight_sampling': 'flat', 'bounding_box_limits': [0, 1], 'optimization_method': 'bayesian_optimization', 'local_search_starting_points': 10, 'local_search_random_points': 10000, 'local_search_evaluation_limit': -1, 'scalarization_key': 'scalarization', 'local_search_scalarization_weights': [1], 'print_parameter_importance': False, 'normalize_inputs': False, 'epsilon_greedy_threshold': 0.1, 'prior_method': 'pibo', 'prior_beta': -1, 'prior_floor': 1e-06, 'model_posterior_weight': 10, 'model_good_quantile': 0.05, 'prior_estimation_file': 'samples.csv', 'prior_estimation_quantile': 0.1, 'estimate_multivariate_priors': False, 'resume_optimization': False, 'resume_optimization_data': 'output_samples.csv', 'bandwidth_parameter': 0, 'bandwidth_n_factor': 100, 'prior_limit_estimation_points': 10000, 'posterior_computation_lower_limit': 1e-08, 'custom_gaussian_prior_means': [0], 'custom_gaussian_prior_stds': [-1], 'acquisition_function_optimizer': 'local_search', 'evolution_population_size': 50, 'evolution_generations': 150, 'mutation_rate': 1, 'evolution_crossover': False, 'regularize_evolution': False, 'batch_size': 2, 'cma_es_sigma': 0.2, 'cma_es_starting_points': 1, 'cma_es_random_points': 10000}
+Design of experiment phase, number of new doe samples = 100 .......
+Loss computed by CAFQA VQE is -5.086703376185314, in 0.04127395800605882 s.
+Loss computed by CAFQA VQE is -4.103156838105287, in 0.04378004198952112 s.
+Loss computed by CAFQA VQE is -4.7507668156545595, in 0.03817383300338406 s.
+Loss computed by CAFQA VQE is -6.4307862088994, in 0.03406937498948537 s.
+Loss computed by CAFQA VQE is -6.410854768054794, in 0.03272825000749435 s.
+Loss computed by CAFQA VQE is -5.188473952848755, in 0.046431958995526657 s.
+Loss computed by CAFQA VQE is -3.8350245394213993, in 0.03526362500269897 s.
+Loss computed by CAFQA VQE is -4.822068822503933, in 0.037129749995074235 s.
+Loss computed by CAFQA VQE is -3.0756382996902953, in 0.0415652920055436 s.
+Loss computed by CAFQA VQE is -4.732479000099973, in 0.041890749998856336 s.
+Loss computed by CAFQA VQE is -4.805694453049048, in 0.03835658299794886 s.
+Loss computed by CAFQA VQE is -3.1124205337639625, in 0.03658458399877418 s.
+Loss computed by CAFQA VQE is -4.805408456741622, in 0.0328792920045089 s.
+Loss computed by CAFQA VQE is -4.750895416199963, in 0.03721041700919159 s.
+Loss computed by CAFQA VQE is -4.808896795134119, in 0.03655625000828877 s.
+Loss computed by CAFQA VQE is -3.183634942626952, in 0.028449167002690956 s.
+Loss computed by CAFQA VQE is -6.2593246883595555, in 0.0340902079915395 s.
+Loss computed by CAFQA VQE is -6.396809054335819, in 0.036049792004632764 s.
+Loss computed by CAFQA VQE is -5.243247922795144, in 0.036358167009893805 s.
+Loss computed by CAFQA VQE is -6.556105570659707, in 0.034513624996179715 s.
+Loss computed by CAFQA VQE is -4.6958406862465765, in 0.03797449999547098 s.
+Loss computed by CAFQA VQE is -4.871936771266988, in 0.03419325000140816 s.
+Loss computed by CAFQA VQE is -3.3495838355994407, in 0.040362874991842546 s.
+Loss computed by CAFQA VQE is -5.2260202614152504, in 0.03235195801244117 s.
+Loss computed by CAFQA VQE is -3.0066426895357243, in 0.06378916700487025 s.
+Loss computed by CAFQA VQE is -6.428998946789509, in 0.036179874994559214 s.
+Loss computed by CAFQA VQE is -4.852772360538356, in 0.03115283400984481 s.
+Loss computed by CAFQA VQE is -2.9464044585724998, in 0.02987691700400319 s.
+Loss computed by CAFQA VQE is -6.367560694390173, in 0.03310862499347422 s.
+Loss computed by CAFQA VQE is -4.833183320846281, in 0.045108457998139784 s.
+Loss computed by CAFQA VQE is -4.864295131688145, in 0.04137625001021661 s.
+Loss computed by CAFQA VQE is -4.7164631790769675, in 0.04285754100419581 s.
+Loss computed by CAFQA VQE is -4.715044759310855, in 0.038715792004950345 s.
+Loss computed by CAFQA VQE is -4.350700760006161, in 0.03262437498779036 s.
+Loss computed by CAFQA VQE is -4.79474787016383, in 0.03759654199529905 s.
+Loss computed by CAFQA VQE is -4.827020847421638, in 0.03592279199801851 s.
+Loss computed by CAFQA VQE is -4.874906255548936, in 0.037427124989335425 s.
+Loss computed by CAFQA VQE is -4.4352821484183735, in 0.0330866669974057 s.
+Loss computed by CAFQA VQE is -4.813120039518093, in 0.036121125012869015 s.
+Loss computed by CAFQA VQE is -4.817089281724648, in 0.03493483299098443 s.
+Loss computed by CAFQA VQE is -3.6581882019814533, in 0.03491037500498351 s.
+Loss computed by CAFQA VQE is -4.778923033597234, in 0.03859020800155122 s.
+Loss computed by CAFQA VQE is -6.242914818234871, in 0.0324707919935463 s.
+Loss computed by CAFQA VQE is -4.778363572654431, in 0.03584374999627471 s.
+Loss computed by CAFQA VQE is -4.585582855676039, in 0.03343108300759923 s.
+Loss computed by CAFQA VQE is -6.608737099708371, in 0.028974708999157883 s.
+Loss computed by CAFQA VQE is -5.013861735218722, in 0.03730508299486246 s.
+Loss computed by CAFQA VQE is -4.4262246805400505, in 0.034708917009993456 s.
+Loss computed by CAFQA VQE is -4.790425771800205, in 0.037946541007841006 s.
+Loss computed by CAFQA VQE is -4.826739392200961, in 0.035767459005001 s.
+Loss computed by CAFQA VQE is -4.808896795134119, in 0.03940016700653359 s.
+Loss computed by CAFQA VQE is -6.5515191846168825, in 0.030303166990051977 s.
+Loss computed by CAFQA VQE is -6.568827851560176, in 0.037333542000851594 s.
+Loss computed by CAFQA VQE is -4.974391832805477, in 0.03904008299286943 s.
+Loss computed by CAFQA VQE is -4.3507007602208905, in 0.03057704199454747 s.
+Loss computed by CAFQA VQE is -5.0448244514511025, in 0.035017208007047884 s.
+Loss computed by CAFQA VQE is -4.350700760006161, in 0.03547808399889618 s.
+Loss computed by CAFQA VQE is -2.5593965320040932, in 0.029137624995200895 s.
+Loss computed by CAFQA VQE is -3.189080377116191, in 0.037841500001377426 s.
+Loss computed by CAFQA VQE is -6.723077755049379, in 0.037495541997486725 s.
+Loss computed by CAFQA VQE is -4.856174611505098, in 0.06592687500233296 s.
+Loss computed by CAFQA VQE is -4.7158934420572045, in 0.0389371250057593 s.
+Loss computed by CAFQA VQE is -4.991349030109291, in 0.04588450001028832 s.
+Loss computed by CAFQA VQE is -3.1918357079535014, in 0.033806167004513554 s.
+Loss computed by CAFQA VQE is -3.214963413598938, in 0.03587037499528378 s.
+Loss computed by CAFQA VQE is -5.20948496093218, in 0.04042224999284372 s.
+Loss computed by CAFQA VQE is -4.7164631790769675, in 0.03590670799894724 s.
+Loss computed by CAFQA VQE is -5.136775874339465, in 0.03410900000017136 s.
+Loss computed by CAFQA VQE is -6.27573455848424, in 0.03182104199368041 s.
+Loss computed by CAFQA VQE is -6.397317816933148, in 0.042296166997402906 s.
+Loss computed by CAFQA VQE is -3.904353399507866, in 0.03677629200683441 s.
+Loss computed by CAFQA VQE is -7.6636155453320765, in 0.031962959008524194 s.
+Loss computed by CAFQA VQE is -4.88960906025441, in 0.04188037500716746 s.
+Loss computed by CAFQA VQE is -2.8351811798550233, in 0.030236833001254126 s.
+Loss computed by CAFQA VQE is -6.556105560015293, in 0.029668874994968064 s.
+Loss computed by CAFQA VQE is -4.3843378687638825, in 0.04654270799073856 s.
+Loss computed by CAFQA VQE is -3.179500414703569, in 0.03350279200822115 s.
+Loss computed by CAFQA VQE is -3.7888118850075405, in 0.028510459000244737 s.
+Loss computed by CAFQA VQE is -5.038489361169557, in 0.03567304198804777 s.
+Loss computed by CAFQA VQE is -2.7144481824192526, in 0.03311779200157616 s.
+Loss computed by CAFQA VQE is -4.883719058551881, in 0.04085004200169351 s.
+Loss computed by CAFQA VQE is -4.778923033597234, in 0.037748875009128824 s.
+Loss computed by CAFQA VQE is -2.7144481824192526, in 0.035297417009132914 s.
+Loss computed by CAFQA VQE is -4.986638585560925, in 0.03280045901192352 s.
+Loss computed by CAFQA VQE is -4.796476985300465, in 0.04286600000341423 s.
+Loss computed by CAFQA VQE is -4.527665285199621, in 0.035622082999907434 s.
+Loss computed by CAFQA VQE is -4.850232240319778, in 0.04043433300103061 s.
+Loss computed by CAFQA VQE is -4.774404922396055, in 0.0369343329948606 s.
+Loss computed by CAFQA VQE is -4.826739392200961, in 0.03919741699064616 s.
+Loss computed by CAFQA VQE is -4.7841489316428625, in 0.037646750002750196 s.
+Loss computed by CAFQA VQE is -3.931363714778723, in 0.04301012499490753 s.
+Loss computed by CAFQA VQE is -5.335718227344724, in 0.02380237499892246 s.
+Loss computed by CAFQA VQE is -3.5265579619883547, in 0.03654458299570251 s.
+Loss computed by CAFQA VQE is -4.829526403102987, in 0.03521524999814574 s.
+Loss computed by CAFQA VQE is -4.842207500761843, in 0.03496433299733326 s.
+Loss computed by CAFQA VQE is -3.030748351595466, in 0.028112375002820045 s.
+Loss computed by CAFQA VQE is -6.644231862753486, in 0.06836579099763185 s.
+Loss computed by CAFQA VQE is -4.590918516962201, in 0.03871399999479763 s.
+Loss computed by CAFQA VQE is -4.811756707044815, in 0.04286429099738598 s.
+Loss computed by CAFQA VQE is -4.793652790434427, in 0.0350660840049386 s.
+x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,value,Timestamp
+0,3,0,3,2,0,1,0,3,1,2,3,3,1,1,3,-5.086703376185314,51
+3,2,2,3,0,2,1,2,1,1,3,3,3,3,2,2,-4.103156838105287,97
+3,2,1,3,2,2,1,2,3,2,0,0,1,2,1,0,-4.7507668156545595,137
+0,1,2,3,1,3,2,3,0,0,0,1,1,3,1,1,-6.4307862088994,172
+2,1,1,3,0,2,3,0,2,0,2,0,0,0,1,3,-6.410854768054794,206
+3,1,1,2,3,1,2,3,3,1,3,1,2,0,3,2,-5.188473952848755,254
+1,0,2,1,2,3,1,0,3,0,0,1,1,2,0,1,-3.8350245394213993,290
+0,1,2,1,0,3,1,3,1,3,2,2,0,3,2,3,-4.822068822503933,329
+3,1,3,3,1,1,2,0,0,2,3,2,2,3,2,1,-3.0756382996902953,372
+3,2,3,1,3,3,3,0,1,3,3,0,3,1,3,3,-4.732479000099973,416
+2,2,3,3,3,0,1,0,1,1,1,0,1,1,0,3,-4.805694453049048,455
+1,0,2,3,3,3,1,1,2,3,0,2,2,1,3,2,-3.1124205337639625,493
+1,2,3,2,0,1,0,0,0,1,1,0,0,3,3,0,-4.805408456741622,527
+3,3,2,2,1,0,1,0,2,3,2,1,2,3,0,2,-4.750895416199963,566
+3,0,2,2,2,0,0,1,2,1,3,1,3,3,0,2,-4.808896795134119,604
+0,0,1,0,0,3,2,3,2,2,0,2,1,0,3,2,-3.183634942626952,634
+2,3,0,2,3,3,3,3,2,2,3,0,0,0,3,2,-6.2593246883595555,669
+0,2,0,1,1,0,1,1,0,1,1,1,0,1,3,1,-6.396809054335819,707
+3,0,3,3,1,1,3,2,2,0,3,0,3,0,2,3,-5.243247922795144,744
+3,2,0,1,0,1,1,2,0,1,2,1,0,3,0,0,-6.556105570659707,780
+0,1,0,2,2,2,1,3,1,2,2,3,1,1,3,1,-4.6958406862465765,819
+0,2,3,1,1,0,0,0,3,3,0,0,3,1,1,1,-4.871936771266988,855
+0,1,1,1,3,2,1,2,2,3,3,2,1,3,1,0,-3.3495838355994407,897
+0,0,2,0,2,2,3,0,2,3,2,3,1,3,3,0,-5.2260202614152504,930
+0,3,2,2,3,3,0,3,2,2,0,3,1,2,1,3,-3.0066426895357243,995
+2,1,2,2,0,3,1,2,2,3,0,1,0,2,3,1,-6.428998946789509,1033
+0,1,0,3,3,3,0,0,3,0,2,0,0,3,0,1,-4.852772360538356,1066
+2,1,3,0,2,1,1,1,0,0,0,0,2,0,0,1,-2.9464044585724998,1097
+2,0,2,2,1,2,2,1,2,0,1,2,1,2,3,1,-6.367560694390173,1132
+3,1,0,3,1,1,1,3,3,1,1,1,2,1,3,0,-4.833183320846281,1178
+0,3,2,3,1,0,1,3,1,3,3,3,2,1,0,1,-4.864295131688145,1221
+1,2,2,3,0,1,3,2,1,3,1,1,3,3,1,3,-4.7164631790769675,1265
+3,3,0,1,3,0,0,1,3,0,0,1,2,3,1,1,-4.715044759310855,1305
+1,1,2,0,3,1,1,2,2,0,2,0,0,3,1,1,-4.350700760006161,1339
+2,2,1,3,0,3,0,3,1,3,0,1,0,0,3,3,-4.79474787016383,1378
+3,1,0,1,1,1,1,1,0,3,2,0,1,0,0,2,-4.827020847421638,1415
+3,2,3,0,2,1,0,2,1,2,0,1,3,2,2,2,-4.874906255548936,1454
+3,2,0,2,1,1,0,0,0,2,1,1,0,3,3,2,-4.4352821484183735,1488
+0,1,3,0,3,1,0,0,3,1,3,2,2,0,0,1,-4.813120039518093,1525
+0,1,0,3,3,0,1,2,3,0,1,0,2,3,3,1,-4.817089281724648,1561
+3,0,0,2,0,0,3,0,1,3,2,1,2,3,2,2,-3.6581882019814533,1598
+1,0,0,2,1,3,1,2,1,1,3,3,3,2,0,0,-4.778923033597234,1637
+2,0,2,1,3,3,2,2,1,0,2,0,1,3,0,2,-6.242914818234871,1671
+2,3,2,2,2,2,3,0,3,0,3,1,3,3,0,0,-4.778363572654431,1708
+3,3,2,2,2,1,0,0,3,0,0,2,1,1,0,3,-4.585582855676039,1743
+0,3,0,0,1,2,1,0,0,0,1,0,3,2,3,3,-6.608737099708371,1773
+2,0,1,1,1,2,3,3,3,2,2,2,1,3,2,3,-5.013861735218722,1811
+3,0,2,2,2,3,2,2,0,0,3,1,3,3,0,3,-4.4262246805400505,1847
+1,1,1,1,3,2,1,0,0,1,0,0,1,1,1,1,-4.790425771800205,1886
+3,0,0,1,2,2,2,2,2,1,3,2,2,3,0,0,-4.826739392200961,1923
+2,1,2,2,1,2,2,1,1,2,1,3,2,1,1,0,-4.808896795134119,1964
+0,2,3,2,2,1,3,2,0,0,2,1,2,0,0,0,-6.5515191846168825,1996
+2,3,1,3,0,2,2,2,2,0,0,1,3,1,1,2,-6.568827851560176,2035
+3,0,2,1,3,2,2,2,1,0,3,3,1,2,2,0,-4.974391832805477,2075
+1,1,2,0,0,0,1,0,0,2,2,0,3,2,1,2,-4.3507007602208905,2107
+1,3,0,2,1,1,2,3,3,1,0,2,1,0,0,0,-5.0448244514511025,2143
+1,1,0,1,0,3,2,0,0,0,2,3,3,3,2,1,-4.350700760006161,2180
+0,0,0,2,1,0,3,1,1,1,2,0,1,0,1,0,-2.5593965320040932,2210
+2,3,0,1,2,1,3,3,0,1,2,3,3,1,2,0,-3.189080377116191,2249
+2,1,3,0,2,1,0,2,2,2,3,1,0,2,3,2,-6.723077755049379,2288
+3,1,2,2,3,1,3,1,3,2,0,1,0,1,2,1,-4.856174611505098,2355
+2,1,3,0,3,2,3,0,1,1,3,0,1,3,3,1,-4.7158934420572045,2395
+1,3,2,1,2,3,3,0,1,3,1,3,3,1,3,3,-4.991349030109291,2442
+2,0,2,0,0,3,1,3,1,1,0,1,1,2,1,1,-3.1918357079535014,2477
+0,3,3,3,0,1,2,1,2,2,0,1,2,3,0,3,-3.214963413598938,2514
+3,3,1,3,2,0,2,1,3,0,1,2,3,0,0,3,-5.20948496093218,2556
+2,2,3,0,0,1,0,3,3,0,1,1,1,1,2,3,-4.7164631790769675,2593
+1,0,3,3,2,1,3,1,2,0,0,2,1,1,0,2,-5.136775874339465,2628
+2,2,2,3,3,0,0,0,3,2,0,2,0,1,1,2,-6.27573455848424,2661
+2,3,3,3,1,0,3,3,2,1,3,3,2,0,2,3,-6.397317816933148,2705
+3,2,1,3,0,0,0,1,0,2,1,3,3,0,2,1,-3.904353399507866,2743
+2,2,0,1,2,0,3,0,2,3,2,0,2,2,0,2,-7.6636155453320765,2776
+2,1,3,1,3,3,2,3,1,1,2,2,3,1,3,1,-4.88960906025441,2819
+2,3,0,0,2,2,2,0,0,1,0,2,3,0,3,1,-2.8351811798550233,2851
+0,2,3,1,3,1,0,1,0,0,0,0,3,0,3,3,-6.556105560015293,2882
+1,1,1,1,0,3,1,3,1,3,1,1,2,2,3,2,-4.3843378687638825,2930
+2,3,0,0,3,1,3,2,0,2,1,3,0,3,2,0,-3.179500414703569,2964
+0,0,2,0,1,0,2,0,3,3,0,2,0,1,3,0,-3.7888118850075405,2994
+0,3,0,1,2,2,3,0,1,0,1,1,1,0,3,0,-5.038489361169557,3031
+1,2,2,3,0,2,3,3,0,2,2,0,1,1,1,2,-2.7144481824192526,3065
+1,3,1,0,3,3,3,3,2,2,1,1,0,3,1,1,-4.883719058551881,3107
+1,3,0,2,3,1,0,2,2,2,3,1,1,2,3,2,-4.778923033597234,3146
+2,1,3,3,3,0,1,3,0,0,1,0,3,2,0,1,-2.7144481824192526,3183
+1,3,0,0,0,1,0,3,2,3,2,0,2,0,3,1,-4.986638585560925,3217
+1,3,3,2,3,2,1,1,3,3,2,1,1,0,1,1,-4.796476985300465,3261
+2,3,0,0,0,1,2,2,3,3,2,2,2,3,3,3,-4.527665285199621,3298
+1,0,3,2,1,3,2,3,1,3,1,0,2,3,1,3,-4.850232240319778,3340
+1,2,2,2,0,3,3,2,0,1,1,1,2,0,1,3,-4.774404922396055,3378
+3,2,3,0,2,1,3,0,1,0,1,3,2,1,1,1,-4.826739392200961,3419
+0,1,1,1,0,2,2,0,2,1,1,2,2,2,0,0,-4.7841489316428625,3458
+1,3,1,1,2,2,0,3,1,1,1,0,2,2,2,0,-3.931363714778723,3502
+0,2,0,2,3,2,0,0,0,0,0,1,0,0,0,3,-5.335718227344724,3527
+2,3,2,2,3,0,3,3,0,2,2,0,2,3,2,3,-3.5265579619883547,3565
+3,0,3,1,3,3,2,2,0,1,0,0,3,3,1,0,-4.829526403102987,3601
+3,0,0,2,2,3,1,3,1,0,3,3,0,2,2,0,-4.842207500761843,3637
+0,2,0,0,0,3,1,3,2,0,3,0,2,3,1,0,-3.030748351595466,3667
+2,1,2,1,1,0,3,2,2,3,1,3,2,0,0,2,-6.644231862753486,3736
+1,3,1,3,0,0,1,1,3,1,0,0,0,1,1,2,-4.590918516962201,3776
+3,1,2,1,1,1,1,3,3,2,2,3,1,3,3,2,-4.811756707044815,3821
+3,0,1,1,0,0,1,2,3,0,2,2,3,0,3,1,-4.793652790434427,3857
+
+
+End of doe/resume phase, the number of evaluated configurations is: 100
+
+End of DoE - Time     3.9480 sec
+Starting optimization iteration 1
+End of training - Time       0.05 sec
+Model fitting time     0.0536 sec
+Total RS time     0.0587 sec
+{'application_name': 'cafqa_optimization', 'optimization_objectives': ['value'], 'design_of_experiment': {'number_of_samples': 100, 'doe_type': 'random sampling'}, 'optimization_iterations': 100, 'models': {'model': 'random_forest', 'number_of_trees': 10, 'max_features': 0.5, 'bootstrap': False, 'min_samples_split': 5}, 'input_parameters': {'x0': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x1': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x2': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x3': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x4': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x5': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x6': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x7': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x8': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x9': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x10': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x11': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x12': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x13': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x14': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x15': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}}, 'print_best': True, 'print_posterior_best': True, 'log_file': 'cafqa_example_out//hypermapper_log.log', 'output_data_file': 'cafqa_example_out//hypermapper_output.csv', 'verbose_logging': False, 'profiling': False, 'noise': True, 'profiling_file': 'profiles/profile.csv', 'append_profiles': False, 'number_of_cpus': 0, 'max_number_of_predictions': 1000000, 'time_budget': -1, 'number_of_repetitions': 1, 'hypermapper_mode': {'mode': 'default'}, 'output_image': {'output_image_pdf_file': 'output_pareto.pdf', 'image_xlog': False, 'image_ylog': False}, 'feasible_output': {'name': 'Valid', 'true_value': 'True', 'false_value': 'False', 'enable_feasible_predictor': False, 'enable_feasible_predictor_grid_search_on_recall_and_precision': False, 'feasible_predictor_grid_search_validation_file': '/home/lnardi/spatial-lang/results/apps_classification_test_set/BlackScholes.csv'}, 'timestamp': 'Timestamp', 'evaluations_per_optimization_iteration': 1, 'run_directory': '.', 'output_pareto_file': 'output_pareto.csv', 'acquisition_function': 'EI', 'scalarization_method': 'tchebyshev', 'weight_sampling': 'flat', 'bounding_box_limits': [0, 1], 'optimization_method': 'bayesian_optimization', 'local_search_starting_points': 10, 'local_search_random_points': 10000, 'local_search_evaluation_limit': -1, 'scalarization_key': 'scalarization', 'local_search_scalarization_weights': [1], 'print_parameter_importance': False, 'normalize_inputs': False, 'epsilon_greedy_threshold': 0.1, 'prior_method': 'pibo', 'prior_beta': -1, 'prior_floor': 1e-06, 'model_posterior_weight': 10, 'model_good_quantile': 0.05, 'prior_estimation_file': 'samples.csv', 'prior_estimation_quantile': 0.1, 'estimate_multivariate_priors': False, 'resume_optimization': False, 'resume_optimization_data': 'output_samples.csv', 'bandwidth_parameter': 0, 'bandwidth_n_factor': 100, 'prior_limit_estimation_points': 10000, 'posterior_computation_lower_limit': 1e-08, 'custom_gaussian_prior_means': [0], 'custom_gaussian_prior_stds': [-1], 'acquisition_function_optimizer': 'local_search', 'evolution_population_size': 50, 'evolution_generations': 150, 'mutation_rate': 1, 'evolution_crossover': False, 'regularize_evolution': False, 'batch_size': 2, 'cma_es_sigma': 0.2, 'cma_es_starting_points': 1, 'cma_es_random_points': 10000}
+Design of experiment phase, number of new doe samples = 100 .......
+Loss computed by CAFQA VQE is -4.9977253570922695, in 0.042697374999988824 s.
+Loss computed by CAFQA VQE is -5.146884105356699, in 0.032737457993789576 s.
+Loss computed by CAFQA VQE is -4.743251599186005, in 0.03657237500010524 s.
+Loss computed by CAFQA VQE is -5.335718227344724, in 0.02875875000609085 s.
+Loss computed by CAFQA VQE is -4.710257008263277, in 0.04103833400586154 s.
+Loss computed by CAFQA VQE is -4.750210746786767, in 0.03960083398851566 s.
+Loss computed by CAFQA VQE is -4.66714526464146, in 0.031902332993922755 s.
+Loss computed by CAFQA VQE is -6.417415373679292, in 0.03578437499527354 s.
+Loss computed by CAFQA VQE is -3.1960598160415405, in 0.03547775000333786 s.
+Loss computed by CAFQA VQE is -6.7283555220568285, in 0.030244291003327817 s.
+Loss computed by CAFQA VQE is -6.72965891259558, in 0.03707862499868497 s.
+Loss computed by CAFQA VQE is -5.038821842783237, in 0.03496545799134765 s.
+Loss computed by CAFQA VQE is -4.5855828558907685, in 0.03943220799556002 s.
+Loss computed by CAFQA VQE is -6.283311551667827, in 0.03014179100864567 s.
+Loss computed by CAFQA VQE is -4.741657422564643, in 0.04243595800653566 s.
+Loss computed by CAFQA VQE is -3.5374552045456826, in 0.029599750007037073 s.
+Loss computed by CAFQA VQE is -6.37709715527088, in 0.041407249998883344 s.
+Loss computed by CAFQA VQE is -3.1492027678376298, in 0.03727999998955056 s.
+Loss computed by CAFQA VQE is -4.861611681067904, in 0.04205099999671802 s.
+Loss computed by CAFQA VQE is -5.159909872218792, in 0.0370801249955548 s.
+Loss computed by CAFQA VQE is -4.914689186542333, in 0.03505750000476837 s.
+Loss computed by CAFQA VQE is -4.718675929379637, in 0.03797541699896101 s.
+Loss computed by CAFQA VQE is -5.193264534473741, in 0.03308266699605156 s.
+Loss computed by CAFQA VQE is -3.1960598160415405, in 0.04102891699585598 s.
+Loss computed by CAFQA VQE is -4.805694453049048, in 0.04138016598881222 s.
+Loss computed by CAFQA VQE is -7.528083297192124, in 0.03135891600686591 s.
+Loss computed by CAFQA VQE is -4.854826580768881, in 0.06116670799383428 s.
+Loss computed by CAFQA VQE is -2.7144481824192526, in 0.03583129101025406 s.
+Loss computed by CAFQA VQE is -6.410737166240439, in 0.03412095800740644 s.
+Loss computed by CAFQA VQE is -4.781500277439758, in 0.04216962499776855 s.
+Loss computed by CAFQA VQE is -4.81193529268012, in 0.03712483399431221 s.
+Loss computed by CAFQA VQE is -2.4867274170830944, in 0.029155458003515378 s.
+Loss computed by CAFQA VQE is -6.394582117355771, in 0.03814345799037255 s.
+Loss computed by CAFQA VQE is -4.790815625656025, in 0.03750125000078697 s.
+Loss computed by CAFQA VQE is -5.068008873246789, in 0.03617087499878835 s.
+Loss computed by CAFQA VQE is -5.090005061332091, in 0.03723924999940209 s.
+Loss computed by CAFQA VQE is -4.3953513452217585, in 0.0385847500001546 s.
+Loss computed by CAFQA VQE is -4.769997625686747, in 0.0365941659983946 s.
+Loss computed by CAFQA VQE is -4.686782374373825, in 0.038409041007980704 s.
+Loss computed by CAFQA VQE is -4.832235120305715, in 0.03479779200279154 s.
+Loss computed by CAFQA VQE is -4.774305591112343, in 0.03681975000654347 s.
+Loss computed by CAFQA VQE is -1.9023384028501509, in 0.03304958299850114 s.
+Loss computed by CAFQA VQE is -4.809251852919024, in 0.03488395799649879 s.
+Loss computed by CAFQA VQE is -4.783775744402824, in 0.039759542007232085 s.
+Loss computed by CAFQA VQE is -3.5374552045456826, in 0.03846079099457711 s.
+Loss computed by CAFQA VQE is -4.732479000099973, in 0.03711587500583846 s.
+Loss computed by CAFQA VQE is -5.226152190436732, in 0.030761457994231023 s.
+Loss computed by CAFQA VQE is -4.754744760958262, in 0.04009958400274627 s.
+Loss computed by CAFQA VQE is -6.156116114417493, in 0.03749362500093412 s.
+Loss computed by CAFQA VQE is -5.078398609317752, in 0.03692262498952914 s.
+Loss computed by CAFQA VQE is -4.802492110963975, in 0.03901120799127966 s.
+Loss computed by CAFQA VQE is -3.622054704199314, in 0.03438041699700989 s.
+Loss computed by CAFQA VQE is -5.279938408894166, in 0.03691637500014622 s.
+Loss computed by CAFQA VQE is -4.807997119325151, in 0.03798745899985079 s.
+Loss computed by CAFQA VQE is -6.443287138495316, in 0.03526979200250935 s.
+Loss computed by CAFQA VQE is -4.745846012548167, in 0.03814295800111722 s.
+Loss computed by CAFQA VQE is -4.823764627778331, in 0.0390455419983482 s.
+Loss computed by CAFQA VQE is -4.497540298478484, in 0.03649899999436457 s.
+Loss computed by CAFQA VQE is -4.6133754398607785, in 0.030872500006807968 s.
+Loss computed by CAFQA VQE is -4.613375428786906, in 0.04225291599868797 s.
+Loss computed by CAFQA VQE is -5.092048368425267, in 0.036869957999442704 s.
+Loss computed by CAFQA VQE is -4.85343458240485, in 0.03862441699311603 s.
+Loss computed by CAFQA VQE is -6.433782871867372, in 0.06985604099463671 s.
+Loss computed by CAFQA VQE is -2.499224999739534, in 0.02990320800745394 s.
+Loss computed by CAFQA VQE is -4.4352821484183735, in 0.04098529100883752 s.
+Loss computed by CAFQA VQE is -4.85343458240485, in 0.037586166989058256 s.
+Loss computed by CAFQA VQE is -5.016277994773768, in 0.03782083300757222 s.
+Loss computed by CAFQA VQE is -4.818518354191278, in 0.037886791993514635 s.
+Loss computed by CAFQA VQE is -6.428998946789509, in 0.03292316698934883 s.
+Loss computed by CAFQA VQE is -4.239633829321225, in 0.03690666599140968 s.
+Loss computed by CAFQA VQE is -4.828208777288053, in 0.0374642499955371 s.
+Loss computed by CAFQA VQE is -2.7144481824192526, in 0.03822395799215883 s.
+Loss computed by CAFQA VQE is -4.539048009904091, in 0.03493562499352265 s.
+Loss computed by CAFQA VQE is -4.72402092183432, in 0.036202290997607633 s.
+Loss computed by CAFQA VQE is -3.1877801153725547, in 0.03488537500379607 s.
+Loss computed by CAFQA VQE is -4.686782374373825, in 0.045480790999135934 s.
+Loss computed by CAFQA VQE is -4.8445998631617435, in 0.03575320800882764 s.
+Loss computed by CAFQA VQE is -6.431194460636057, in 0.03321345799486153 s.
+Loss computed by CAFQA VQE is -2.466326829386323, in 0.03126991698809434 s.
+Loss computed by CAFQA VQE is -4.7673260170719445, in 0.03501970799698029 s.
+Loss computed by CAFQA VQE is -4.824196641911184, in 0.034675457995035686 s.
+Loss computed by CAFQA VQE is -4.613375428786906, in 0.03320750000420958 s.
+Loss computed by CAFQA VQE is -6.3039752733604235, in 0.03482879100192804 s.
+Loss computed by CAFQA VQE is -3.6581882019814533, in 0.032004749999032356 s.
+Loss computed by CAFQA VQE is -5.231454647412727, in 0.04254483399563469 s.
+Loss computed by CAFQA VQE is -4.750775402701462, in 0.034902750005130656 s.
+Loss computed by CAFQA VQE is -1.9806581766181823, in 0.03652325000439305 s.
+Loss computed by CAFQA VQE is -6.440248630002813, in 0.039840666999225505 s.
+Loss computed by CAFQA VQE is -4.852772360538356, in 0.03965412499383092 s.
+Loss computed by CAFQA VQE is -4.451479033879304, in 0.03978520799137186 s.
+Loss computed by CAFQA VQE is -4.750210746786767, in 0.03960266699141357 s.
+Loss computed by CAFQA VQE is -4.830181989844098, in 0.036799624998820946 s.
+Loss computed by CAFQA VQE is -6.3039752733604235, in 0.043110666010761634 s.
+Loss computed by CAFQA VQE is -6.433948998413323, in 0.04054004201316275 s.
+Loss computed by CAFQA VQE is -4.802831212899097, in 0.03792779099603649 s.
+Loss computed by CAFQA VQE is -4.72822787132346, in 0.034395709008094855 s.
+Loss computed by CAFQA VQE is -3.112420533763962, in 0.03339016699464992 s.
+Loss computed by CAFQA VQE is -3.184856269028151, in 0.03600312500202563 s.
+Loss computed by CAFQA VQE is -4.757178082407378, in 0.04160129200317897 s.
+Loss computed by CAFQA VQE is -4.901016912574818, in 0.035701333996257745 s.
+x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,value,Timestamp
+1,1,2,1,3,0,0,0,3,1,1,1,1,2,0,0,-4.9977253570922695,52
+0,0,3,0,3,3,1,0,1,0,2,1,0,1,1,2,-5.146884105356699,86
+1,3,0,1,2,2,3,2,3,2,0,0,2,0,1,1,-4.743251599186005,124
+2,2,0,1,0,3,0,1,2,2,0,0,2,2,0,2,-5.335718227344724,154
+2,3,1,1,1,3,2,3,1,1,2,0,1,0,2,2,-4.710257008263277,196
+3,0,0,0,3,3,2,3,1,3,3,1,2,1,3,3,-4.750210746786767,237
+3,3,2,2,0,2,0,2,0,0,2,2,2,0,2,1,-4.66714526464146,270
+0,2,2,0,3,3,3,2,3,1,0,1,3,3,2,1,-6.417415373679292,308
+0,1,3,2,1,3,0,3,2,0,3,2,3,3,0,2,-3.1960598160415405,345
+3,2,0,3,2,1,0,1,0,0,2,0,0,1,1,3,-6.7283555220568285,376
+3,0,3,1,0,1,0,0,3,1,1,0,2,0,0,1,-6.72965891259558,415
+2,0,3,2,0,2,1,1,1,2,2,1,0,0,1,3,-5.038821842783237,451
+2,0,0,3,2,3,2,2,3,3,3,3,1,1,2,0,-4.5855828558907685,492
+0,0,0,2,2,2,2,0,0,0,1,1,2,3,3,1,-6.283311551667827,523
+3,2,3,0,1,2,2,2,0,1,0,3,3,3,1,1,-4.741657422564643,567
+2,3,0,0,2,3,1,0,0,3,0,0,0,1,0,2,-3.5374552045456826,598
+0,2,1,2,0,0,1,2,0,3,3,3,3,2,1,1,-6.37709715527088,641
+0,2,1,3,2,2,0,3,2,3,1,0,0,2,3,2,-3.1492027678376298,680
+1,3,3,1,0,2,1,0,2,3,1,2,2,3,3,3,-4.861611681067904,724
+3,2,1,0,1,1,3,2,2,2,0,3,2,3,2,1,-5.159909872218792,762
+3,2,2,2,3,1,1,2,0,0,1,2,2,3,1,1,-4.914689186542333,798
+1,1,3,0,3,1,0,3,1,0,3,2,0,3,2,3,-4.718675929379637,838
+2,2,0,0,3,1,2,3,1,0,3,0,1,2,2,1,-5.193264534473741,873
+0,1,1,0,2,3,1,2,2,1,1,1,2,2,2,3,-3.1960598160415405,915
+2,3,1,1,2,3,3,3,1,1,2,0,3,3,3,2,-4.805694453049048,958
+2,2,2,2,1,2,1,1,2,1,0,0,2,0,3,3,-7.528083297192124,991
+1,1,2,3,3,3,3,0,2,0,3,0,1,2,1,0,-4.854826580768881,1053
+0,0,3,0,0,1,3,2,2,3,2,2,3,1,1,0,-2.7144481824192526,1091
+1,2,2,0,0,0,3,3,1,2,0,3,3,3,0,3,-6.410737166240439,1126
+3,2,0,1,3,2,0,3,1,1,1,1,3,0,1,2,-4.781500277439758,1170
+3,3,1,3,3,3,3,3,0,2,0,2,0,2,1,1,-4.81193529268012,1208
+2,1,2,0,1,0,2,2,0,2,2,0,0,2,3,2,-2.4867274170830944,1238
+2,3,1,1,0,0,0,2,1,2,1,2,3,3,2,0,-6.394582117355771,1278
+3,3,2,3,1,2,1,0,1,0,1,2,0,0,3,3,-4.790815625656025,1317
+1,1,0,2,0,3,2,2,1,1,3,0,3,0,0,0,-5.068008873246789,1354
+2,1,0,2,1,2,1,1,3,1,0,2,3,3,2,2,-5.090005061332091,1393
+1,3,0,0,3,2,0,2,3,3,3,2,2,2,3,3,-4.3953513452217585,1432
+3,3,0,3,1,2,0,2,1,3,2,0,1,0,3,0,-4.769997625686747,1470
+0,1,0,0,2,2,1,2,1,3,1,3,3,3,1,0,-4.686782374373825,1510
+1,3,0,2,0,1,0,0,2,0,3,1,2,2,3,3,-4.832235120305715,1546
+2,1,2,3,0,3,3,2,1,1,0,0,1,3,3,2,-4.774305591112343,1584
+2,0,1,1,2,0,1,1,0,0,3,0,1,1,0,3,-1.9023384028501509,1618
+0,3,3,2,2,0,0,2,1,2,3,2,3,0,0,3,-4.809251852919024,1654
+2,3,3,3,1,1,3,1,1,2,0,3,1,0,1,2,-4.783775744402824,1695
+0,1,1,1,3,0,1,2,2,2,3,3,0,3,0,3,-3.5374552045456826,1735
+1,0,3,0,3,3,1,0,2,1,3,2,3,2,2,2,-4.732479000099973,1774
+3,2,1,1,1,0,1,3,0,0,2,0,0,0,3,0,-5.226152190436732,1806
+3,1,3,0,2,3,3,0,3,0,1,3,3,0,2,3,-4.754744760958262,1847
+1,2,2,1,0,0,0,1,3,1,0,1,3,1,2,1,-6.156116114417493,1886
+1,3,0,2,1,1,2,1,2,3,1,2,2,3,0,0,-5.078398609317752,1924
+3,2,0,1,1,0,2,1,1,3,1,3,0,0,0,3,-4.802492110963975,1964
+2,2,3,1,1,1,0,0,0,1,2,1,1,3,0,0,-3.622054704199314,1999
+1,3,2,2,0,2,1,2,1,1,2,0,2,2,2,0,-5.279938408894166,2038
+1,1,2,2,2,0,0,2,2,3,2,1,2,1,0,2,-4.807997119325151,2077
+3,2,0,2,0,0,1,1,2,1,2,1,2,1,1,2,-6.443287138495316,2113
+2,3,1,2,0,1,1,1,1,1,0,3,3,3,0,0,-4.745846012548167,2153
+2,1,3,0,3,3,3,0,1,2,3,1,0,1,1,0,-4.823764627778331,2193
+0,0,2,1,2,2,2,0,1,1,1,3,2,0,1,0,-4.497540298478484,2231
+0,0,0,2,0,3,2,3,1,3,1,0,0,2,1,0,-4.6133754398607785,2263
+3,3,2,1,3,3,2,0,1,3,3,3,1,0,3,0,-4.613375428786906,2307
+1,2,2,0,2,2,3,3,3,2,1,2,3,3,3,0,-5.092048368425267,2345
+2,2,3,3,2,1,1,2,1,1,2,0,2,1,2,1,-4.85343458240485,2385
+2,1,2,2,1,0,3,2,2,1,2,3,3,2,3,2,-6.433782871867372,2456
+0,2,1,3,2,2,0,3,2,0,0,0,0,3,1,2,-2.499224999739534,2487
+1,0,1,3,2,1,0,1,2,3,3,1,1,0,1,3,-4.4352821484183735,2529
+1,0,0,1,0,3,3,1,1,0,3,3,1,1,2,2,-4.85343458240485,2568
+2,3,2,2,2,1,1,2,3,3,2,0,1,1,1,1,-5.016277994773768,2607
+2,3,0,2,1,3,2,2,3,2,1,3,3,3,1,0,-4.818518354191278,2646
+0,1,3,2,3,2,3,3,0,2,1,2,0,2,0,0,-6.428998946789509,2680
+1,3,1,3,0,0,3,3,1,3,0,0,0,1,0,0,-4.239633829321225,2718
+3,1,2,0,1,2,0,3,2,0,3,3,1,2,1,3,-4.828208777288053,2757
+1,2,0,1,0,1,1,1,1,3,0,3,0,2,2,1,-2.7144481824192526,2797
+1,3,2,2,2,1,1,1,0,0,1,2,0,1,0,2,-4.539048009904091,2833
+3,1,0,3,2,3,1,1,2,0,0,3,3,3,0,2,-4.72402092183432,2871
+0,3,3,3,2,0,3,0,2,3,2,0,0,2,2,1,-3.1877801153725547,2907
+1,1,1,1,1,0,1,3,3,1,1,1,0,2,0,2,-4.686782374373825,2954
+3,1,1,0,2,3,1,1,0,0,0,3,2,3,2,3,-4.8445998631617435,2991
+0,3,1,2,0,1,0,3,0,2,0,1,3,2,2,1,-6.431194460636057,3025
+1,0,0,0,2,0,2,2,1,0,2,2,3,3,0,1,-2.466326829386323,3058
+3,3,3,0,0,3,1,1,0,0,3,2,0,2,1,2,-4.7673260170719445,3094
+1,0,3,1,0,1,0,0,1,0,2,2,2,1,3,3,-4.824196641911184,3130
+3,1,2,0,0,1,0,1,0,3,1,0,0,1,0,1,-4.613375428786906,3164
+1,0,2,1,1,3,3,0,2,2,2,3,0,1,2,3,-6.3039752733604235,3200
+3,2,2,3,0,0,2,3,0,0,2,2,3,2,1,3,-3.6581882019814533,3233
+1,3,2,1,0,1,3,3,1,1,0,3,3,2,2,2,-5.231454647412727,3277
+3,1,3,2,3,0,1,0,0,2,0,1,3,2,0,2,-4.750775402701462,3313
+2,3,3,1,2,0,0,0,0,3,3,2,2,3,0,2,-1.9806581766181823,3351
+2,2,1,1,1,3,2,1,2,1,1,2,3,0,2,3,-6.440248630002813,3392
+3,1,2,3,3,2,2,3,0,1,1,2,1,1,1,0,-4.852772360538356,3433
+1,0,1,1,2,2,1,3,3,3,0,2,2,3,1,2,-4.451479033879304,3474
+0,2,2,2,2,3,2,1,3,3,1,3,1,2,3,3,-4.750210746786767,3515
+2,3,2,2,1,0,1,1,3,2,1,1,0,0,3,2,-4.830181989844098,3553
+1,3,3,1,1,1,0,2,3,0,3,1,1,2,0,2,-6.3039752733604235,3598
+2,3,3,2,1,3,2,2,2,1,1,2,1,1,3,2,-6.433948998413323,3640
+3,2,1,2,1,1,2,2,3,2,2,3,0,0,2,1,-4.802831212899097,3679
+1,3,1,0,3,1,1,0,0,0,1,1,0,3,0,0,-4.72822787132346,3714
+0,2,0,1,0,3,1,3,2,3,1,0,1,1,3,0,-3.112420533763962,3749
+2,3,0,1,2,3,1,2,0,1,3,0,1,0,3,3,-3.184856269028151,3786
+3,3,2,2,3,3,3,3,1,1,1,1,1,0,2,0,-4.757178082407378,3829
+0,1,2,0,2,1,1,1,3,2,2,1,3,0,2,1,-4.901016912574818,3866
+
+
+End of doe/resume phase, the number of evaluated configurations is: 100
+
+End of DoE - Time     3.9840 sec
+Starting optimization iteration 1
+End of training - Time       0.02 sec
+Model fitting time     0.0167 sec
+Total RS time     0.0592 sec
+{'application_name': 'cafqa_optimization', 'optimization_objectives': ['value'], 'design_of_experiment': {'number_of_samples': 100, 'doe_type': 'random sampling'}, 'optimization_iterations': 100, 'models': {'model': 'random_forest', 'number_of_trees': 10, 'max_features': 0.5, 'bootstrap': False, 'min_samples_split': 5}, 'input_parameters': {'x0': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x1': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x2': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x3': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x4': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x5': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x6': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x7': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x8': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x9': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x10': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x11': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x12': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x13': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x14': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x15': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}}, 'print_best': True, 'print_posterior_best': True, 'log_file': 'cafqa_example_out//hypermapper_log.log', 'output_data_file': 'cafqa_example_out//hypermapper_output.csv', 'verbose_logging': False, 'profiling': False, 'noise': True, 'profiling_file': 'profiles/profile.csv', 'append_profiles': False, 'number_of_cpus': 0, 'max_number_of_predictions': 1000000, 'time_budget': -1, 'number_of_repetitions': 1, 'hypermapper_mode': {'mode': 'default'}, 'output_image': {'output_image_pdf_file': 'output_pareto.pdf', 'image_xlog': False, 'image_ylog': False}, 'feasible_output': {'name': 'Valid', 'true_value': 'True', 'false_value': 'False', 'enable_feasible_predictor': False, 'enable_feasible_predictor_grid_search_on_recall_and_precision': False, 'feasible_predictor_grid_search_validation_file': '/home/lnardi/spatial-lang/results/apps_classification_test_set/BlackScholes.csv'}, 'timestamp': 'Timestamp', 'evaluations_per_optimization_iteration': 1, 'run_directory': '.', 'output_pareto_file': 'output_pareto.csv', 'acquisition_function': 'EI', 'scalarization_method': 'tchebyshev', 'weight_sampling': 'flat', 'bounding_box_limits': [0, 1], 'optimization_method': 'bayesian_optimization', 'local_search_starting_points': 10, 'local_search_random_points': 10000, 'local_search_evaluation_limit': -1, 'scalarization_key': 'scalarization', 'local_search_scalarization_weights': [1], 'print_parameter_importance': False, 'normalize_inputs': False, 'epsilon_greedy_threshold': 0.1, 'prior_method': 'pibo', 'prior_beta': -1, 'prior_floor': 1e-06, 'model_posterior_weight': 10, 'model_good_quantile': 0.05, 'prior_estimation_file': 'samples.csv', 'prior_estimation_quantile': 0.1, 'estimate_multivariate_priors': False, 'resume_optimization': False, 'resume_optimization_data': 'output_samples.csv', 'bandwidth_parameter': 0, 'bandwidth_n_factor': 100, 'prior_limit_estimation_points': 10000, 'posterior_computation_lower_limit': 1e-08, 'custom_gaussian_prior_means': [0], 'custom_gaussian_prior_stds': [-1], 'acquisition_function_optimizer': 'local_search', 'evolution_population_size': 50, 'evolution_generations': 150, 'mutation_rate': 1, 'evolution_crossover': False, 'regularize_evolution': False, 'batch_size': 2, 'cma_es_sigma': 0.2, 'cma_es_starting_points': 1, 'cma_es_random_points': 10000}
+Design of experiment phase, number of new doe samples = 100 .......
+Loss computed by CAFQA VQE is -3.6151373658284096, in 0.04904741598875262 s.
+Loss computed by CAFQA VQE is -5.134203582515932, in 0.034863000008044764 s.
+Loss computed by CAFQA VQE is -4.903220560929473, in 0.03875883397995494 s.
+Loss computed by CAFQA VQE is -4.3507007602208905, in 0.0350558330246713 s.
+Loss computed by CAFQA VQE is -3.8350245394213993, in 0.03199804198811762 s.
+Loss computed by CAFQA VQE is -4.61796181482973, in 0.03757362501346506 s.
+Loss computed by CAFQA VQE is -4.751329213111781, in 0.043019792006816715 s.
+Loss computed by CAFQA VQE is -3.8704875383167683, in 0.03034900000784546 s.
+Loss computed by CAFQA VQE is -3.191835707953501, in 0.0353504590166267 s.
+Loss computed by CAFQA VQE is -6.5225726494944904, in 0.03380008399835788 s.
+Loss computed by CAFQA VQE is -4.527665285199621, in 0.03800216599483974 s.
+Loss computed by CAFQA VQE is -4.942674317382712, in 0.044789500010665506 s.
+Loss computed by CAFQA VQE is -4.915266617674389, in 0.037114292004844174 s.
+Loss computed by CAFQA VQE is -6.156116114417493, in 0.03613275001407601 s.
+Loss computed by CAFQA VQE is -5.068094276829651, in 0.03741920800530352 s.
+Loss computed by CAFQA VQE is -4.818094500324786, in 0.037727000017184764 s.
+Loss computed by CAFQA VQE is -6.556105560015293, in 0.025066083995625377 s.
+Loss computed by CAFQA VQE is -2.4663268293863227, in 0.033785332983825356 s.
+Loss computed by CAFQA VQE is -6.428904099300453, in 0.03924408298917115 s.
+Loss computed by CAFQA VQE is -5.246176872046684, in 0.0390426249941811 s.
+Loss computed by CAFQA VQE is -6.444817903373668, in 0.036094707989832386 s.
+Loss computed by CAFQA VQE is -4.527665285199621, in 0.03497412501019426 s.
+Loss computed by CAFQA VQE is -6.394582117355771, in 0.07358183301403187 s.
+Loss computed by CAFQA VQE is -4.847535481619273, in 0.04670420798356645 s.
+Loss computed by CAFQA VQE is -4.793652790434427, in 0.03604304199689068 s.
+Loss computed by CAFQA VQE is -4.828300371651908, in 0.041470208001555875 s.
+Loss computed by CAFQA VQE is -4.393395336642204, in 0.03519462500116788 s.
+Loss computed by CAFQA VQE is -6.417415373679292, in 0.03273116599302739 s.
+Loss computed by CAFQA VQE is -4.790173980010648, in 0.039842500002123415 s.
+Loss computed by CAFQA VQE is -5.172458727833623, in 0.04260945800342597 s.
+Loss computed by CAFQA VQE is -4.89797236967558, in 0.04951979199540801 s.
+Loss computed by CAFQA VQE is -3.112420533763962, in 0.03471745899878442 s.
+Loss computed by CAFQA VQE is -2.7144481824192526, in 0.03644345799693838 s.
+Loss computed by CAFQA VQE is -4.827398983996257, in 0.03754775002016686 s.
+Loss computed by CAFQA VQE is -5.067721324367781, in 0.03834929098957218 s.
+Loss computed by CAFQA VQE is -6.407907510197671, in 0.04109066701494157 s.
+Loss computed by CAFQA VQE is -5.098958584896588, in 0.04063516698079184 s.
+Loss computed by CAFQA VQE is -4.4352821484183735, in 0.03755612499662675 s.
+Loss computed by CAFQA VQE is -4.0441620574959, in 0.036001832981128246 s.
+Loss computed by CAFQA VQE is -4.508923012323811, in 0.03559129199129529 s.
+Loss computed by CAFQA VQE is -4.829646416386758, in 0.04071450000628829 s.
+Loss computed by CAFQA VQE is -4.778900286464941, in 0.03830491699045524 s.
+Loss computed by CAFQA VQE is -6.054227555108511, in 0.034239583008456975 s.
+Loss computed by CAFQA VQE is -5.689390902224616, in 0.02921295800479129 s.
+Loss computed by CAFQA VQE is -4.815199304902681, in 0.043581292004091665 s.
+Loss computed by CAFQA VQE is -5.227785770746676, in 0.0333097499969881 s.
+Loss computed by CAFQA VQE is -4.762603986821109, in 0.040271292004035786 s.
+Loss computed by CAFQA VQE is -3.135888283776982, in 0.038492249994305894 s.
+Loss computed by CAFQA VQE is -5.121286308918933, in 0.037487875000806525 s.
+Loss computed by CAFQA VQE is -4.775668949302439, in 0.0400753750000149 s.
+Loss computed by CAFQA VQE is -5.394766815728509, in 0.036145207996014506 s.
+Loss computed by CAFQA VQE is -4.566840583014958, in 0.03472141700331122 s.
+Loss computed by CAFQA VQE is -2.8351811798550233, in 0.030757500004256144 s.
+Loss computed by CAFQA VQE is -4.103156838105287, in 0.040429625019896775 s.
+Loss computed by CAFQA VQE is -5.1878970451190405, in 0.03213774997857399 s.
+Loss computed by CAFQA VQE is -5.465902289463791, in 0.036353625007905066 s.
+Loss computed by CAFQA VQE is -4.217769171118883, in 0.0427660410059616 s.
+Loss computed by CAFQA VQE is -6.396033126895304, in 0.028044583013979718 s.
+Loss computed by CAFQA VQE is -4.71811127346494, in 0.04477529099676758 s.
+Loss computed by CAFQA VQE is -2.493678643119799, in 0.03239854099228978 s.
+Loss computed by CAFQA VQE is -4.688772204069398, in 0.04099554201820865 s.
+Loss computed by CAFQA VQE is -4.7925266794425685, in 0.03753424997557886 s.
+Loss computed by CAFQA VQE is -5.465902289463791, in 0.03580887499265373 s.
+Loss computed by CAFQA VQE is -3.8704875383167683, in 0.03418891699402593 s.
+Loss computed by CAFQA VQE is -6.633541878273579, in 0.06690841598901898 s.
+Loss computed by CAFQA VQE is -4.8760379602495405, in 0.04092758399201557 s.
+Loss computed by CAFQA VQE is -6.722980705156727, in 0.03139229101361707 s.
+Loss computed by CAFQA VQE is -4.4262246805400505, in 0.03344170798663981 s.
+Loss computed by CAFQA VQE is -5.014234687680592, in 0.039775374985765666 s.
+Loss computed by CAFQA VQE is -4.508923012323811, in 0.034067457978380844 s.
+Loss computed by CAFQA VQE is -4.793014434383734, in 0.03616091699223034 s.
+Loss computed by CAFQA VQE is -4.967417701721461, in 0.0377282080007717 s.
+Loss computed by CAFQA VQE is -6.398699556863644, in 0.031612666993169114 s.
+Loss computed by CAFQA VQE is -5.149665734564399, in 0.0431133329984732 s.
+Loss computed by CAFQA VQE is -3.308033116216707, in 0.03443387500010431 s.
+Loss computed by CAFQA VQE is -6.410737166240439, in 0.03694175000418909 s.
+Loss computed by CAFQA VQE is -4.717463246955354, in 0.03706441700342111 s.
+Loss computed by CAFQA VQE is -5.487891177339545, in 0.03614774998277426 s.
+Loss computed by CAFQA VQE is -3.1877801153725547, in 0.03555145798600279 s.
+Loss computed by CAFQA VQE is -6.400384105709266, in 0.033685749978758395 s.
+Loss computed by CAFQA VQE is -6.430834722986582, in 0.032829250005306676 s.
+Loss computed by CAFQA VQE is -3.8704875383167683, in 0.03126054198946804 s.
+Loss computed by CAFQA VQE is -3.191835707953501, in 0.03395558401825838 s.
+Loss computed by CAFQA VQE is -4.8105948527646785, in 0.03690608299802989 s.
+Loss computed by CAFQA VQE is -2.6196465160907803, in 0.03255712499958463 s.
+Loss computed by CAFQA VQE is -5.22311643369688, in 0.03905404201941565 s.
+Loss computed by CAFQA VQE is -3.182100938190841, in 0.03768379200482741 s.
+Loss computed by CAFQA VQE is -5.208710179304557, in 0.033809458022005856 s.
+Loss computed by CAFQA VQE is -4.382463007541034, in 0.042530750011792406 s.
+Loss computed by CAFQA VQE is -6.490757410398524, in 0.03679579100571573 s.
+Loss computed by CAFQA VQE is -4.805408456741622, in 0.037932250008452684 s.
+Loss computed by CAFQA VQE is -4.79474787016383, in 0.03969908397994004 s.
+Loss computed by CAFQA VQE is -4.4352821484183735, in 0.04261875001247972 s.
+Loss computed by CAFQA VQE is -4.3953513452217585, in 0.036407292005605996 s.
+Loss computed by CAFQA VQE is -4.211392844135904, in 0.03287712499150075 s.
+Loss computed by CAFQA VQE is -4.743805107993689, in 0.032515416998649016 s.
+Loss computed by CAFQA VQE is -6.40217800655847, in 0.027012750011635944 s.
+Loss computed by CAFQA VQE is -3.180800676447205, in 0.03219483300927095 s.
+Loss computed by CAFQA VQE is -3.1808006764472045, in 0.03649795800447464 s.
+Loss computed by CAFQA VQE is -4.836840604288382, in 0.04008841598988511 s.
+x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,value,Timestamp
+2,1,1,3,0,2,2,2,1,1,3,1,3,3,1,1,-3.6151373658284096,59
+0,2,1,2,2,3,2,2,3,3,2,0,0,0,0,1,-5.134203582515932,95
+1,1,1,0,2,0,1,0,0,1,3,3,1,0,3,0,-4.903220560929473,135
+3,3,0,2,1,1,0,0,3,0,3,0,1,1,2,3,-4.3507007602208905,172
+0,2,0,3,0,1,3,1,2,2,3,0,0,2,1,3,-3.8350245394213993,205
+3,1,0,1,0,1,1,2,1,0,2,1,0,2,0,0,-4.61796181482973,244
+2,1,1,1,1,1,2,2,2,1,1,1,3,2,0,2,-4.751329213111781,289
+1,2,0,0,0,2,2,3,0,3,0,0,2,1,1,3,-3.8704875383167683,320
+0,2,1,0,3,3,2,3,2,1,3,0,2,1,1,0,-3.191835707953501,357
+0,3,2,2,1,3,3,1,0,2,3,0,3,3,2,1,-6.5225726494944904,392
+0,2,3,1,0,1,2,2,3,3,0,1,0,3,0,2,-4.527665285199621,432
+1,1,3,1,1,2,2,1,3,3,3,2,1,0,0,1,-4.942674317382712,478
+1,2,3,1,0,3,0,3,0,2,1,3,0,0,3,1,-4.915266617674389,516
+2,2,3,2,2,0,0,2,2,3,1,1,0,2,0,2,-6.156116114417493,554
+2,2,2,0,1,1,3,2,1,1,1,2,2,3,3,0,-5.068094276829651,593
+1,3,2,2,1,0,1,3,1,2,0,1,3,1,2,0,-4.818094500324786,632
+0,2,3,0,3,0,0,2,0,0,0,1,0,0,0,0,-6.556105560015293,658
+0,0,1,2,1,1,2,0,2,2,3,0,1,1,3,1,-2.4663268293863227,693
+3,2,2,1,1,2,3,3,0,3,0,3,2,2,2,3,-6.428904099300453,734
+3,3,1,3,2,2,3,1,2,0,1,0,0,0,3,3,-5.246176872046684,774
+0,2,3,2,1,0,2,1,0,1,3,0,2,2,3,2,-6.444817903373668,812
+0,2,0,0,3,3,3,1,1,1,3,2,2,1,2,0,-4.527665285199621,848
+2,0,0,2,0,2,2,0,2,3,3,1,1,2,3,3,-6.394582117355771,926
+0,3,3,2,0,3,3,2,1,3,1,1,1,2,3,1,-4.847535481619273,974
+3,0,0,0,0,3,3,3,3,0,1,1,3,0,2,1,-4.793652790434427,1012
+3,1,2,2,1,2,1,3,1,2,3,1,0,3,2,1,-4.828300371651908,1055
+1,2,3,0,2,3,1,3,0,2,1,2,0,2,2,0,-4.393395336642204,1091
+3,0,2,0,1,3,0,3,1,0,2,3,3,0,0,1,-6.417415373679292,1126
+2,1,3,2,3,2,1,3,3,2,0,1,3,2,1,3,-4.790173980010648,1167
+0,2,3,2,1,2,2,2,1,3,3,3,2,1,1,2,-5.172458727833623,1211
+2,0,1,1,3,3,2,1,3,3,2,2,3,3,1,1,-4.89797236967558,1262
+0,0,3,2,0,0,3,1,2,3,1,1,0,0,2,2,-3.112420533763962,1298
+1,0,3,3,0,2,0,0,2,2,1,2,1,0,3,3,-2.7144481824192526,1336
+2,0,3,0,2,3,0,2,1,3,2,1,3,2,1,3,-4.827398983996257,1375
+2,0,3,3,3,1,0,1,1,2,3,2,1,1,2,2,-5.067721324367781,1414
+1,3,1,3,3,2,0,2,1,2,3,0,1,0,2,1,-6.407907510197671,1457
+1,1,1,1,3,1,3,0,2,1,2,1,2,1,0,0,-5.098958584896588,1499
+3,0,3,2,3,3,3,1,1,1,2,0,0,3,1,3,-4.4352821484183735,1537
+2,1,1,3,0,0,0,0,0,1,0,3,1,0,1,2,-4.0441620574959,1575
+0,0,0,3,1,0,1,3,1,2,3,1,1,0,3,2,-4.508923012323811,1612
+3,1,1,2,3,2,0,1,3,1,2,0,3,1,2,3,-4.829646416386758,1654
+1,3,0,0,0,2,2,3,2,2,1,3,3,3,2,2,-4.778900286464941,1693
+3,2,0,3,2,1,2,1,0,2,2,3,0,2,0,3,-6.054227555108511,1729
+0,0,2,0,1,1,3,2,2,0,2,1,2,3,3,0,-5.689390902224616,1759
+3,3,3,2,3,1,2,3,1,1,2,3,2,1,0,0,-4.815199304902681,1804
+3,2,3,0,1,0,3,2,0,0,1,2,0,1,2,3,-5.227785770746676,1839
+3,1,1,1,1,1,1,3,0,1,0,2,3,2,2,2,-4.762603986821109,1880
+0,1,3,3,3,1,0,3,2,1,0,3,1,3,2,0,-3.135888283776982,1920
+1,2,2,0,1,1,3,1,1,3,3,2,0,0,2,1,-5.121286308918933,1959
+3,1,2,2,1,3,0,2,1,1,0,1,0,1,3,2,-4.775668949302439,2001
+1,2,3,0,2,3,2,0,1,3,0,0,2,0,1,2,-5.394766815728509,2038
+2,0,2,2,0,1,1,3,3,3,1,2,0,3,0,3,-4.566840583014958,2074
+0,0,0,3,1,3,2,1,3,2,2,0,1,0,3,0,-2.8351811798550233,2106
+1,0,2,1,0,0,2,2,3,1,1,1,2,0,3,3,-4.103156838105287,2148
+3,2,0,0,0,2,0,3,0,0,1,3,3,2,3,2,-5.1878970451190405,2181
+1,0,1,2,2,2,3,2,3,1,0,0,0,1,3,1,-5.465902289463791,2219
+0,3,1,3,3,2,1,3,3,1,1,2,2,2,0,3,-4.217769171118883,2263
+0,1,0,0,1,0,0,2,0,0,0,1,3,3,3,1,-6.396033126895304,2292
+1,1,1,2,3,1,1,1,1,2,1,1,2,3,2,3,-4.71811127346494,2338
+0,2,0,1,3,2,2,2,2,0,3,2,2,2,0,0,-2.493678643119799,2372
+2,1,2,1,1,1,2,3,1,2,2,3,2,3,1,2,-4.688772204069398,2414
+3,1,3,2,3,0,3,0,0,2,3,3,2,0,1,0,-4.7925266794425685,2453
+3,0,3,0,0,3,1,3,3,1,0,2,0,1,1,1,-5.465902289463791,2490
+0,0,3,3,0,3,2,1,2,0,2,1,3,3,2,2,-3.8704875383167683,2526
+1,0,0,2,0,3,2,1,2,0,0,2,1,3,3,3,-6.633541878273579,2594
+2,1,1,3,1,3,1,3,1,2,0,1,2,0,2,2,-4.8760379602495405,2636
+1,2,0,2,2,0,2,2,0,0,2,3,1,0,2,1,-6.722980705156727,2669
+1,2,3,2,3,1,0,1,0,1,0,0,1,3,3,0,-4.4262246805400505,2703
+1,0,2,3,1,0,0,2,2,1,3,1,2,3,1,2,-5.014234687680592,2744
+3,2,0,2,3,1,1,0,0,1,3,0,2,3,3,1,-4.508923012323811,2780
+2,1,1,0,3,3,3,0,1,0,3,2,2,1,0,2,-4.793014434383734,2817
+0,2,1,2,1,2,3,3,3,2,1,1,0,0,1,3,-4.967417701721461,2856
+0,3,0,0,3,1,3,0,0,2,2,1,3,3,2,1,-6.398699556863644,2889
+1,3,1,3,2,2,0,3,3,1,2,2,2,2,1,1,-5.149665734564399,2933
+2,0,0,2,0,3,2,1,1,3,2,3,2,0,2,3,-3.308033116216707,2969
+0,0,3,2,3,1,1,3,0,1,1,1,2,1,2,2,-6.410737166240439,3007
+0,0,1,1,2,1,1,3,3,1,2,2,3,3,1,0,-4.717463246955354,3046
+3,2,3,0,2,1,2,0,3,3,0,0,1,1,2,0,-5.487891177339545,3083
+2,3,3,2,2,0,2,3,0,3,2,0,1,1,2,3,-3.1877801153725547,3120
+2,0,3,0,3,2,3,3,2,1,0,3,1,0,3,3,-6.400384105709266,3155
+0,3,2,1,0,0,2,1,0,2,2,1,3,3,0,0,-6.430834722986582,3189
+2,0,2,0,1,0,3,2,3,3,0,2,0,1,1,3,-3.8704875383167683,3221
+0,3,0,3,0,0,3,1,2,3,0,1,0,3,3,1,-3.191835707953501,3256
+1,1,3,2,2,0,1,3,2,2,3,0,0,3,0,3,-4.8105948527646785,3295
+0,2,0,0,3,2,1,1,2,0,3,3,2,3,3,1,-2.6196465160907803,3328
+3,3,2,3,2,2,1,3,3,0,3,2,0,3,0,2,-5.22311643369688,3369
+2,3,3,0,2,1,3,3,0,3,3,0,3,1,3,3,-3.182100938190841,3407
+1,2,3,2,0,1,1,0,1,2,2,0,0,3,1,1,-5.208710179304557,3443
+3,1,1,2,0,1,3,3,3,3,1,1,1,0,2,0,-4.382463007541034,3486
+2,1,2,1,0,3,0,2,2,2,2,3,3,1,1,3,-6.490757410398524,3525
+1,0,1,1,3,3,1,2,0,3,1,2,3,3,0,0,-4.805408456741622,3564
+3,0,2,3,1,3,2,3,1,0,3,1,2,3,1,3,-4.79474787016383,3605
+1,2,1,1,3,2,3,3,1,1,3,0,0,3,1,1,-4.4352821484183735,3649
+3,1,3,3,0,1,1,0,0,3,0,1,1,0,0,0,-4.3953513452217585,3686
+2,2,0,2,1,3,3,1,3,2,1,0,3,3,2,0,-4.211392844135904,3720
+1,1,2,0,2,2,2,2,0,2,0,0,2,3,0,2,-4.743805107993689,3754
+2,2,0,0,0,0,0,3,2,0,1,0,1,3,1,1,-6.40217800655847,3782
+0,0,3,0,0,0,1,2,2,3,2,1,2,3,2,0,-3.180800676447205,3816
+1,0,0,2,1,3,0,3,3,1,2,1,2,3,0,3,-3.1808006764472045,3854
+0,3,3,1,0,3,3,3,1,0,3,1,0,2,1,2,-4.836840604288382,3895
+
+
+End of doe/resume phase, the number of evaluated configurations is: 100
+
+End of DoE - Time     4.0374 sec
+Starting optimization iteration 1
+End of training - Time       0.02 sec
+Model fitting time     0.0201 sec
+0.03319742843615192 < 0.1 random sampling a configuration to run
+Local search time     0.0005 sec
+Loss computed by CAFQA VQE is -2.7144481824192526, in 0.03386695799417794 s.
+x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,value,Timestamp
+3,0,0,1,2,1,1,0,2,2,2,2,2,0,2,3,-2.7144481824192526,4095
+
+Black box function time     0.0364 sec
+Total iteration time     0.0574 sec
+Starting optimization iteration 2
+End of training - Time       0.02 sec
+Model fitting time     0.0153 sec
+0.05375242376213307 < 0.1 random sampling a configuration to run
+Local search time     0.0003 sec
+Loss computed by CAFQA VQE is -4.804852387873829, in 0.04014600001391955 s.
+x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,value,Timestamp
+3,0,1,3,1,2,3,3,1,3,0,2,0,3,1,3,-4.804852387873829,4154
+
+Black box function time     0.0426 sec
+Total iteration time     0.0583 sec
+Starting optimization iteration 3
+End of training - Time       0.02 sec
+Model fitting time     0.0160 sec
+Total RS time     0.0601 sec
+one
+two
+all circs run!
+Loss computed by VQE is -4.687134773584985, in 1.9663612910080701 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.727432588043419, in 1.785489834001055 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.832733928164643, in 1.5773977090138942 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.8128579244505705, in 1.7270273749891203 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.743421386878747, in 1.5957043749804143 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.638611344965003, in 1.711269874998834 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.689247852948984, in 1.7079353750159498 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.687885725592967, in 1.7060592499910854 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.701684860581363, in 1.7873374159971718 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.727468987227702, in 1.7020857080060523 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.65189885042591, in 1.735649917012779 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.826153590420214, in 1.8077736249833833 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.751229706128074, in 1.6004159999720287 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.695122475423737, in 1.7317397079896182 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.690590643112149, in 1.8222251250117552 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.698251595393087, in 1.7242664170044009 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.687609321623736, in 1.7407344579987694 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.755939055414357, in 1.5987405420164578 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.798904087089218, in 1.7415532500017434 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.780900689458912, in 1.667152417008765 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.783653813761221, in 1.9172358750074636 s.
+one
+two
+all circs run!
+Loss computed by VQE is -4.770857753431994, in 1.6257012909918558 s.
+one
+{'application_name': 'cafqa_optimization', 'optimization_objectives': ['value'], 'design_of_experiment': {'number_of_samples': 100, 'doe_type': 'random sampling'}, 'optimization_iterations': 100, 'models': {'model': 'random_forest', 'number_of_trees': 10, 'max_features': 0.5, 'bootstrap': False, 'min_samples_split': 5}, 'input_parameters': {'x0': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x1': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x2': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x3': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x4': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x5': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x6': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x7': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x8': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x9': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x10': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 0, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x11': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 1, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x12': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x13': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 2, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x14': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}, 'x15': {'parameter_type': 'ordinal', 'values': [0, 1, 2, 3], 'parameter_default': 3, 'prior': 'uniform', 'custom_gaussian_prior_means': False, 'custom_gaussian_prior_stds': False}}, 'print_best': True, 'print_posterior_best': True, 'log_file': 'cafqa_example_out//hypermapper_log.log', 'output_data_file': 'cafqa_example_out//hypermapper_output.csv', 'verbose_logging': False, 'profiling': False, 'noise': True, 'profiling_file': 'profiles/profile.csv', 'append_profiles': False, 'number_of_cpus': 0, 'max_number_of_predictions': 1000000, 'time_budget': -1, 'number_of_repetitions': 1, 'hypermapper_mode': {'mode': 'default'}, 'output_image': {'output_image_pdf_file': 'output_pareto.pdf', 'image_xlog': False, 'image_ylog': False}, 'feasible_output': {'name': 'Valid', 'true_value': 'True', 'false_value': 'False', 'enable_feasible_predictor': False, 'enable_feasible_predictor_grid_search_on_recall_and_precision': False, 'feasible_predictor_grid_search_validation_file': '/home/lnardi/spatial-lang/results/apps_classification_test_set/BlackScholes.csv'}, 'timestamp': 'Timestamp', 'evaluations_per_optimization_iteration': 1, 'run_directory': '.', 'output_pareto_file': 'output_pareto.csv', 'acquisition_function': 'EI', 'scalarization_method': 'tchebyshev', 'weight_sampling': 'flat', 'bounding_box_limits': [0, 1], 'optimization_method': 'bayesian_optimization', 'local_search_starting_points': 10, 'local_search_random_points': 10000, 'local_search_evaluation_limit': -1, 'scalarization_key': 'scalarization', 'local_search_scalarization_weights': [1], 'print_parameter_importance': False, 'normalize_inputs': False, 'epsilon_greedy_threshold': 0.1, 'prior_method': 'pibo', 'prior_beta': -1, 'prior_floor': 1e-06, 'model_posterior_weight': 10, 'model_good_quantile': 0.05, 'prior_estimation_file': 'samples.csv', 'prior_estimation_quantile': 0.1, 'estimate_multivariate_priors': False, 'resume_optimization': False, 'resume_optimization_data': 'output_samples.csv', 'bandwidth_parameter': 0, 'bandwidth_n_factor': 100, 'prior_limit_estimation_points': 10000, 'posterior_computation_lower_limit': 1e-08, 'custom_gaussian_prior_means': [0], 'custom_gaussian_prior_stds': [-1], 'acquisition_function_optimizer': 'local_search', 'evolution_population_size': 50, 'evolution_generations': 150, 'mutation_rate': 1, 'evolution_crossover': False, 'regularize_evolution': False, 'batch_size': 2, 'cma_es_sigma': 0.2, 'cma_es_starting_points': 1, 'cma_es_random_points': 10000}
+Design of experiment phase, number of new doe samples = 100 .......
+Loss computed by CAFQA VQE is -2.4867274170830944, in 0.043591416004346684 s.
+Loss computed by CAFQA VQE is -6.799063117591629, in 0.03261587501037866 s.
+Loss computed by CAFQA VQE is -4.796685150445592, in 0.035240375000284985 s.
+Loss computed by CAFQA VQE is -6.546932820292346, in 0.04209745899424888 s.
+Loss computed by CAFQA VQE is -4.774368687558804, in 0.035577917005866766 s.
+Loss computed by CAFQA VQE is -4.916599832658559, in 0.0326139590179082 s.
+Loss computed by CAFQA VQE is -2.8351811798550233, in 0.03615604099468328 s.
+Loss computed by CAFQA VQE is -5.080735261070197, in 0.04120491701178253 s.
+Loss computed by CAFQA VQE is -6.2593246883595555, in 0.035632707993499935 s.
+Loss computed by CAFQA VQE is -3.1876115998654613, in 0.03369729200494476 s.
+Loss computed by CAFQA VQE is -3.936248184078076, in 0.03177087500807829 s.
+Loss computed by CAFQA VQE is -6.428998946789509, in 0.037893125001573935 s.
+Loss computed by CAFQA VQE is -4.829121109310696, in 0.037484082975424826 s.
+Loss computed by CAFQA VQE is -3.8242748839029095, in 0.03392308298498392 s.
+Loss computed by CAFQA VQE is -4.843374929035589, in 0.03607324999757111 s.
+Loss computed by CAFQA VQE is -6.397317816933148, in 0.03236770801595412 s.
+Loss computed by CAFQA VQE is -4.4262246805400505, in 0.03921441698912531 s.
+Loss computed by CAFQA VQE is -6.40631691781744, in 0.0340128329989966 s.
+Loss computed by CAFQA VQE is -3.712301583727743, in 0.02922341600060463 s.
+Loss computed by CAFQA VQE is -4.883113024078673, in 0.03903008397901431 s.
+Loss computed by CAFQA VQE is -6.4291650733354615, in 0.030789874988840893 s.
+Loss computed by CAFQA VQE is -3.001267861776479, in 0.03503604099387303 s.
+Loss computed by CAFQA VQE is -4.986005522053896, in 0.037427709001349285 s.
+Loss computed by CAFQA VQE is -6.428737972754501, in 0.03538720801589079 s.
+Loss computed by CAFQA VQE is -4.4929539124356594, in 0.04089037497760728 s.
+Loss computed by CAFQA VQE is -4.103156838105287, in 0.041781417006859556 s.
+Loss computed by CAFQA VQE is -5.059933579493794, in 0.04574683401733637 s.
+Loss computed by CAFQA VQE is -4.393395336642204, in 0.07994058300391771 s.
+Loss computed by CAFQA VQE is -6.269955137219581, in 0.04321458301274106 s.
+Loss computed by CAFQA VQE is -4.741969932698661, in 0.03929870901629329 s.
+Loss computed by CAFQA VQE is -2.8351811798550233, in 0.032044416991993785 s.
+Loss computed by CAFQA VQE is -6.433473372671308, in 0.033903000003192574 s.
+Loss computed by CAFQA VQE is -6.4269232371609135, in 0.03438362499582581 s.
+Loss computed by CAFQA VQE is -6.430434864178805, in 0.034381333010969684 s.
+Loss computed by CAFQA VQE is -4.444800826655181, in 0.03714816700085066 s.
+Loss computed by CAFQA VQE is -4.775586089506396, in 0.03615829101181589 s.
+Loss computed by CAFQA VQE is -5.15501671670145, in 0.03248866699868813 s.
+Loss computed by CAFQA VQE is -4.804481770624765, in 0.03625075001036748 s.
+Loss computed by CAFQA VQE is -6.428904099300453, in 0.03434795900830068 s.
+Loss computed by CAFQA VQE is -4.772946953217636, in 0.03531554201617837 s.
+Loss computed by CAFQA VQE is -5.203950198402659, in 0.03500012500444427 s.
+Loss computed by CAFQA VQE is -4.8482334588980045, in 0.04228720799437724 s.
+Loss computed by CAFQA VQE is -3.8047268925554607, in 0.02989299999899231 s.
+Loss computed by CAFQA VQE is -6.428998946789509, in 0.034674916008953005 s.
+Loss computed by CAFQA VQE is -4.715285352292126, in 0.0794867500080727 s.
+Loss computed by CAFQA VQE is -4.6133754398607785, in 0.04402008300530724 s.
+Loss computed by CAFQA VQE is -4.854531976170971, in 0.03908074999344535 s.
+Loss computed by CAFQA VQE is -4.778923033597234, in 0.03697304200613871 s.
+Loss computed by CAFQA VQE is -4.89797236967558, in 0.03646779098198749 s.
+Loss computed by CAFQA VQE is -6.2593246883595555, in 0.03634887500084005 s.
+Loss computed by CAFQA VQE is -4.716729822684712, in 0.03104612499009818 s.
+Loss computed by CAFQA VQE is -3.865322186287338, in 0.029494541988242418 s.
+Loss computed by CAFQA VQE is -4.904215804143268, in 0.02582616699510254 s.
+Loss computed by CAFQA VQE is -4.0441620574959, in 0.03688304199022241 s.
+Loss computed by CAFQA VQE is -6.400384105709266, in 0.0800882919866126 s.
+Loss computed by CAFQA VQE is -3.3659936948649816, in 0.033641124988207594 s.
+Loss computed by CAFQA VQE is -6.551519195261298, in 0.03873516697785817 s.
+Loss computed by CAFQA VQE is -4.837769696030902, in 0.038187500002095476 s.
+Loss computed by CAFQA VQE is -3.308033116216707, in 0.03408029201091267 s.
+Loss computed by CAFQA VQE is -5.070465422134845, in 0.03274725002120249 s.
+Loss computed by CAFQA VQE is -4.80364885852763, in 0.040960999991511926 s.
+Loss computed by CAFQA VQE is -4.802831212899097, in 0.039666791999479756 s.
+Loss computed by CAFQA VQE is -4.796488878747105, in 0.04093804198782891 s.
+Loss computed by CAFQA VQE is -5.135520418089616, in 0.038496082997880876 s.
+Loss computed by CAFQA VQE is -4.845901172858394, in 0.03463566701975651 s.
+Loss computed by CAFQA VQE is -4.359083515424629, in 0.03565725000225939 s.
+Loss computed by CAFQA VQE is -5.0073244712092695, in 0.03767733299173415 s.
+Loss computed by CAFQA VQE is -4.692260542461897, in 0.04405141598545015 s.
+Loss computed by CAFQA VQE is -4.829526403102987, in 0.04083374998299405 s.
+Loss computed by CAFQA VQE is -6.385710598473967, in 0.031896375003270805 s.
+Loss computed by CAFQA VQE is -4.818251673878176, in 0.03544087501359172 s.
+Loss computed by CAFQA VQE is -5.258710074843609, in 0.03525720798643306 s.
+Loss computed by CAFQA VQE is -4.721324163133815, in 0.040925500012235716 s.
+Loss computed by CAFQA VQE is -4.750895416199963, in 0.03901495801983401 s.
+Loss computed by CAFQA VQE is -5.215217535247751, in 0.04054279101546854 s.
+Loss computed by CAFQA VQE is -4.8478852615634604, in 0.04343216700362973 s.
+Loss computed by CAFQA VQE is -3.191835707953501, in 0.040523125004256144 s.
+Loss computed by CAFQA VQE is -4.39993772040544, in 0.0319352499791421 s.
+Loss computed by CAFQA VQE is -4.773358433288667, in 0.04297324997605756 s.
+Loss computed by CAFQA VQE is -4.4262246805400505, in 0.03626929101301357 s.
+Loss computed by CAFQA VQE is -4.802221453062677, in 0.0378536669886671 s.
+Loss computed by CAFQA VQE is -4.732479000099973, in 0.03734912499203347 s.
+Loss computed by CAFQA VQE is -4.845681613208807, in 0.032107749982969835 s.
+Loss computed by CAFQA VQE is -4.655392849993802, in 0.07461787498323247 s.
+Loss computed by CAFQA VQE is -4.890827356409199, in 0.04078004200709984 s.
+Loss computed by CAFQA VQE is -4.845901172858394, in 0.03810549998888746 s.
+Loss computed by CAFQA VQE is -4.850232240319778, in 0.040104915999108925 s.
+Loss computed by CAFQA VQE is -4.68457872601917, in 0.04443075001472607 s.
+Loss computed by CAFQA VQE is -6.431294949778442, in 0.03907387499930337 s.
+Loss computed by CAFQA VQE is -3.1124205337639625, in 0.03570574999321252 s.
+Loss computed by CAFQA VQE is -4.752858980540944, in 0.04129712501890026 s.
+Loss computed by CAFQA VQE is -5.139217622688976, in 0.04098779201740399 s.
+Loss computed by CAFQA VQE is -4.769347192046677, in 0.03866095902048983 s.
+Loss computed by CAFQA VQE is -5.01460764014246, in 0.04032037500292063 s.
+Loss computed by CAFQA VQE is -4.7507668156545595, in 0.038339874998200685 s.
+Loss computed by CAFQA VQE is -5.040621394285187, in 0.03515625 s.
+Loss computed by CAFQA VQE is -4.796482973455049, in 0.03512591699836776 s.
+Loss computed by CAFQA VQE is -4.824196641911184, in 0.03534816700266674 s.
+Loss computed by CAFQA VQE is -4.781500277439758, in 0.04255441599525511 s.
+Loss computed by CAFQA VQE is -6.710483713751575, in 0.040184542012866586 s.
+x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,value,Timestamp
+0,1,1,1,3,1,3,2,2,3,0,1,3,2,3,3,-2.4867274170830944,52
+0,0,1,2,3,3,0,3,0,2,3,3,3,0,2,1,-6.799063117591629,86
+1,1,0,3,2,1,1,0,2,1,0,0,1,0,2,1,-4.796685150445592,122
+1,2,1,1,2,2,2,2,2,1,3,1,0,3,2,1,-6.546932820292346,166
+3,3,3,2,1,2,2,1,0,2,3,2,0,0,0,2,-4.774368687558804,202
+1,1,1,0,2,2,2,3,2,0,0,0,0,3,1,0,-4.916599832658559,237
+2,1,2,3,0,2,0,0,0,1,2,1,1,1,1,3,-2.8351811798550233,274
+0,1,2,1,0,1,1,2,1,1,3,3,1,0,1,3,-5.080735261070197,316
+2,3,2,2,1,0,2,1,2,2,1,2,0,1,2,2,-6.2593246883595555,354
+2,3,2,0,2,2,0,3,0,0,1,1,2,1,0,2,-3.1876115998654613,388
+3,0,2,2,3,3,1,0,2,3,0,0,1,0,1,3,-3.936248184078076,421
+2,3,2,2,3,3,2,1,2,2,3,1,3,3,2,1,-6.428998946789509,460
+0,3,1,3,1,1,2,1,1,2,0,3,0,1,0,1,-4.829121109310696,499
+2,2,3,3,3,1,0,3,0,0,3,2,1,0,0,2,-3.8242748839029095,535
+3,1,3,2,3,0,2,2,0,3,0,0,2,1,1,3,-4.843374929035589,572
+2,3,0,1,1,3,3,1,2,0,2,2,0,3,1,0,-6.397317816933148,606
+1,0,3,0,1,2,3,1,2,2,3,1,1,2,3,2,-4.4262246805400505,646
+0,2,3,0,2,1,1,3,0,3,0,1,3,1,3,1,-6.40631691781744,681
+0,2,1,0,3,2,2,0,2,2,1,0,0,0,0,2,-3.712301583727743,712
+0,1,1,1,2,2,0,2,3,3,0,1,3,2,2,0,-4.883113024078673,752
+0,3,2,3,0,0,0,0,0,3,2,0,1,2,1,1,-6.4291650733354615,784
+0,3,0,1,3,2,2,0,2,1,1,2,1,2,3,0,-3.001267861776479,820
+3,3,0,1,1,2,2,0,2,1,0,1,3,0,1,2,-4.986005522053896,859
+0,1,1,1,3,0,1,2,0,2,2,2,2,1,1,2,-6.428737972754501,895
+3,3,2,3,3,0,1,0,3,2,1,1,1,0,1,2,-4.4929539124356594,938
+1,1,0,3,0,2,1,2,3,1,2,3,3,3,0,2,-4.103156838105287,981
+3,1,1,1,0,3,1,0,1,0,2,3,1,2,3,3,-5.059933579493794,1028
+2,2,3,0,2,3,2,2,3,1,3,1,2,1,0,0,-4.393395336642204,1109
+2,2,2,0,1,3,1,3,2,0,1,3,3,0,3,1,-6.269955137219581,1160
+2,1,1,1,2,1,0,3,3,0,0,2,3,0,3,1,-4.741969932698661,1201
+0,3,2,2,0,1,2,0,2,2,1,2,2,2,3,0,-2.8351811798550233,1234
+2,2,1,0,1,3,2,0,2,1,3,0,2,0,1,3,-6.433473372671308,1269
+0,0,2,2,1,3,0,3,3,1,2,1,2,0,2,3,-6.4269232371609135,1305
+1,2,0,3,3,3,3,2,0,3,2,2,3,3,0,0,-6.430434864178805,1340
+2,3,1,2,2,1,0,1,1,0,3,1,3,0,0,0,-4.444800826655181,1379
+3,2,1,2,1,1,2,0,2,3,3,0,3,0,0,2,-4.775586089506396,1416
+3,0,0,0,3,2,3,2,0,2,3,3,2,0,1,3,-5.15501671670145,1450
+3,3,2,2,3,2,2,2,0,0,2,3,1,2,2,1,-4.804481770624765,1488
+0,0,3,2,3,1,2,1,0,1,0,3,3,0,3,2,-6.428904099300453,1524
+3,0,3,0,1,3,0,3,1,0,3,0,1,0,3,0,-4.772946953217636,1560
+2,2,0,2,0,3,2,3,2,3,0,1,3,0,3,3,-5.203950198402659,1597
+1,3,1,2,1,2,2,3,2,2,0,3,1,2,1,1,-4.8482334588980045,1640
+0,0,2,3,0,1,3,3,2,0,3,2,1,0,0,3,-3.8047268925554607,1672
+2,3,2,0,1,0,3,3,2,1,2,1,3,2,0,3,-6.428998946789509,1707
+2,1,3,0,3,0,3,0,3,3,3,2,2,2,3,2,-4.715285352292126,1807
+3,0,0,0,3,1,3,3,1,2,3,2,2,3,1,1,-4.6133754398607785,1853
+0,3,3,1,1,2,1,3,3,0,0,3,2,2,1,3,-4.854531976170971,1893
+3,2,0,2,1,3,1,3,1,2,1,1,0,2,0,2,-4.778923033597234,1931
+2,0,2,3,0,0,2,1,3,3,3,3,0,0,3,2,-4.89797236967558,1969
+2,3,1,1,3,2,0,2,2,0,2,1,0,1,1,2,-6.2593246883595555,2006
+1,1,0,1,2,0,2,3,0,0,2,0,0,3,1,0,-4.716729822684712,2038
+2,2,0,3,3,0,3,3,0,0,1,2,0,2,0,1,-3.865322186287338,2069
+2,2,2,0,0,0,2,2,0,2,0,0,2,2,0,1,-4.904215804143268,2096
+2,0,1,1,3,2,0,0,3,2,1,1,1,0,0,0,-4.0441620574959,2134
+2,0,0,2,2,3,3,0,2,3,3,1,2,2,0,1,-6.400384105709266,2216
+2,1,2,2,1,2,0,3,0,2,0,1,3,3,3,3,-3.3659936948649816,2251
+0,2,0,1,0,2,1,0,1,1,2,3,1,1,0,2,-6.551519195261298,2291
+2,3,1,0,1,0,3,3,1,0,3,3,3,1,3,0,-4.837769696030902,2330
+0,0,3,0,0,2,1,0,2,3,1,1,2,0,1,1,-3.308033116216707,2366
+0,3,0,2,3,0,1,0,3,0,1,2,2,2,0,3,-5.070465422134845,2400
+2,1,1,3,3,1,0,1,3,2,2,1,3,2,1,3,-4.80364885852763,2442
+2,2,1,1,0,1,0,3,1,1,1,2,2,3,1,1,-4.802831212899097,2482
+0,3,3,3,2,0,1,1,1,2,1,3,3,2,0,2,-4.796488878747105,2524
+1,3,0,1,2,3,1,1,3,1,0,2,0,2,1,1,-5.135520418089616,2564
+3,2,2,1,2,0,3,0,3,0,1,0,1,3,2,0,-4.845901172858394,2600
+1,2,1,2,3,1,1,1,0,2,3,0,2,0,2,1,-4.359083515424629,2636
+2,1,2,2,3,0,3,1,3,3,3,0,3,3,3,2,-5.0073244712092695,2675
+1,1,2,3,1,2,2,3,3,1,3,1,3,3,2,0,-4.692260542461897,2720
+3,2,2,2,1,2,0,2,1,1,3,3,2,3,2,3,-4.829526403102987,2762
+0,0,0,2,2,0,3,2,0,3,1,3,1,1,0,2,-6.385710598473967,2795
+0,1,3,2,0,2,1,0,3,2,2,2,1,1,2,3,-4.818251673878176,2832
+0,2,3,2,2,3,1,1,3,1,2,0,2,0,0,3,-5.258710074843609,2869
+1,1,0,1,3,3,3,2,1,0,1,2,3,1,1,1,-4.721324163133815,2911
+0,3,1,1,1,0,3,2,1,2,2,2,1,0,1,0,-4.750895416199963,2951
+3,3,1,0,2,2,0,3,3,2,3,2,2,0,2,3,-5.215217535247751,2993
+3,3,3,1,3,0,3,0,1,3,3,2,3,1,0,2,-4.8478852615634604,3038
+0,1,3,1,1,1,1,3,2,0,1,1,3,2,2,2,-3.191835707953501,3080
+0,1,2,0,1,3,3,3,3,0,2,0,0,1,2,2,-4.39993772040544,3113
+3,3,1,1,2,1,3,2,3,2,1,2,1,2,0,3,-4.773358433288667,3157
+1,2,0,3,1,0,3,3,0,2,1,3,1,1,2,0,-4.4262246805400505,3195
+0,3,3,2,1,0,1,1,1,0,1,2,3,2,3,3,-4.802221453062677,3234
+2,2,1,2,1,0,2,1,3,1,0,3,2,0,2,3,-4.732479000099973,3273
+2,1,0,3,1,3,3,2,1,0,0,0,0,3,2,0,-4.845681613208807,3306
+3,3,0,2,1,0,1,0,0,3,3,0,1,2,1,0,-4.655392849993802,3382
+2,3,3,2,0,0,3,3,3,3,3,2,1,1,3,1,-4.890827356409199,3424
+1,2,3,1,1,2,3,3,1,0,0,1,0,3,2,0,-4.845901172858394,3463
+3,2,0,2,1,1,0,2,3,3,1,1,0,1,1,1,-4.850232240319778,3504
+2,3,3,2,1,2,3,0,3,3,3,1,1,1,1,1,-4.68457872601917,3550
+2,1,3,3,3,1,0,1,2,2,2,3,2,0,3,3,-6.431294949778442,3591
+2,2,0,1,1,2,0,3,3,1,0,0,1,3,1,3,-3.1124205337639625,3628
+3,1,3,0,3,1,3,1,3,3,3,2,0,3,0,3,-4.752858980540944,3670
+3,0,2,3,0,0,3,1,3,1,3,1,3,3,2,1,-5.139217622688976,3713
+2,3,1,0,3,2,1,2,3,1,2,0,3,1,1,2,-4.769347192046677,3753
+1,0,1,1,3,2,1,0,2,3,3,1,3,2,0,0,-5.01460764014246,3794
+3,2,2,0,1,3,2,2,2,3,1,3,3,0,1,2,-4.7507668156545595,3834
+3,2,3,3,1,3,3,1,0,0,2,2,0,3,0,1,-5.040621394285187,3870
+0,3,1,2,3,3,1,3,1,2,0,1,0,0,0,2,-4.796482973455049,3906
+3,0,3,0,3,3,2,3,0,1,0,3,2,3,0,1,-4.824196641911184,3943
+2,0,1,1,3,3,3,1,1,3,1,1,2,1,0,1,-4.781500277439758,3987
+2,1,3,2,3,0,0,1,2,1,3,1,3,3,1,3,-6.710483713751575,4028
+
+
+End of doe/resume phase, the number of evaluated configurations is: 100
+
+End of DoE - Time     4.1181 sec
+Starting optimization iteration 1
+End of training - Time       0.05 sec
+Model fitting time     0.0487 sec
+Total RS time     0.0657 sec
+all circs run!
+Loss computed by VQE is -4.743091159731145, in 1.9466622499749064 s.
+all circs run!
+Loss computed by VQE is -4.906345334208744, in 1.6753524170198943 s.
+all circs run!
+Loss computed by VQE is -4.691131416799712, in 1.7565627080039121 s.
+all circs run!
+Loss computed by VQE is -4.606484360735109, in 1.8519253750273492 s.
+all circs run!
+Loss computed by VQE is -4.776584705333455, in 1.624058999994304 s.
+all circs run!
+Loss computed by VQE is -4.7359806902253965, in 1.7320110840082634 s.
+all circs run!
+Loss computed by VQE is -4.745951265622434, in 1.6303456659952644 s.
+all circs run!
+Loss computed by VQE is -4.747290119345468, in 1.8200754580029752 s.
+all circs run!
+Loss computed by VQE is -4.7606735780676654, in 1.7504518750065472 s.
+all circs run!
+Loss computed by VQE is -4.902890005721268, in 1.6810418330132961 s.
+all circs run!
+Loss computed by VQE is -4.781949060918199, in 1.7068005000182893 s.
+all circs run!
+Loss computed by VQE is -4.641759644830444, in 1.665667958004633 s.
+all circs run!
+Loss computed by VQE is -4.7870446051027695, in 1.697619582992047 s.
+all circs run!
+Loss computed by VQE is -4.7434231999240435, in 1.7128218330035452 s.
+all circs run!
+Loss computed by VQE is -4.7468060796132505, in 1.7256932079908438 s.
+all circs run!
+Loss computed by VQE is -4.731514883488, in 1.587901624996448 s.
+all circs run!
+Loss computed by VQE is -4.737974306021416, in 1.7396658750076313 s.
+all circs run!
+Loss computed by VQE is -4.743662144118781, in 1.7089759580267128 s.
+all circs run!
+Loss computed by VQE is -4.987707445188541, in 1.584691791998921 s.
+all circs run!
+Loss computed by VQE is -4.637788964499386, in 1.7105172080046032 s.
+all circs run!
+Loss computed by VQE is -4.490438994834848, in 1.7006992499809712 s.
+all circs run!
+Loss computed by VQE is -4.765304963750689, in 1.5977917090058327 s.
+all circs run!
+Loss computed by VQE is -4.751733801245649, in 1.6995728339825291 s.
+all circs run!
+Loss computed by VQE is -4.734086768025351, in 1.7014210410125088 s.
+all circs run!
+Loss computed by VQE is -4.746553428630085, in 1.629017291998025 s.
+all circs run!
+Loss computed by VQE is -4.74037580147807, in 1.7637882079870906 s.
+all circs run!
+Loss computed by VQE is -4.979316441906894, in 1.693268833012553 s.
+all circs run!
+Loss computed by VQE is -4.777332383446915, in 1.5881329169787932 s.
+all circs run!
+Loss computed by VQE is -4.52668959723219, in 1.732872666005278 s.
+all circs run!
+Loss computed by VQE is -4.760395712056807, in 1.7274382920004427 s.
+all circs run!
+Loss computed by VQE is -4.7270417181662125, in 1.5948962909751572 s.
+all circs run!
+Loss computed by VQE is -4.735380018253416, in 1.7106843329966068 s.
+all circs run!
+Loss computed by VQE is -4.736397750394916, in 1.7292104580265004 s.
+all circs run!
+Loss computed by VQE is -4.735460759996563, in 1.6333991660212632 s.
+all circs run!
+Loss computed by VQE is -4.798469303243882, in 1.8159846659982577 s.
+all circs run!
+Loss computed by VQE is -5.001783268861557, in 1.7258441669982858 s.
+all circs run!
+Loss computed by VQE is -4.582342701988512, in 1.7511463749979157 s.
+all circs run!
+Loss computed by VQE is -4.422282812084999, in 1.6406065420014784 s.
+all circs run!
+Loss computed by VQE is -4.815807811842843, in 1.738962041999912 s.
+all circs run!
+Loss computed by VQE is -4.815623080172859, in 1.784311333001824 s.
+all circs run!
+Loss computed by VQE is -4.813446181920144, in 1.6943127920094412 s.
+all circs run!
+Loss computed by VQE is -4.810588459000867, in 1.7460525420028716 s.
+all circs run!
+Loss computed by VQE is -4.805153343861376, in 1.7249259579984937 s.
+all circs run!
+Loss computed by VQE is -5.032423814704519, in 1.6032071249792352 s.
+all circs run!
+Loss computed by VQE is -4.467002093734685, in 1.7181251669826452 s.
+all circs run!
+Loss computed by VQE is -4.8169251809909905, in 1.8145047500147484 s.
