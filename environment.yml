@@ -1,0 +1,15 @@
+name: mycondaenv
+channels:
+  - defaults
+dependencies:
+  - python
+  - pip
+  - pip:
+    - qiskit_ibm_runtime
+    - qiskit_aer
+    - qiskit
+    - pyscf
+    - stim
+    - scikit-quant
+    - qiskit_nature
+    - hypermapper

@@ -19,7 +19,7 @@
                 2,
                 3
             ],
-            "parameter_default": 0
+            "parameter_default": 2
         },
         "x1": {
             "parameter_type": "ordinal",
@@ -29,7 +29,7 @@
                 2,
                 3
             ],
-            "parameter_default": 1
+            "parameter_default": 2
         },
         "x2": {
             "parameter_type": "ordinal",
@@ -39,7 +39,7 @@
                 2,
                 3
             ],
-            "parameter_default": 1
+            "parameter_default": 0
         },
         "x3": {
             "parameter_type": "ordinal",
@@ -49,7 +49,7 @@
                 2,
                 3
             ],
-            "parameter_default": 1
+            "parameter_default": 3
         },
         "x4": {
             "parameter_type": "ordinal",
@@ -89,87 +89,7 @@
                 2,
                 3
             ],
-            "parameter_default": 2
-        },
-        "x8": {
-            "parameter_type": "ordinal",
-            "values": [
-                0,
-                1,
-                2,
-                3
-            ],
-            "parameter_default": 2
-        },
-        "x9": {
-            "parameter_type": "ordinal",
-            "values": [
-                0,
-                1,
-                2,
-                3
-            ],
-            "parameter_default": 3
-        },
-        "x10": {
-            "parameter_type": "ordinal",
-            "values": [
-                0,
-                1,
-                2,
-                3
-            ],
-            "parameter_default": 0
-        },
-        "x11": {
-            "parameter_type": "ordinal",
-            "values": [
-                0,
-                1,
-                2,
-                3
-            ],
             "parameter_default": 1
-        },
-        "x12": {
-            "parameter_type": "ordinal",
-            "values": [
-                0,
-                1,
-                2,
-                3
-            ],
-            "parameter_default": 3
-        },
-        "x13": {
-            "parameter_type": "ordinal",
-            "values": [
-                0,
-                1,
-                2,
-                3
-            ],
-            "parameter_default": 2
-        },
-        "x14": {
-            "parameter_type": "ordinal",
-            "values": [
-                0,
-                1,
-                2,
-                3
-            ],
-            "parameter_default": 3
-        },
-        "x15": {
-            "parameter_type": "ordinal",
-            "values": [
-                0,
-                1,
-                2,
-                3
-            ],
-            "parameter_default": 3
         }
     },
     "print_best": true,
