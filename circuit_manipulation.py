@@ -75,7 +75,7 @@ def qiskit_to_stim(circuit):
     (stim._stim_sse2.Circuit) stim circuit.
     """
     assert isinstance(circuit, QuantumCircuit), f"Circuit is not a Qiskit QuantumCircuit."
-    allowed_gates = ["X", "Y", "Z", "H", "CX", "S", "S_DAG", "SQRT_X", "SQRT_X_DAG"]
+    allowed_gates = ["X", "Y", "Z", "H", "CX", "S", "S_DAG", "SQRT_X", "SQRT_X_DAG", "T"]
     stim_circ = stim.Circuit()
     # make sure right number of qubits in stim circ
 
@@ -91,7 +91,110 @@ def qiskit_to_stim(circuit):
             gate_lbl = "SQRT_X"
         elif gate_lbl == "SXDG":
             gate_lbl = "SQRT_X_DAG"
+        elif gate_lbl == "T":
+            gate_lbl = "T"
         assert gate_lbl in allowed_gates, f"Invalid gate {gate_lbl}."
         qubit_idc = [circuit.find_bit(qb)[0] for qb in instruction.qubits]
+        print(gate_lbl, qubit_idc)
         stim_circ.append(gate_lbl, qubit_idc)
     return stim_circ
+
+from qiskit import QuantumCircuit
+from qiskit.circuit.library import (
+    TGate, HGate, SGate, SdgGate, XGate, YGate, ZGate, 
+    CXGate, CYGate, CZGate, SwapGate
+)
+from qiskit.quantum_info import Operator
+import numpy as np
+
+def incorporate_t_gates(ansatz: QuantumCircuit, num_t_gates: int) -> QuantumCircuit:
+    """
+    Incorporate a specified number of T gates into the input ansatz,
+    replacing existing Clifford gates while maintaining the original functionality.
+    
+    Args:
+    ansatz (QuantumCircuit): The input ansatz to modify
+    num_t_gates (int): The target number of T gates to incorporate
+    
+    Returns:
+    QuantumCircuit: The modified ansatz with incorporated T gates
+    """
+    
+    modified_ansatz = QuantumCircuit(ansatz.num_qubits)
+    t_gates_added = 0
+    
+    def add_t_gate():
+        nonlocal t_gates_added
+        if t_gates_added < num_t_gates:
+            modified_ansatz.t(qargs)
+            t_gates_added += 1
+        else:
+            modified_ansatz.s(qargs)  # S = T^2, so we use S if we've reached our T gate limit
+    
+    for inst, qargs, _ in ansatz.data:
+        if isinstance(inst, HGate):
+            # H = THTHTHt
+            add_t_gate()
+            modified_ansatz.h(qargs)
+            add_t_gate()
+            modified_ansatz.h(qargs)
+            add_t_gate()
+            modified_ansatz.h(qargs)
+            add_t_gate()
+        elif isinstance(inst, SGate):
+            # S = T^2
+            add_t_gate()
+            add_t_gate()
+        elif isinstance(inst, SdgGate):
+            # S† = (T†)^2
+            modified_ansatz.tdg(qargs)
+            modified_ansatz.tdg(qargs)
+        elif isinstance(inst, XGate):
+            # X = HtH
+            modified_ansatz.h(qargs)
+            add_t_gate()
+            modified_ansatz.h(qargs)
+        elif isinstance(inst, YGate):
+            # Y = SX = StHtH
+            add_t_gate()
+            add_t_gate()
+            modified_ansatz.h(qargs)
+            add_t_gate()
+            modified_ansatz.h(qargs)
+        elif isinstance(inst, ZGate):
+            # Z = S^2 = T^4
+            add_t_gate()
+            add_t_gate()
+            add_t_gate()
+            add_t_gate()
+        elif isinstance(inst, CXGate):
+            # CX (CNOT) = (I⊗H) * CZ * (I⊗H)
+            modified_ansatz.h(qargs[1])
+            modified_ansatz.cz(qargs[0], qargs[1])
+            modified_ansatz.h(qargs[1])
+        elif isinstance(inst, CYGate):
+            # CY = (I⊗S†) * CX * (I⊗S)
+            modified_ansatz.sdg(qargs[1])
+            modified_ansatz.cx(qargs[0], qargs[1])
+            add_t_gate()
+            add_t_gate()
+        elif isinstance(inst, CZGate):
+            # CZ remains as is, as it's already a Clifford gate
+            modified_ansatz.cz(qargs[0], qargs[1])
+        elif isinstance(inst, SwapGate):
+            # SWAP = CX * CX * CX
+            modified_ansatz.cx(qargs[0], qargs[1])
+            modified_ansatz.cx(qargs[1], qargs[0])
+            modified_ansatz.cx(qargs[0], qargs[1])
+        else:
+            # For other gates, we'll just append them as-is
+            modified_ansatz.append(inst, qargs)
+    
+    # If we haven't added enough T gates, add more at the end
+    while t_gates_added < num_t_gates:
+        qubit = t_gates_added % ansatz.num_qubits
+        modified_ansatz.t(qubit)
+        modified_ansatz.tdg(qubit)
+        t_gates_added += 1
+    
+    return modified_ansatz

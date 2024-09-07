@@ -1,23 +1,11 @@
-# Use the official Miniconda base image
-FROM continuumio/miniconda3
+FROM amd64/debian:latest
+ADD . /CAFQA
+WORKDIR /CAFQA
 
-# Set environment variables
-ENV PATH /opt/conda/bin:$PATH
-
-# Create a new Conda environment
-COPY environment.yml environment.yml
-RUN conda env create -f environment.yml
-RUN conda init
-
-# Activate the Conda environment
-SHELL ["conda", "activate", "mycondaenv"]
-
-# Copy your project files into the container
-COPY . /app
-WORKDIR /app
-
-# Install additional dependencies if needed
-# RUN pip install -r requirements.txt
-
-# Command to run your Python project (adjust as needed)
-CMD ["python",  "/example/H2/h2.py"]
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y wget
+RUN mkdir -p ~/miniconda3
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+RUN bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+RUN rm ~/miniconda3/miniconda.sh
+RUN ~/miniconda3/bin/conda init bash
