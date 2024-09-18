@@ -17,17 +17,22 @@ Full list of dependencies (`pip install ...`):
 ## Create a conda environment if you have not already:
 
 ```
-conda create --name qs-01 python=3.12.2 -y
+conda env create -f environment.yaml
 ```
 
 ## Activate the environment:
 
 ```
-conda activate qs-01
+conda activate mycondaenv
 ```
 
-## Install the necessary libraries.
+## To use the Docker file.
 
 ```
-pip install -r requirements.txt
+With docker installed execute the following command in terminal
+
+docker build -t myconda_image .
+
+docker run --platform linux/amd64 -it --rm myconda_image
+
 ```
