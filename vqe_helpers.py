@@ -287,16 +287,16 @@ def vqe_cafqa_stim(inputs, n_qubits, coeffs, paulis, init_func=hartreefock, ansa
 
     vqe_qc = QuantumCircuit(n_qubits)
 
-    t_gates = 1
+    t_gates = 2
 
     if not init_last:
         init_func(vqe_qc, **kwargs)
     add_ansatz(vqe_qc, ansatz_func, parameters, ansatz_reps, **kwargs)
     if init_last:
         init_func(vqe_qc, **kwargs)
-    vqe_qc_trans = transform_to_allowed_gates(vqe_qc)
-    vqe_qc_trans_with_t = incorporate_t_gates(vqe_qc_trans, t_gates)
-    stim_qc = qiskit_to_stim(vqe_qc_trans_with_t)
+    vqe_qc_with_t = incorporate_t_gates(vqe_qc, t_gates)
+    vqe_qc_trans = transform_to_allowed_gates(vqe_qc_with_t)
+    stim_qc = qiskit_to_stim(vqe_qc_trans)
     sim = stim.TableauSimulator()
     sim.do_circuit(stim_qc)
     pauli_expect = [sim.peek_observable_expectation(stim.PauliString(p)) for p in paulis]

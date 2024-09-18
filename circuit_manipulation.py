@@ -64,6 +64,15 @@ def transform_to_allowed_gates(circuit, **kwargs):
             qc_loc.x(0)
             qc_loc_instr = qc_loc.to_instruction()
             dag.substitute_node(node, qc_loc_instr, inplace=True)
+        elif node.name == 't':
+            qc_loc = QuantumCircuit(1)
+            qc_loc.h(0)
+            qc_loc.sdg(0)
+            qc_loc.z(0)
+            qc_loc.s(0)
+            qc_loc.h(0)
+            qc_loc_instr = qc_loc.to_instruction()
+            dag.substitute_node(node, qc_loc_instr, inplace = True)
     return dag_to_circuit(dag).decompose()
 
 def qiskit_to_stim(circuit):
@@ -75,7 +84,7 @@ def qiskit_to_stim(circuit):
     (stim._stim_sse2.Circuit) stim circuit.
     """
     assert isinstance(circuit, QuantumCircuit), f"Circuit is not a Qiskit QuantumCircuit."
-    allowed_gates = ["X", "Y", "Z", "H", "CX", "S", "S_DAG", "SQRT_X", "SQRT_X_DAG", "T"]
+    allowed_gates = ["X", "Y", "Z", "H", "CX", "S", "S_DAG", "SQRT_X", "SQRT_X_DAG"]
     stim_circ = stim.Circuit()
     # make sure right number of qubits in stim circ
 
@@ -91,8 +100,6 @@ def qiskit_to_stim(circuit):
             gate_lbl = "SQRT_X"
         elif gate_lbl == "SXDG":
             gate_lbl = "SQRT_X_DAG"
-        elif gate_lbl == "T":
-            gate_lbl = "T"
         assert gate_lbl in allowed_gates, f"Invalid gate {gate_lbl}."
         qubit_idc = [circuit.find_bit(qb)[0] for qb in instruction.qubits]
         print(gate_lbl, qubit_idc)
@@ -101,7 +108,7 @@ def qiskit_to_stim(circuit):
 
 from qiskit import QuantumCircuit
 from qiskit.circuit.library import (
-    TGate, HGate, SGate, SdgGate, XGate, YGate, ZGate, 
+    HGate, SGate, SdgGate, XGate, YGate, ZGate, 
     CXGate, CYGate, CZGate, SwapGate
 )
 from qiskit.quantum_info import Operator

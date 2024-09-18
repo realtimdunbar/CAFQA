@@ -19,7 +19,7 @@
                 2,
                 3
             ],
-            "parameter_default": 0
+            "parameter_default": 3
         },
         "x1": {
             "parameter_type": "ordinal",
@@ -29,7 +29,7 @@
                 2,
                 3
             ],
-            "parameter_default": 3
+            "parameter_default": 2
         },
         "x2": {
             "parameter_type": "ordinal",
@@ -39,7 +39,7 @@
                 2,
                 3
             ],
-            "parameter_default": 2
+            "parameter_default": 0
         },
         "x3": {
             "parameter_type": "ordinal",
@@ -59,7 +59,7 @@
                 2,
                 3
             ],
-            "parameter_default": 3
+            "parameter_default": 1
         },
         "x5": {
             "parameter_type": "ordinal",
@@ -79,7 +79,7 @@
                 2,
                 3
             ],
-            "parameter_default": 1
+            "parameter_default": 0
         },
         "x7": {
             "parameter_type": "ordinal",
@@ -89,7 +89,7 @@
                 2,
                 3
             ],
-            "parameter_default": 1
+            "parameter_default": 0
         }
     },
     "print_best": true,
