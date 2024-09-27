@@ -64,15 +64,6 @@ def transform_to_allowed_gates(circuit, **kwargs):
             qc_loc.x(0)
             qc_loc_instr = qc_loc.to_instruction()
             dag.substitute_node(node, qc_loc_instr, inplace=True)
-        elif node.name == 't':
-            qc_loc = QuantumCircuit(1)
-            qc_loc.h(0)
-            qc_loc.sdg(0)
-            qc_loc.z(0)
-            qc_loc.s(0)
-            qc_loc.h(0)
-            qc_loc_instr = qc_loc.to_instruction()
-            dag.substitute_node(node, qc_loc_instr, inplace = True)
     return dag_to_circuit(dag).decompose()
 
 def qiskit_to_stim(circuit):
@@ -102,7 +93,6 @@ def qiskit_to_stim(circuit):
             gate_lbl = "SQRT_X_DAG"
         assert gate_lbl in allowed_gates, f"Invalid gate {gate_lbl}."
         qubit_idc = [circuit.find_bit(qb)[0] for qb in instruction.qubits]
-        print(gate_lbl, qubit_idc)
         stim_circ.append(gate_lbl, qubit_idc)
     return stim_circ
 

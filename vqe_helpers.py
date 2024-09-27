@@ -6,7 +6,6 @@ from qiskit.circuit.library import EfficientSU2
 
 from qiskit.quantum_info import Pauli, Operator
 
-
 import numpy as np
 from numpy.linalg import eigh
 import csv
@@ -14,6 +13,8 @@ import stim
 from circuit_manipulation import *
 
 from timeit import default_timer as timer
+
+backend = AerSimulator()
 
 
 def get_ref_energy(coeffs, paulis, return_groundstate=False):
@@ -216,7 +217,54 @@ def compute_expectations(n_qubits, parameters, paulis, shots, backend, mode, **k
             all_counts.append({len(_id)*'0':shots})
         else:
             all_counts.append(result.get_counts(__))
+
+    #compute the expectations
+    expectations = []
+    for i, count in enumerate(all_counts):
+        #initiate the expectation value to 0
+        expectation_val = 0
+        #compute the expectation
+        for el in count.keys():
+            sign = 1
+            #change sign if there are an odd number of ones
+            if el.count('1')%2 == 1:
+                sign = -1
+            expectation_val += sign*count[el]/shots
+        expectations.append(expectation_val)
+    return expectations
+
+def new_compute_expectations(circuit, shots, backend, paulis, mode, **kwargs):
+    """
+    Compute the expection values of the Pauli strings.
+    n_qubits (Int): Number of qubits in circuit.
+    parameters (Iterable[Float]): VQE parameters.
+    paulis (Iterable[String]): Corresponding Pauli strings in Hamiltonian (same order as coeffs).
+    backend (IBM backend): Can be simulator, fake backend or real backend; only with mode = "device_execution".
+    mode (String): ["no_noisy_sim", "device_execution", "noisy_sim"].
+    shots (Int): Number of VQE circuit execution shots.
+    kwargs (Dict): All the arguments that need to be passed on to the next function calls.
     
+    Returns:
+    List[Float] of expection value for each Pauli string.
+    """
+    #evaluate the circuits
+    if mode == 'no_noisy_sim':
+        result = transpile(circuit, backend=Aer.get_backend("qasm_simulator"), shots=shots).result()
+    elif mode == 'device_execution':
+        circuit.measure_all()
+        job = backend.run(circuit)
+        result = job.result()
+    elif mode == 'noisy_sim':
+        sim_device = AerSimulator.from_backend(backend)
+        result = sim_device.run(circuit, shots=shots).result()
+    else:
+        raise Exception('Invalid circuit execution mode')
+    print("all circs run!")
+ 
+    all_counts = []
+  
+    all_counts.append(result.get_counts())
+
     #compute the expectations
     expectations = []
     for i, count in enumerate(all_counts):
@@ -295,12 +343,21 @@ def vqe_cafqa_stim(inputs, n_qubits, coeffs, paulis, init_func=hartreefock, ansa
     if init_last:
         init_func(vqe_qc, **kwargs)
     vqe_qc_with_t = incorporate_t_gates(vqe_qc, t_gates)
-    vqe_qc_trans = transform_to_allowed_gates(vqe_qc_with_t)
-    stim_qc = qiskit_to_stim(vqe_qc_trans)
-    sim = stim.TableauSimulator()
-    sim.do_circuit(stim_qc)
-    pauli_expect = [sim.peek_observable_expectation(stim.PauliString(p)) for p in paulis]
-    loss = np.dot(coeffs, pauli_expect)
+
+    # need to get the expected value of vqe_qc_with_t
+    shots = 100
+    mode = 'device_execution'
+
+    exp = new_compute_expectations(vqe_qc_with_t, shots, backend, paulis, mode, **kwargs)
+
+    loss = exp[0]
+
+    # vqe_qc_trans = transform_to_allowed_gates(vqe_qc)
+    # stim_qc = qiskit_to_stim(vqe_qc_trans)
+    # sim = stim.TableauSimulator()
+    # sim.do_circuit(stim_qc)
+    # pauli_expect = [sim.peek_observable_expectation(stim.PauliString(p)) for p in paulis]
+    # loss = np.dot(coeffs, pauli_expect)
     end = timer()
     print(f'Loss computed by CAFQA VQE is {loss}, in {end - start} s.')
     
