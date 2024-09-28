@@ -233,52 +233,31 @@ def compute_expectations(n_qubits, parameters, paulis, shots, backend, mode, **k
         expectations.append(expectation_val)
     return expectations
 
-def new_compute_expectations(circuit, shots, backend, paulis, mode, **kwargs):
-    """
-    Compute the expection values of the Pauli strings.
-    n_qubits (Int): Number of qubits in circuit.
-    parameters (Iterable[Float]): VQE parameters.
-    paulis (Iterable[String]): Corresponding Pauli strings in Hamiltonian (same order as coeffs).
-    backend (IBM backend): Can be simulator, fake backend or real backend; only with mode = "device_execution".
-    mode (String): ["no_noisy_sim", "device_execution", "noisy_sim"].
-    shots (Int): Number of VQE circuit execution shots.
-    kwargs (Dict): All the arguments that need to be passed on to the next function calls.
+def get_expectation_value(circuit: QuantumCircuit) -> float:
+    # Create a statevector simulator
+    backend = Aer.get_backend('statevector_simulator')
     
-    Returns:
-    List[Float] of expection value for each Pauli string.
-    """
-    #evaluate the circuits
-    if mode == 'no_noisy_sim':
-        result = transpile(circuit, backend=Aer.get_backend("qasm_simulator"), shots=shots).result()
-    elif mode == 'device_execution':
-        circuit.measure_all()
-        job = backend.run(circuit)
-        result = job.result()
-    elif mode == 'noisy_sim':
-        sim_device = AerSimulator.from_backend(backend)
-        result = sim_device.run(circuit, shots=shots).result()
-    else:
-        raise Exception('Invalid circuit execution mode')
-    print("all circs run!")
- 
-    all_counts = []
-  
-    all_counts.append(result.get_counts())
-
-    #compute the expectations
-    expectations = []
-    for i, count in enumerate(all_counts):
-        #initiate the expectation value to 0
-        expectation_val = 0
-        #compute the expectation
-        for el in count.keys():
-            sign = 1
-            #change sign if there are an odd number of ones
-            if el.count('1')%2 == 1:
-                sign = -1
-            expectation_val += sign*count[el]/shots
-        expectations.append(expectation_val)
-    return expectations
+    # Execute the circuit and get the final statevector
+    job = backend.run(circuit)
+    result = job.result()
+    statevector = result.get_statevector()
+    
+    # Calculate the expectation value
+    num_qubits = circuit.num_qubits
+    expectation_value = 0.0
+    
+    for i in range(2**num_qubits):
+        # Convert integer to binary string
+        binary = format(i, f'0{num_qubits}b')
+        
+        # Calculate the contribution of this basis state to the expectation value
+        # We use the convention that |0> corresponds to +1 and |1> corresponds to -1
+        state_value = (-1)**sum(int(bit) for bit in binary)
+        prob = abs(statevector[i])**2
+        
+        expectation_value += state_value * prob
+    
+    return expectation_value.real  # Ensure
 
 def vqe(n_qubits, parameters, coeffs, loss_filename=None, params_filename=None, **kwargs):
     """
@@ -335,6 +314,56 @@ def vqe_cafqa_stim(inputs, n_qubits, coeffs, paulis, init_func=hartreefock, ansa
 
     vqe_qc = QuantumCircuit(n_qubits)
 
+    if not init_last:
+        init_func(vqe_qc, **kwargs)
+    add_ansatz(vqe_qc, ansatz_func, parameters, ansatz_reps, **kwargs)
+    if init_last:
+        init_func(vqe_qc, **kwargs)
+    vqe_qc_trans = transform_to_allowed_gates(vqe_qc)
+    stim_qc = qiskit_to_stim(vqe_qc_trans)
+    sim = stim.TableauSimulator()
+    sim.do_circuit(stim_qc)
+    pauli_expect = [sim.peek_observable_expectation(stim.PauliString(p)) for p in paulis]
+    loss = np.dot(coeffs, pauli_expect)
+    end = timer()
+    print(f'Loss computed by CAFQA VQE is {loss}, in {end - start} s.')
+    
+    if loss_filename is not None:
+        with open(loss_filename, 'a') as file:
+            writer = csv.writer(file)
+            writer.writerow([loss])
+    
+    if params_filename is not None and parameters is not None:
+        with open(params_filename, 'a') as file:
+            writer = csv.writer(file)
+            writer.writerow(parameters)
+    return loss
+
+def vqe_cafqa_t(inputs, n_qubits, coeffs, paulis, init_func=hartreefock, ansatz_func=efficientsu2_full, ansatz_reps=1, init_last=False, loss_filename=None, params_filename=None, **kwargs):
+    """
+    Compute the CAFQA VQE loss/energy using stim.
+    inputs (Dict): CAFQA VQE parameters (values in 0...3) as passed by hypermapper, e.g.: {"x0": 1, "x1": 0, "x2": 0, "x3": 2}
+    n_qubits (Int): Number of qubits in circuit.
+    coeffs (Iterable[Float]): Pauli coefficients in Hamiltonian.
+    paulis (Iterable[String]): Corresponding Pauli strings in Hamiltonian (same order as coeffs).
+    initialization (Function): Takes QuantumCircuit and applies state initialization inplace.
+    parametrization (Function): Takes QuantumCircuit and applies ansatz inplace.
+    init_last (Bool): Whether initialization should come after (True) or before (False) ansatz.
+    loss_filename (String): Path to save file for VQE loss/energy.
+    params_filename (String): Path to save file for VQE parameters.
+    kwargs (Dict): All the arguments that need to be passed on to the next function calls.
+    
+    Returns:
+    (Float) CAFQA VQE energy. 
+    """
+    start = timer()
+    parameters = []
+    # take the hypermapper parameters and convert them to vqe parameters
+    for key in inputs:
+        parameters.append(inputs[key]*(np.pi/2))
+
+    vqe_qc = QuantumCircuit(n_qubits)
+
     t_gates = 2
 
     if not init_last:
@@ -344,20 +373,8 @@ def vqe_cafqa_stim(inputs, n_qubits, coeffs, paulis, init_func=hartreefock, ansa
         init_func(vqe_qc, **kwargs)
     vqe_qc_with_t = incorporate_t_gates(vqe_qc, t_gates)
 
-    # need to get the expected value of vqe_qc_with_t
-    shots = 100
-    mode = 'device_execution'
+    loss = get_expectation_value(vqe_qc_with_t)
 
-    exp = new_compute_expectations(vqe_qc_with_t, shots, backend, paulis, mode, **kwargs)
-
-    loss = exp[0]
-
-    # vqe_qc_trans = transform_to_allowed_gates(vqe_qc)
-    # stim_qc = qiskit_to_stim(vqe_qc_trans)
-    # sim = stim.TableauSimulator()
-    # sim.do_circuit(stim_qc)
-    # pauli_expect = [sim.peek_observable_expectation(stim.PauliString(p)) for p in paulis]
-    # loss = np.dot(coeffs, pauli_expect)
     end = timer()
     print(f'Loss computed by CAFQA VQE is {loss}, in {end - start} s.')
     

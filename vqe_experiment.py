@@ -225,7 +225,7 @@ def run_cafqa(n_qubits, coeffs, paulis, param_guess, budget, save_dir, loss_file
     stdout = sys.stdout
     hypermapper.optimizer.optimize(
         hypermapper_config_path, 
-        lambda x: vqe_cafqa_stim(
+        lambda x: vqe_cafqa_t( # change this to vqe_cafqa_stim to use original code
             inputs=x,
             n_qubits=n_qubits,
             loss_filename=save_dir + "/" + loss_file,
