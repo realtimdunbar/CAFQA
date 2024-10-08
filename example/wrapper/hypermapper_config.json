@@ -4,9 +4,9 @@
         "value"
     ],
     "design_of_experiment": {
-        "number_of_samples": 100
+        "number_of_samples": 500
     },
-    "optimization_iterations": 100,
+    "optimization_iterations": 500,
     "models": {
         "model": "random_forest"
     },
@@ -19,7 +19,7 @@
                 2,
                 3
             ],
-            "parameter_default": 1
+            "parameter_default": 0
         },
         "x1": {
             "parameter_type": "ordinal",
@@ -29,7 +29,7 @@
                 2,
                 3
             ],
-            "parameter_default": 2
+            "parameter_default": 0
         },
         "x2": {
             "parameter_type": "ordinal",
@@ -39,7 +39,7 @@
                 2,
                 3
             ],
-            "parameter_default": 3
+            "parameter_default": 0
         },
         "x3": {
             "parameter_type": "ordinal",
@@ -69,7 +69,7 @@
                 2,
                 3
             ],
-            "parameter_default": 1
+            "parameter_default": 0
         },
         "x6": {
             "parameter_type": "ordinal",
@@ -79,9 +79,49 @@
                 2,
                 3
             ],
-            "parameter_default": 3
+            "parameter_default": 0
         },
         "x7": {
+            "parameter_type": "ordinal",
+            "values": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "parameter_default": 0
+        },
+        "x8": {
+            "parameter_type": "ordinal",
+            "values": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "parameter_default": 0
+        },
+        "x9": {
+            "parameter_type": "ordinal",
+            "values": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "parameter_default": 0
+        },
+        "x10": {
+            "parameter_type": "ordinal",
+            "values": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "parameter_default": 0
+        },
+        "x11": {
             "parameter_type": "ordinal",
             "values": [
                 0,
@@ -94,6 +134,6 @@
     },
     "print_best": true,
     "print_posterior_best": true,
-    "log_file": "cafqa_example_out//hypermapper_log.log",
-    "output_data_file": "cafqa_example_out//hypermapper_output.csv"
+    "log_file": ".//hypermapper_log.log",
+    "output_data_file": ".//hypermapper_output.csv"
 }

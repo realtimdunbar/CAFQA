@@ -259,7 +259,7 @@ def get_expectation_value(circuit: QuantumCircuit) -> float:
     
     return expectation_value.real  # Ensure
 
-def vqe(n_qubits, parameters, coeffs, loss_filename=None, params_filename=None, **kwargs):
+def vqe(n_qubits, t_gates, parameters, coeffs, loss_filename=None, params_filename=None, **kwargs):
     """
     Compute the VQE loss/energy.
     n_qubits (Int): Number of qubits in circuit.
@@ -276,7 +276,7 @@ def vqe(n_qubits, parameters, coeffs, loss_filename=None, params_filename=None, 
     expectations = compute_expectations(n_qubits, parameters, **kwargs)
     loss = np.inner(coeffs, expectations)
     end = timer()
-    print(f'Loss computed by VQE is {loss}, in {end - start} s.')
+    print(f'For {t_gates} number of T-gates, the loss computed by VQE is {loss}, in {end - start} s.')
     
     if loss_filename is not None:
         with open(loss_filename, 'a') as file:
@@ -339,7 +339,7 @@ def vqe_cafqa_stim(inputs, n_qubits, coeffs, paulis, init_func=hartreefock, ansa
             writer.writerow(parameters)
     return loss
 
-def vqe_cafqa_t(inputs, n_qubits, coeffs, paulis, init_func=hartreefock, ansatz_func=efficientsu2_full, ansatz_reps=1, init_last=False, loss_filename=None, params_filename=None, **kwargs):
+def vqe_cafqa_t(inputs, t_gate_count, n_qubits, coeffs, paulis, init_func=hartreefock, ansatz_func=efficientsu2_full, ansatz_reps=1, init_last=False, loss_filename=None, params_filename=None, **kwargs):
     """
     Compute the CAFQA VQE loss/energy using stim.
     inputs (Dict): CAFQA VQE parameters (values in 0...3) as passed by hypermapper, e.g.: {"x0": 1, "x1": 0, "x2": 0, "x3": 2}
@@ -364,19 +364,17 @@ def vqe_cafqa_t(inputs, n_qubits, coeffs, paulis, init_func=hartreefock, ansatz_
 
     vqe_qc = QuantumCircuit(n_qubits)
 
-    t_gates = 2
-
     if not init_last:
         init_func(vqe_qc, **kwargs)
     add_ansatz(vqe_qc, ansatz_func, parameters, ansatz_reps, **kwargs)
     if init_last:
         init_func(vqe_qc, **kwargs)
-    vqe_qc_with_t = incorporate_t_gates(vqe_qc, t_gates)
+    vqe_qc_with_t = insert_random_t_gates(vqe_qc, t_gate_count)
 
     loss = get_expectation_value(vqe_qc_with_t)
 
     end = timer()
-    print(f'Loss computed by CAFQA VQE is {loss}, in {end - start} s.')
+    print(f'For {t_gate_count} number of T-gates, the loss computed by CAFQA VQE is {loss}, in {end - start} s.')
     
     if loss_filename is not None:
         with open(loss_filename, 'a') as file:

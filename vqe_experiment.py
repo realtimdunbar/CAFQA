@@ -124,7 +124,7 @@ def ising_model(N, Jx, h, Jy=0., periodic=False):
             paulis.append("I"*j+"Z"+"I"*(N-j-1))
     return coeffs, paulis, "0"*N
 
-def run_vqe(n_qubits, coeffs, paulis, param_guess, budget, shots, mode, backend, save_dir, loss_file, params_file, vqe_kwargs):
+def run_vqe(n_qubits, t_gates, coeffs, paulis, param_guess, budget, shots, mode, backend, save_dir, loss_file, params_file, vqe_kwargs):
     """
     Run VQE instance. Uses skquant for optimization.
     n_qubits (Int): Number of qubits in circuit.
@@ -154,6 +154,7 @@ def run_vqe(n_qubits, coeffs, paulis, param_guess, budget, shots, mode, backend,
     vqe_result = minimize(
             lambda c: vqe(
                 n_qubits=n_qubits,
+                t_gates=t_gates,
                 parameters=c, 
                 loss_filename=save_dir + "/" + loss_file,
                 params_filename=save_dir + "/" + params_file,
@@ -173,7 +174,7 @@ def run_vqe(n_qubits, coeffs, paulis, param_guess, budget, shots, mode, backend,
     return energy_vqe, params_vqe
 
 
-def run_cafqa(n_qubits, coeffs, paulis, param_guess, budget, save_dir, loss_file, params_file, vqe_kwargs):
+def run_cafqa(n_qubits, t_gates, coeffs, paulis, param_guess, budget, save_dir, loss_file, params_file, vqe_kwargs):
     """
     Run CAFQA VQE instance. Uses stim for fast Clifford circuit simulation and hypermapper for discrete optimization.
     n_qubits (Int): Number of qubits in circuit.
@@ -225,8 +226,9 @@ def run_cafqa(n_qubits, coeffs, paulis, param_guess, budget, save_dir, loss_file
     stdout = sys.stdout
     hypermapper.optimizer.optimize(
         hypermapper_config_path, 
-        lambda x: vqe_cafqa_t( # change this to vqe_cafqa_stim to use original code
+        lambda x: vqe_cafqa_t(
             inputs=x,
+            t_gate_count=t_gates,
             n_qubits=n_qubits,
             loss_filename=save_dir + "/" + loss_file,
             params_filename=save_dir + "/" + params_file,

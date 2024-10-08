@@ -96,6 +96,46 @@ def qiskit_to_stim(circuit):
         stim_circ.append(gate_lbl, qubit_idc)
     return stim_circ
 
+import random
+
+from qiskit import QuantumCircuit
+import random
+
+def insert_random_t_gates(circuit: QuantumCircuit, num_gates: int) -> QuantumCircuit:
+    """
+    Randomly inserts a given number of T gates into the provided quantum circuit.
+    
+    Args:
+    circuit (QuantumCircuit): The input quantum circuit.
+    num_gates (int): The number of T gates to insert.
+    
+    Returns:
+    QuantumCircuit: A new quantum circuit with randomly inserted T gates.
+    """
+    # Create a copy of the input circuit to avoid modifying the original
+    new_circuit = circuit.copy()
+    
+    # Get the number of qubits in the circuit
+    num_qubits = new_circuit.num_qubits
+    
+    # Get the current number of gates in the circuit
+    num_operations = len(new_circuit.data)
+    
+    # Generate random insertion points
+    insertion_points = random.sample(range(num_operations + 1), num_gates)
+    
+    # Sort the insertion points in descending order to maintain the relative positions
+    insertion_points.sort(reverse=True)
+    
+    # Insert T gates at the random points
+    for point in insertion_points:
+        qubit = random.randint(0, num_qubits - 1)
+        new_circuit.t(qubit)
+        new_circuit.data.insert(point, new_circuit.data.pop())
+    
+    return new_circuit
+
+
 from qiskit import QuantumCircuit
 from qiskit.circuit.library import (
     HGate, SGate, SdgGate, XGate, YGate, ZGate, 
