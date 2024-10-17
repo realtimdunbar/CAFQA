@@ -7,22 +7,24 @@ from vqe_experiment import *
 
 
 def main():
-    num_orbitals = 2
     budget = 500
     # molecule strings
-    atom_strings = {'h2':'H 0 0 0; H 0 0 0.74',
-                    # 'h6':'H 3.0000 0.0000 0; H 1.5000 2.5981 0; H -1.5000 2.5981 0; H -3.0000 0.0000 0; H -1.5000 -2.5981 0; H 1.5000 -2.5981 0',
-                    # 'h2o':'O 0 0 0; H 0.757 0.586 0; H -0.757 0.586 0',
-                    # 'cr2':'Cr 0 0 0; Cr 0 0 1.68',
-                    # 'n2':'N 0 0 0; N 0 0 1.0975',
-                    # 'nah':'Na 0 0 0; H 0 0 1.887',
-                    # 'h2_s1': 'H 0 0 0; H 0 0 0.74; S 0 0 2.5',
-                    # 'beh2':'Be 0 0 0; H 0 0 1.32; H 0 0 -1.32'
+    atom_strings = { 'h2':('H 0 0 0; H 0 0 1.00', 2),
+                    #  'h6':('H 3.0000 0.0000 0; H 1.5000 2.5981 0; H -1.5000 2.5981 0; H -3.0000 0.0000 0; H -1.5000 -2.5981 0; H 1.5000 -2.5981 0', 3),
+                    #  'h2o':('O 0 0 0; H 0.757 0.586 0; H -0.757 0.586 0', 7),
+                    #  'cr2':('Cr 0 0 0; Cr 0 0 1.68', 32),
+                    #  'n2':('N 0 0 0; N 0 0 1.0975', 10),
+                    #  'nah':('Na 0 0 0; H 0 0 1.887', 6),
+                    #  'h2_s1':('H 0 0 0; H 0 0 0.74; S 0 0 2.5', 11),
+                    #  'beh2':('Be 0 0 0; H 0 0 1.32; H 0 0 -1.32', 10),
+                    #  'Lih':('Li 0.0000 0.0000 0; H 1.6000 0.0000 0', 6)
                     }
 
     for key, value in atom_strings.items():
         atom = key
-        atom_string = value
+        atom_string = value[0]
+        num_orbitals = value[1]
+
 
         coeffs, paulis, HF_bitstring = molecule(atom_string, num_orbitals)
         n_qubits = len(paulis[0])
@@ -35,7 +37,7 @@ def main():
             "HF_bitstring": HF_bitstring
         }
 
-        t_gates_max = 20
+        t_gates_max = 3
         for t in range(t_gates_max):
             result_file = str(t)+"_"+atom + ".txt"
             # run CAFQA

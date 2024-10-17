@@ -235,3 +235,33 @@ def incorporate_t_gates(ansatz: QuantumCircuit, num_t_gates: int) -> QuantumCirc
         t_gates_added += 1
     
     return modified_ansatz
+
+from qiskit import QuantumCircuit
+from qiskit.circuit.library import RZGate, RXGate, RYGate
+from qiskit.circuit import Parameter
+import random
+
+def replace_r_gates_with_t(circuit, num_replacements):
+    # Find all RZ, RX, and RY gates in the circuit
+    r_gates = []
+    for instruction, qargs, _ in circuit.data:
+        if isinstance(instruction, (RZGate, RXGate, RYGate)):
+            r_gates.append((instruction, qargs))
+    
+    # If there are fewer R gates than requested replacements, adjust num_replacements
+    num_replacements = min(num_replacements, len(r_gates))
+    
+    # Randomly select R gates to replace
+    gates_to_replace = random.sample(r_gates, num_replacements)
+    
+    # Create a new circuit
+    new_circuit = QuantumCircuit(circuit.num_qubits)
+    
+    # Copy the original circuit, replacing selected R gates with T gates
+    for instruction, qargs, cargs in circuit.data:
+        if (instruction, qargs) in gates_to_replace:
+            new_circuit.t(qargs[0])
+        else:
+            new_circuit.append(instruction, qargs, cargs)
+    
+    return new_circuit

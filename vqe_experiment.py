@@ -2,7 +2,7 @@ import numpy as np
 
 from qiskit_nature.units import DistanceUnit
 from qiskit_nature.second_q.circuit.library import HartreeFock
-from qiskit_nature.second_q.transformers import ActiveSpaceTransformer
+from qiskit_nature.second_q.transformers import ActiveSpaceTransformer, FreezeCoreTransformer
 from qiskit_nature.second_q.drivers import PySCFDriver
 from qiskit_nature.second_q.mappers import ParityMapper
 
@@ -20,6 +20,7 @@ from circuit_manipulation import *
 from qiskit_aer import AerSimulator
 from qiskit_ibm_runtime import Session
 from qiskit_ibm_runtime import EstimatorV2 as Estimator
+
 
 # To run locally
 backend = AerSimulator()
@@ -49,6 +50,8 @@ def molecule(atom_string, new_num_orbitals=None, **kwargs):
         num_electrons = (problem.num_alpha, problem.num_beta)
         transformer = ActiveSpaceTransformer(num_electrons, new_num_orbitals)
         problem = transformer.transform(problem)
+        freeze_core = FreezeCoreTransformer()
+        problem = freeze_core.transform(problem)
     ferOp = problem.hamiltonian.second_q_op()
     qubitOp = mapper.map(ferOp)
 

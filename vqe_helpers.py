@@ -369,7 +369,7 @@ def vqe_cafqa_t(inputs, t_gate_count, n_qubits, coeffs, paulis, init_func=hartre
     add_ansatz(vqe_qc, ansatz_func, parameters, ansatz_reps, **kwargs)
     if init_last:
         init_func(vqe_qc, **kwargs)
-    vqe_qc_with_t = insert_random_t_gates(vqe_qc, t_gate_count)
+    vqe_qc_with_t = replace_r_gates_with_t(vqe_qc, t_gate_count)
 
     loss = get_expectation_value(vqe_qc_with_t)
 
