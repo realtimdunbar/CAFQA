@@ -37,7 +37,7 @@ def main():
             "HF_bitstring": HF_bitstring
         }
 
-        t_gates_max = 3
+        t_gates_max = 1
         for t in range(t_gates_max):
             result_file = str(t)+"_"+atom + ".txt"
             # run CAFQA

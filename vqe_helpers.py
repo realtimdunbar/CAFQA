@@ -371,7 +371,20 @@ def vqe_cafqa_t(inputs, t_gate_count, n_qubits, coeffs, paulis, init_func=hartre
         init_func(vqe_qc, **kwargs)
     vqe_qc_with_t = replace_r_gates_with_t(vqe_qc, t_gate_count)
 
-    loss = get_expectation_value(vqe_qc_with_t)
+    loss_with_t = get_expectation_value(vqe_qc_with_t)
+
+    vqe_qc_trans = transform_to_allowed_gates(vqe_qc)
+    stim_qc = qiskit_to_stim(vqe_qc_trans)
+    sim = stim.TableauSimulator()
+    sim.do_circuit(stim_qc)
+    pauli_expect = [sim.peek_observable_expectation(stim.PauliString(p)) for p in paulis]
+    
+    loss_without_t = np.dot(coeffs, pauli_expect)
+
+    if loss_with_t <= loss_without_t:
+        loss = loss_with_t
+    else:
+        loss = loss_without_t
 
     end = timer()
     print(f'For {t_gate_count} number of T-gates, the loss computed by CAFQA VQE is {loss}, in {end - start} s.')
