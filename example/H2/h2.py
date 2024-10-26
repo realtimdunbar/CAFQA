@@ -1,5 +1,5 @@
 import numpy as np
-from qiskit.providers.fake_provider import FakeMumbai
+from qiskit_ibm_runtime.fake_provider import FakeMumbai
 import sys
 sys.path.append("../../")
 

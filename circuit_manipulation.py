@@ -91,6 +91,6 @@ def qiskit_to_stim(circuit):
         elif gate_lbl == "SXDG":
             gate_lbl = "SQRT_X_DAG"
         assert gate_lbl in allowed_gates, f"Invalid gate {gate_lbl}."
-        qubit_idc = [qb.index for qb in instruction.qubits]
+        qubit_idc = [circuit.find_bit(qb)[0] for qb in instruction.qubits]
         stim_circ.append(gate_lbl, qubit_idc)
     return stim_circ

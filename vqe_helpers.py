@@ -1,6 +1,6 @@
-from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister, Aer, execute, IBMQ, transpile
+from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister, transpile
+from qiskit_aer import Aer, AerSimulator
 from qiskit.transpiler.passes import RemoveBarriers
-from qiskit.providers.aer import AerSimulator
 
 from qiskit.circuit.library import EfficientSU2
 
@@ -152,7 +152,7 @@ def all_transpiled_vqe_circuits(n_qubits, parameters, paulis, backend, seed_tran
     virtual_to_physical_mapping = {}
     for inst in t_circuit:
         if inst[0].name == 'measure':
-            virtual_to_physical_mapping[inst[2][0].index] = inst[1][0].index
+            virtual_to_physical_mapping[t_circuit.find_bit(inst[2][0])[0]] = t_circuit.find_bit(inst[1][0])[0]
     # remove final measurements
     t_circuit.remove_final_measurements()
     # create all transpiled circuits
@@ -196,10 +196,11 @@ def compute_expectations(n_qubits, parameters, paulis, shots, backend, mode, **k
     if mode == 'no_noisy_sim':
         #get all the vqe circuits
         circuits = [vqe_circuit(n_qubits, parameters, pauli, **kwargs) for pauli in paulis]
-        result = execute(circuits, backend=Aer.get_backend("qasm_simulator"), shots=shots).result()
+        result = transpile(circuits, backend=Aer.get_backend("qasm_simulator"), shots=shots).result()
     elif mode == 'device_execution':
         tcircs = all_transpiled_vqe_circuits(n_qubits, parameters, paulis, backend, **kwargs)
-        job = execute(tcircs, backend=backend, shots=shots)
+        new_circuit = transpile(tcircs, backend=backend)
+        job = backend.run(new_circuit, shots=shots)
         result = job.result()
     elif mode == 'noisy_sim':
         sim_device = AerSimulator.from_backend(backend)

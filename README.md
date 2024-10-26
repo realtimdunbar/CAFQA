@@ -1,4 +1,4 @@
-# CAFQA
+## CAFQA
 
 (Re-)Implementation of an interface for the Variational Quantum Eigensolver and the [CAFQA](https://dl.acm.org/doi/abs/10.1145/3567955.3567958) scheme (original code: https://github.com/rgokulsm/CAFQA).
 
@@ -13,3 +13,26 @@ Full list of dependencies (`pip install ...`):
 - scikit-quant
 - hypermapper
 - pyscf
+
+## Create a conda environment if you have not already:
+
+```
+conda env create -f environment.yml
+```
+
+## Activate the environment:
+
+```
+conda activate mycondaenv
+```
+
+## To use the Docker file.
+
+```
+With docker installed execute the following command in terminal
+
+docker build -t myconda_image .
+
+docker run --platform linux/amd64 -it --rm image_name
+
+```
