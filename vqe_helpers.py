@@ -201,7 +201,7 @@ def compute_expectations(n_qubits, parameters, paulis, shots, backend, mode, **k
     elif mode == 'device_execution':
         tcircs = all_transpiled_vqe_circuits(n_qubits, parameters, paulis, backend, **kwargs)
         new_circuit = transpile(tcircs, backend=backend)
-        job = backend.run(new_circuit)
+        job = backend.run(new_circuit, shots=shots)
         result = job.result()
     elif mode == 'noisy_sim':
         sim_device = AerSimulator.from_backend(backend)
