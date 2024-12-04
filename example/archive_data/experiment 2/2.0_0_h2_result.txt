@@ -1,0 +1,5 @@
+CAFQA energy:
+-1.0000000000000002
+CAFQA params (x pi/2):
+[2 1 1 0 1 1 0 3 3 1 1 0]
+

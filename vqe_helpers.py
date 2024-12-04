@@ -4,8 +4,10 @@ from qiskit.transpiler.passes import RemoveBarriers
 
 from qiskit.circuit.library import EfficientSU2
 
-from qiskit.quantum_info import Pauli, Operator
+from qiskit.quantum_info import Pauli, Operator, SparsePauliOp
+from qiskit.primitives import Estimator
 
+from pyscf import gto
 import numpy as np
 from numpy.linalg import eigh
 import csv
@@ -257,9 +259,9 @@ def get_expectation_value(circuit: QuantumCircuit) -> float:
         
         expectation_value += state_value * prob
     
-    return expectation_value.real  # Ensure
+    return expectation_value.real / (2**num_qubits)
 
-def vqe(n_qubits, t_gates, parameters, coeffs, loss_filename=None, params_filename=None, **kwargs):
+def vqe(n_qubits, parameters, coeffs, loss_filename=None, params_filename=None, **kwargs):
     """
     Compute the VQE loss/energy.
     n_qubits (Int): Number of qubits in circuit.
@@ -276,7 +278,7 @@ def vqe(n_qubits, t_gates, parameters, coeffs, loss_filename=None, params_filena
     expectations = compute_expectations(n_qubits, parameters, **kwargs)
     loss = np.inner(coeffs, expectations)
     end = timer()
-    print(f'For {t_gates} number of T-gates, the loss computed by VQE is {loss}, in {end - start} s.')
+    print(f'The loss computed by VQE is {loss}, in {end - start} s.')
     
     if loss_filename is not None:
         with open(loss_filename, 'a') as file:
@@ -371,6 +373,7 @@ def vqe_cafqa_t(inputs, t_gate_count, n_qubits, coeffs, paulis, init_func=hartre
         init_func(vqe_qc, **kwargs)
     vqe_qc_with_t = replace_r_gates_with_t(vqe_qc, t_gate_count)
 
+    observable = SparsePauliOp('ZZ')
     loss_with_t = get_expectation_value(vqe_qc_with_t)
 
     vqe_qc_trans = transform_to_allowed_gates(vqe_qc)
@@ -399,3 +402,55 @@ def vqe_cafqa_t(inputs, t_gate_count, n_qubits, coeffs, paulis, init_func=hartre
             writer = csv.writer(file)
             writer.writerow(parameters)
     return loss
+
+def build_molecule(atom_symbols, bond_length, unit='angstrom'):
+    
+    # Convert bond length to bohr if given in angstrom
+    if unit.lower() == 'angstrom':
+        bond_length_bohr = bond_length * 1.8897259886
+    elif unit.lower() == 'bohr':
+        bond_length_bohr = bond_length
+    else:
+        raise ValueError("Unit must be either 'angstrom' or 'bohr'")
+    
+    # Generate coordinates for atoms
+    n_atoms = len(atom_symbols)
+    if n_atoms < 2:
+        raise ValueError("At least two atoms are required")
+    
+    # Place atoms along z-axis centered at origin
+    coords = []
+    for i in range(n_atoms):
+        # Calculate position for each atom
+        z_pos = (i - (n_atoms-1)/2) * bond_length_bohr
+        coords.append([0, 0, z_pos])
+    
+    # Create atom specification string for PySCF
+    atom_spec = []
+    for symbol, coord in zip(atom_symbols, coords):
+        atom_spec.append([symbol, coord])
+    
+    # Initialize molecule
+    mol = gto.M(
+        atom=atom_spec,
+        basis='sto3g',  # Default basis set, can be modified as needed
+        unit='bohr',      # PySCF internal coordinates are in bohr
+        symmetry=True,    # Enable molecular symmetry
+    )
+    
+    return mol
+
+def get_atom_string(mol):
+    
+    atom_string = ''
+    for i, coord in enumerate(mol.atom_coords()):
+        atom_string = atom_string + mol.atom_symbol(i) + ' '
+        for j in range(len(coord)):
+            if j != len(coord) - 1:
+                atom_string = atom_string + str(coord[j]) + ' '
+            else:
+                atom_string = atom_string + str(coord[j])
+        if i != len(mol.atom_coords()) - 1:
+            atom_string = atom_string + '; '
+
+    return atom_string

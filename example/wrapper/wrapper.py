@@ -4,85 +4,67 @@ import sys
 sys.path.append("../../")
 
 from vqe_experiment import *
+from vqe_helpers import *
 
 
 def main():
-    budget = 500
+    budget = 250
     # molecule strings
-    atom_strings = { 'h2':('H 0 0 0; H 0 0 1.00', 2),
-                    #  'h6':('H 3.0000 0.0000 0; H 1.5000 2.5981 0; H -1.5000 2.5981 0; H -3.0000 0.0000 0; H -1.5000 -2.5981 0; H 1.5000 -2.5981 0', 3),
-                    #  'h2o':('O 0 0 0; H 0.757 0.586 0; H -0.757 0.586 0', 7),
-                    #  'cr2':('Cr 0 0 0; Cr 0 0 1.68', 32),
-                    #  'n2':('N 0 0 0; N 0 0 1.0975', 10),
-                    #  'nah':('Na 0 0 0; H 0 0 1.887', 6),
-                    #  'h2_s1':('H 0 0 0; H 0 0 0.74; S 0 0 2.5', 11),
-                    #  'beh2':('Be 0 0 0; H 0 0 1.32; H 0 0 -1.32', 10),
-                    #  'Lih':('Li 0.0000 0.0000 0; H 1.6000 0.0000 0', 6)
+    atom_strings = { 'h2':['H', 'H'],
+                    #  'h6':['H', 'H', 'H', 'H', 'H', 'H'],
+                    #  'NaH':['Na', 'H'],
+                    #  'LiH':['Li', 'H']
                     }
-
+    
     for key, value in atom_strings.items():
         atom = key
-        atom_string = value[0]
-        num_orbitals = value[1]
+        atoms = value
+        bond_lengths = [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3.0]
 
+        for bond_length in bond_lengths:
+            mol = build_molecule(atoms, bond_length)
 
-        coeffs, paulis, HF_bitstring = molecule(atom_string, num_orbitals)
-        n_qubits = len(paulis[0])
+            num_orbitals = mol.nao
 
-        save_dir = "./"
-        
-        vqe_kwargs = {
-            "ansatz_reps": 2,
-            "init_last": False,
-            "HF_bitstring": HF_bitstring
-        }
+            # atom_string = get_atom_string(mol)
 
-        t_gates_max = 1
-        for t in range(t_gates_max):
-            result_file = str(t)+"_"+atom + ".txt"
-            # run CAFQA
-            cafqa_guess = [] # will start from all 0 parameters
-            loss_file = str(t)+"_"+atom+"_cafqa_loss.txt"
-            params_file = str(t)+"_"+atom+"_cafqa_params.txt"
-            cafqa_energy, cafqa_params = run_cafqa(
-                n_qubits=n_qubits,
-                t_gates=t,
-                coeffs=coeffs,
-                paulis=paulis,
-                param_guess=cafqa_guess,
-                budget=budget,
-                save_dir=save_dir,
-                loss_file=loss_file,
-                params_file=params_file,
-                vqe_kwargs=vqe_kwargs
-            )
-            with open(save_dir + result_file, "w") as res_file:
-                res_file.write(f"CAFQA energy:\n{cafqa_energy}\n")
-                res_file.write(f"CAFQA params (x pi/2):\n{np.array(cafqa_params)}\n\n")
+            atom_string = f"H 0 0 0; H 0 0 {bond_length}"
 
-        
-            # VQE with CAFQA initialization
-            shots = 8192
-            loss_file = str(t)+"_"+atom+"_vqe_loss.txt"
-            params_file = str(t)+"_"+atom+"_vqe_params.txt"
-            vqe_energy, vqe_params = run_vqe(
-                n_qubits=n_qubits,
-                t_gates=t,
-                coeffs=coeffs,
-                paulis=paulis,
-                param_guess=np.array(cafqa_params)*np.pi/2,
-                budget=budget,
-                shots=shots,
-                mode="device_execution",
-                backend=FakeMumbai(),
-                save_dir=save_dir,
-                loss_file=loss_file,
-                params_file=params_file,
-                vqe_kwargs=vqe_kwargs
-            )
-            with open(save_dir + result_file, "a") as res_file:
-                res_file.write(f"VQE energy:\n{vqe_energy}\n")
-                res_file.write(f"VQE params:\n{np.array(vqe_params)}\n\n")
+            coeffs, paulis, HF_bitstring = molecule(atom_string, num_orbitals)
+            n_qubits = len(paulis[0])
+
+            save_dir = "./"
+            
+            vqe_kwargs = {
+                "ansatz_reps": 2,
+                "init_last": False,
+                "HF_bitstring": HF_bitstring
+            }
+
+            # params
+            t_gates = [0]
+
+            for t in t_gates:
+                result_file = str(bond_length)+"_"+str(t)+"_"+atom + "_result.txt"
+                # run CAFQA
+                cafqa_guess = [] # will start from all 0 parameters
+                loss_file = str(bond_length)+"_"+str(t)+"_"+atom+"_cafqa_loss.txt"
+                params_file = str(bond_length)+"_"+str(t)+"_"+atom+"_cafqa_params.txt"
+                cafqa_energy, cafqa_params = run_cafqa(
+                    n_qubits=n_qubits,
+                    t_gates=t,
+                    coeffs=coeffs,
+                    paulis=paulis,
+                    param_guess=cafqa_guess,
+                    budget=budget,
+                    save_dir=save_dir,
+                    loss_file=loss_file,
+                    params_file=params_file,
+                    vqe_kwargs=vqe_kwargs
+                )
+                with open(save_dir + result_file, "w") as res_file:
+                    res_file.write(f"CAFQA energy:\n{cafqa_energy}\n")
+                    res_file.write(f"CAFQA params (x pi/2):\n{np.array(cafqa_params)}\n\n")
 
 
 if __name__ == "__main__":

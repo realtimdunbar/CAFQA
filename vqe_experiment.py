@@ -50,8 +50,8 @@ def molecule(atom_string, new_num_orbitals=None, **kwargs):
         num_electrons = (problem.num_alpha, problem.num_beta)
         transformer = ActiveSpaceTransformer(num_electrons, new_num_orbitals)
         problem = transformer.transform(problem)
-        freeze_core = FreezeCoreTransformer()
-        problem = freeze_core.transform(problem)
+        # freeze_core = FreezeCoreTransformer()
+        # problem = freeze_core.transform(problem)
     ferOp = problem.hamiltonian.second_q_op()
     qubitOp = mapper.map(ferOp)
 
@@ -127,7 +127,7 @@ def ising_model(N, Jx, h, Jy=0., periodic=False):
             paulis.append("I"*j+"Z"+"I"*(N-j-1))
     return coeffs, paulis, "0"*N
 
-def run_vqe(n_qubits, t_gates, coeffs, paulis, param_guess, budget, shots, mode, backend, save_dir, loss_file, params_file, vqe_kwargs):
+def run_vqe(n_qubits, coeffs, paulis, param_guess, budget, shots, mode, backend, save_dir, loss_file, params_file, vqe_kwargs):
     """
     Run VQE instance. Uses skquant for optimization.
     n_qubits (Int): Number of qubits in circuit.
@@ -157,7 +157,6 @@ def run_vqe(n_qubits, t_gates, coeffs, paulis, param_guess, budget, shots, mode,
     vqe_result = minimize(
             lambda c: vqe(
                 n_qubits=n_qubits,
-                t_gates=t_gates,
                 parameters=c, 
                 loss_filename=save_dir + "/" + loss_file,
                 params_filename=save_dir + "/" + params_file,
