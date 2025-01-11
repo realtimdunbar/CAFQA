@@ -10,10 +10,10 @@ from vqe_helpers import *
 def main():
     budget = 250
     # molecule strings
-    atom_strings = { 'h2':['H', 'H'],
-                    #  'h6':['H', 'H', 'H', 'H', 'H', 'H'],
-                    #  'NaH':['Na', 'H'],
-                    #  'LiH':['Li', 'H']
+    atom_strings = {'h2':['H', 'H']
+                    # 'h6':['H', 'H', 'H', 'H', 'H', 'H'],
+                    # 'NaH':['Na', 'H'],
+                    # 'LiH':['Li', 'H']
                     }
     
     for key, value in atom_strings.items():
@@ -26,9 +26,7 @@ def main():
 
             num_orbitals = mol.nao
 
-            # atom_string = get_atom_string(mol)
-
-            atom_string = f"H 0 0 0; H 0 0 {bond_length}"
+            atom_string = get_atom_string(mol)
 
             coeffs, paulis, HF_bitstring = molecule(atom_string, num_orbitals)
             n_qubits = len(paulis[0])
